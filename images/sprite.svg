@@ -50,4 +50,8 @@
         <path d="M22.955 8.36853L7.04505 24.2784" stroke="#E02F21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
     </symbol>
 
+    <symbol viewBox="0 0 24 24" id="up-link">
+        <path d="M18 15L12 9L6 15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+
 </svg>

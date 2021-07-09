@@ -12,7 +12,9 @@ body {min-width:480px; margin:0; padding:0; font:300 16px/24px Arial, sans-serif
 }
 
 a {color:#000; text-decoration:none}
-a:hover {color:#e02f21}
+@media screen and (min-width:1200px) {
+    a:hover {color:#e02f21}
+}
 
 img {border:none; max-width:100%; height:auto}
 iframe {border:none; max-width:100%}
@@ -23,7 +25,9 @@ strong, b {font-weight:bold}
 
 .btn {display:inline-block; vertical-align:top; margin:0; padding:9px 23px; overflow:visible; outline:none; text-decoration:none; background:#e02f21; color:#fff; border:1px solid #e02f21; border-radius:2px; font:16px/24px Arial, Helvetica, sans-serif; letter-spacing:0; text-transform:none; text-align:center; position:relative; -webkit-appearance:none; cursor:pointer; transition:all 0.2s; box-sizing:border-box}
 .fonts-loaded .btn {font-family:RobotoCondensed, sans-serif}
-.btn:hover {color:#e02f21; background:#fff; text-decoration:none}
+@media screen and (min-width:1200px) {
+    .btn:hover {color:#e02f21; background:#fff; text-decoration:none}
+}
 
 @media screen and (max-width:1199px) {
     .btn {display:block; width:100%; padding:9px 0; font-size:20px; line-height:30px}
@@ -57,6 +61,11 @@ form.loading::after {content:""; display:block; position:absolute; left:0; top:0
 .form-input textarea.valid {border-color:#40cb4e}
 label.error {display:block; margin:10px 0 0 0; font-weight:normal; font-size:14px; line-height:21px; text-transform:uppercase; letter-spacing:0.05em; text-align:right; color:#ea1e1e}
 
+@media screen and (max-width:1199px) {
+    .form-input input,
+    .form-input textarea {font-size:24px}
+}
+
 .form-checkbox {margin:20px 0; color:#171717; font-size:16px; line-height:21px}
 .form-checkbox::after {content:""; display:block; clear:both}
 .form-checkbox label {float:left; display:block; cursor:pointer; position:relative}
@@ -71,7 +80,9 @@ label.error {display:block; margin:10px 0 0 0; font-weight:normal; font-size:14p
 .form-checkbox input:checked+label.error+span::before {background-position:center; border-color:#e02f21; background-color:#e02f21}
 .form-checkbox label.error {position:absolute; right:0; bottom:0; white-space:nowrap}
 .form-checkbox a {color:#e02f21}
-.form-checkbox a:hover {text-decoration:underline}
+@media screen and (min-width:1200px) {
+    .form-checkbox a:hover {text-decoration:underline}
+}
 .form-checkbox span em {font-style:normal; color:#848484; font-size:14px}
 
 .form-ctrl {margin:40px 0 0 0}
@@ -149,7 +160,9 @@ header {height:170px; position:relative; z-index:99; background:#fff}
 
 .header-callback {float:right; margin:33px 0 0 0}
 .header-callback a {display:block; height:43px; border:1px solid #e02f21; color:#4a4a4a; font-weight:normal; font-size:15px; line-height:41px; padding:0 15px; text-decoration:none; transition:background 0.2s, color 0.2s}
-.header-callback a:hover {background:#e02f21; color:#fff}
+@media screen and (min-width:1200px) {
+    .header-callback a:hover {background:#e02f21; color:#fff}
+}
 
 @media screen and (max-width:1199px) {
     .header-callback {display:none; float:left; margin:15px 0 0 0}
@@ -172,6 +185,7 @@ header {height:170px; position:relative; z-index:99; background:#fff}
 .nav ul li::before {display:none}
 .nav ul li:first-child {margin:0}
 .nav ul li a {display:block; color:#fff}
+.nav ul li.active a,
 .nav ul li a:hover {text-decoration:underline}
 .nav-contacts {display:none}
 
@@ -217,15 +231,18 @@ header {height:170px; position:relative; z-index:99; background:#fff}
 .slider .slick-prev svg,
 .slider .slick-next svg {display:block; width:20px; height:20px; fill:none; stroke:#848484; transition:stroke 0.2s; position:absolute; left:50%; top:50%; margin:-10px 0 0 -11px}
 .slider .slick-next svg {margin-left:-9px}
-.slider .slick-prev:hover,
-.slider .slick-next:hover {background:#e02f21}
-.slider .slick-prev:hover svg,
-.slider .slick-next:hover svg {stroke:#fff}
+@media screen and (min-width:1200px) {
+    .slider .slick-prev:hover,
+    .slider .slick-next:hover {background:#e02f21}
+    .slider .slick-prev:hover svg,
+    .slider .slick-next:hover svg {stroke:#fff}
+}
 .slider .slick-dots {position:absolute; left:50%; bottom:15px; transform:translateX(-50%); white-space:nowrap; margin:0; padding:0; list-style:none; text-align:center; font-size:0; line-height:0; letter-spacing:-1px}
 .slider .slick-dots li {margin:0 0 0 14px; padding:0; display:inline-block; vertical-align:top; position:relative}
 .slider .slick-dots li::before {display:none}
 .slider .slick-dots li:first-child {margin:0}
 .slider .slick-dots li button {display:block; position:relative; width:11px; height:11px; border-radius:50%; border:2px solid #e02f21; background:transparent; margin:0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; font-size:0; line-height:0; text-indent:100px; transition:background 0.2s}
+.slider .slick-dots li button:hover,
 .slider .slick-dots li.slick-active button {background:#e02f21}
 
 @media screen and (max-width:1199px) {
@@ -233,9 +250,9 @@ header {height:170px; position:relative; z-index:99; background:#fff}
     .slider-item-bg {display:none}
     .slider-item-bg-mobile {display:block; position:absolute; left:0; top:0; right:0; bottom:0; background:no-repeat center}
     .slider-item-container {top:0; bottom:0; transform:none}
-    .slider-item-title {padding:60px 0 0 0; font-size:48px; line-height:48px}
+    .slider-item-title {padding:60px 0 0 0; font-size:48px; line-height:48px; margin-right:-10px}
     .slider-item-title br {display:none}
-    .slider-item-title-mini {padding:50px 0 0 0; font-size:40px; line-height:40px}
+    .slider-item-title-mini {padding:50px 0 0 0; font-size:40px; line-height:40px; margin-right:0}
     .slider-item-text {padding:30px 0 0 0; font-size:20px; line-height:30px}
     .slider-item-wrap {position:absolute; left:20px; bottom:53px; right:20px}
     .slider-item-info {margin:0; padding:0 0 0 12px}
@@ -253,16 +270,21 @@ header {height:170px; position:relative; z-index:99; background:#fff}
 .main-catalogue {padding:46px 0 80px 0}
 .main-catalogue-list {margin:45px 0 0 0; border-top:1px solid #e8e8e8; border-left:1px solid #e8e8e8}
 .main-catalogue-list::after {content:""; display:block; clear:both}
-.main-catalogue-item {float:left; width:20%; height:180px; border-right:1px solid #e8e8e8; border-bottom:1px solid #e8e8e8; text-align:center}
+.main-catalogue-item {display:block; float:left; width:20%; height:180px; border-right:1px solid #e8e8e8; border-bottom:1px solid #e8e8e8; text-align:center; text-decoration:none; color:#2c2c2c; transition:color 0.2s, box-shadow 0.2s}
+@media screen and (min-width:1200px) {
+    .main-catalogue-item:hover {text-decoration:none; color:#e02f21; box-shadow:0 0 5px rgba(0, 0, 0, 0.4)}
+}
 .main-catalogue-item-preview {padding:22px 0 0 0; line-height:0; height:102px; line-height:80px}
 .main-catalogue-item-preview img {vertical-align:middle; max-height:80px}
 .main-catalogue-item-title {display:table; width:100%; margin:19px 0 0 0}
-.main-catalogue-item-title-inner {display:table-cell; vertical-align:middle; height:38px; font-weight:normal; font-size:16px; line-height:19px; color:#2c2c2c; padding:0 10px}
+.main-catalogue-item-title-inner {display:table-cell; vertical-align:middle; height:38px; font-weight:normal; font-size:16px; line-height:19px; padding:0 10px}
 .main-catalogue-links {float:right; margin:-44px 0 0 0}
 .main-catalogue-link {float:left; margin:0 0 0 11px}
 .main-catalogue-link:first-child {margin:0}
 .main-catalogue-link svg {display:inline-block; vertical-align:middle; width:24px; height:24px; fill:none; stroke:#fff; margin:-2px 10px 0 0; transition:stroke 0.2s}
-.main-catalogue-link a:hover svg {stroke:#e02f21}
+@media screen and (min-width:1200px) {
+    .main-catalogue-link a:hover svg {stroke:#e02f21}
+}
 
 @media screen and (max-width:1199px) {
     .main-catalogue {padding:60px 0}
@@ -389,7 +411,9 @@ footer {background:#f5f5f5; padding:25px 0}
 .window-container-preload {opacity:0}
 .window-close {display:block; position:absolute; right:15px; top:15px; width:24px; height:24px}
 .window-close svg {display:block; width:24px; height:24px; fill:#000; transition:fill 0.2s}
-.window-close:hover svg {fill:#e02f21}
+@media screen and (min-width:1200px) {
+    .window-close:hover svg {fill:#e02f21}
+}
 
 @media screen and (max-width:1199px) {
     .window-close {right:10px; top:10px; width:28px; height:28px}
@@ -416,4 +440,20 @@ footer {background:#f5f5f5; padding:25px 0}
 @media screen and (max-width:1199px) {
     .window-success-text {margin:8px 0 0 0}
     .window-success-btn {margin:32px 0 0 0}
+}
+
+.up-link {display:block; opacity:0; visibility:hidden; position:fixed; z-index:90; right:20px; bottom:20px; width:40px; height:40px; border:1px solid #e8e8e8; background:#fff; box-shadow:2px 2px 10px rgba(0, 0, 0, 0.1); transition:opacity 0.2s, background-color 0.2s, border-color 0.2s}
+.up-link.visible {opacity:1; visibility:visible}
+@media screen and (min-width:1200px) {
+    .up-link:hover {background:#e02f21; border-color:#e02f21}
+}
+.up-link svg {display:block; position:absolute; left:50%; top:50%; margin:-12px 0 0 -12px; width:24px; height:24px; fill:none; stroke:#e02f21; transition:stroke 0.2s}
+@media screen and (min-width:1200px) {
+    .up-link:hover svg {stroke:#fff}
+}
+
+@media screen and (max-width:1199px) {
+    .up-link {width:50px; height:50px}
+    .up-link::before {content:""; display:block; position:absolute; left:-40px; top:-40px; right:-40px; bottom:-40px}
+    .up-link svg {width:28px; height:28px; margin:-14px 0 0 -14px}
 }
