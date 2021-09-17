@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title>Yamato</title>
+
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="js/slick/slick.css" />
+        <link rel="stylesheet" href="js/select2/select2.css" />
+        <link rel="stylesheet" href="js/air-datepicker/datepicker.css" />
+
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width" />
+    </head>
+
+    <body>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+
+            <header>
+                <div class="header-container">
+                    <div class="container">
+                        <div class="logo">
+                            <a href="#">
+                                <div class="logo-img"></div>
+                                <div class="logo-title">
+                                    <div class="logo-title-text-1">Лабораторное научное оборудование</div>
+                                    <div class="logo-title-text-2">Yamato Scientific Co., Ltd.</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <a href="#" class="mobile-menu-link"><svg><use xlink:href="images/sprite.svg#mobile-menu-link"></use></svg><svg><use xlink:href="images/sprite.svg#mobile-menu-close"></use></svg></a>
+
+                        <div class="header-search">
+                            <a href="#" class="header-search-link"><svg><use xlink:href="images/sprite.svg#header-search"></use></svg></a>
+                        </div>
+
+                        <div class="header-callback">
+                            <a href="windows/callback.html" class="window-link">Обратный звонок</a>
+                        </div>
+
+                        <div class="header-contacts">
+                            <div class="header-contacts-title"><a href="tel:+74957406871">+7 495 740-68-71</a></div>
+                            <div class="header-contacts-text">08:00–18:00 пн-чт, 08:00–17:00 пт</div>
+                        </div>
+
+                        <div class="header-contacts">
+                            <div class="header-contacts-title">Москва</div>
+                            <div class="header-contacts-text">Павелецкая наб., д. 2, стр. 3, оф. 119</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav">
+                    <div class="container">
+                        <ul>
+                            <li><a href="#">О компании</a></li>
+                            <li class="nav-catalogue">
+                                <a href="#">Каталог<svg><use xlink:href="images/sprite.svg#nav-arrow"></use></svg></a>
+                                <div class="nav-catalogue-sub">
+                                    <div class="nav-catalogue-sub-inner">
+                                        <div class="container">
+                                            <ul>
+                                                <li><a href="#">Сушильные шкафы</a></li>
+                                                <li><a href="#">Муфельные печи</a></li>
+                                                <li><a href="#">Инкубаторы</a></li>
+                                                <li><a href="#">Промышленное оборудование по&nbsp;индивидуальному заказу</a></li>
+                                                <li><a href="#">Ротационные испарители</a></li>
+                                                <li><a href="#">Стерилизаторы и автоклавы</a></li>
+                                                <li><a href="#">Распылительные сушилки</a></li>
+                                                <li><a href="#">Лиофильные (сублимационные) сушилки</a></li>
+                                                <li><a href="#">Охладители (чиллеры) лабораторные и&nbsp;холодовые ловушки Cool Trap</a></li>
+                                                <li><a href="#">Системы очистки воды</a></li>
+                                                <li><a href="#">Бани лабораторные</a></li>
+                                                <li><a href="#">Машины посудомоечные лабораторные</a></li>
+                                                <li><a href="#">Плиты нагревательные лабораторные</a></li>
+                                                <li><a href="#">Мешалки и шейкеры лабораторные</a></li>
+                                                <li><a href="#">Абсорбциометры</a></li>
+                                                <li><a href="#">Насосы и компрессоры</a></li>
+                                                <li><a href="#">Дополнительное оборудование и&nbsp;принадлежности</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="#">Поддержка</a></li>
+                            <li><a href="#">Документы и инструкции</a></li>
+                            <li class="active">
+                                <a href="#">Партнерам<svg><use xlink:href="images/sprite.svg#nav-arrow"></use></svg></a>
+                                <ul>
+                                    <li class="active"><a href="#">Партнерская программа</a></li>
+                                    <li><a href="#">Стать партнером</a></li>
+                                    <li><a href="#">Партнерская сеть</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                        <div class="nav-contacts">
+                            <div class="nav-contacts-item">
+                                <svg><use xlink:href="images/sprite.svg#main-contacts-icon-address"></use></svg>
+                                <div class="nav-contacts-item-title">Москва</div>
+                                <div class="nav-contacts-item-text">Павелецкая наб., д. 2, стр. 3, оф. 119 БЦ «Loft Ville»</div>
+                            </div>
+
+                            <div class="nav-contacts-item">
+                                <svg><use xlink:href="images/sprite.svg#main-contacts-icon-phone"></use></svg>
+                                <div class="nav-contacts-item-title"><a href="tel:+74957406871">+7 495 740-68-71</a></div>
+                                <div class="nav-contacts-item-title"><a href="tel:+74957409196">+7 495 740-91-96</a></div>
+                                <div class="nav-contacts-item-text">08:00–18:00 пн-чт, 08:00–17:00 пт</div>
+                            </div>
+
+                            <div class="nav-contacts-item">
+                                <svg><use xlink:href="images/sprite.svg#main-contacts-icon-address"></use></svg>
+                                <div class="nav-contacts-item-title"><a href="mailto:sales@yamatorussia.ru">sales@yamatorussia.ru</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- container -->
+            <div class="container">
+
+                <div class="breadcrumbs"><a href="#">Yamato</a> &nbsp;/&nbsp; <span>Партнерская программа</span></div>
+
+                <div class="program-header">
+                    <h1>Стать партнером</h1>
+                    <div class="program-header-text">
+                        <p class="anonce-text">Разрабатывая Партнерскую Программу Yamato, мы заложили в нее наше стремление создать сообщество компаний, работающих в области точного взвешивания в духе высокого профессионализма, глубокого понимания потребностей клиентов, взаимовыгодного сотрудничества и преданности своему делу.</p>
+                        <p>Мы стремимся создать оптимальные условия поддержки Партнеров для обеспечения стабильного роста их бизнеса. Мы уверены, что вместе мы сможем добиться выдающихся успехов, предоставляя нашим клиентам решения их задач с помощью самых современных и уникальных технологий Yamato.</p>
+                    </div>
+                </div>
+
+                <div class="program-contacts">
+                    <div class="program-contacts-info">
+                        <h2>Контакты</h2>
+                        <div class="program-contacts-item">
+                            <div class="program-contacts-item-title">Москва</div>
+                            <div class="program-contacts-item-text">Павелецкая наб., д. 2, стр. 3, оф. 119</div>
+                        </div>
+                        <div class="program-contacts-item">
+                            <div class="program-contacts-item-title"><a href="tel:+74957406871">+7 495 740-68-71</a></div>
+                            <div class="program-contacts-item-text">08:00–18:00 пн–чт, 08:00–17:00 пт</div>
+                        </div>
+                    </div>
+                    <div class="program-contacts-text">Если у вас есть какие-либо вопросы или предложени - или свяжитесь с нами, пожалуйста, или отправьте нам сообщение, <a href="windows/callback.html" class="window-link">воспользовавшись специальной формой</a>.</div>
+                </div>
+
+                <div class="program-prefs">
+                    <h2><span>Выгоды</span> партнерской программы</h2>
+                    <div class="main-prefs-list">
+                        <div class="main-prefs-item">
+                            <div class="main-prefs-item-inner">
+                                <div class="main-prefs-item-icon"><img src="files/program-prefs-1.svg" alt="" /></div>
+                                <div class="main-prefs-item-text">Безупречная репутация бренда Yamato</div>
+                            </div>
+                        </div>
+                        <div class="main-prefs-item">
+                            <div class="main-prefs-item-inner">
+                                <div class="main-prefs-item-icon"><img src="files/program-prefs-2.svg" alt="" /></div>
+                                <div class="main-prefs-item-text">Тренинги по продукту и&nbsp;продажам</div>
+                            </div>
+                        </div>
+                        <div class="main-prefs-item">
+                            <div class="main-prefs-item-inner">
+                                <div class="main-prefs-item-icon"><img src="files/program-prefs-3.svg" alt="" /></div>
+                                <div class="main-prefs-item-text">Отсрочка<br /> платежа</div>
+                            </div>
+                        </div>
+                        <div class="main-prefs-item">
+                            <div class="main-prefs-item-inner">
+                                <div class="main-prefs-item-icon"><img src="files/program-prefs-4.svg" alt="" /></div>
+                                <div class="main-prefs-item-text">Справедливые скидки и&nbsp;поощрения</div>
+                            </div>
+                        </div>
+                        <div class="main-prefs-item">
+                            <div class="main-prefs-item-inner">
+                                <div class="main-prefs-item-icon"><img src="files/program-prefs-5.svg" alt="" /></div>
+                                <div class="main-prefs-item-text">Маркетинговые материалы и&nbsp;поддержка продаж</div>
+                            </div>
+                        </div>
+                        <div class="main-prefs-item">
+                            <div class="main-prefs-item-inner">
+                                <div class="main-prefs-item-icon"><img src="files/program-prefs-6.svg" alt="" /></div>
+                                <div class="main-prefs-item-text">Техническая поддержка продаж Партнера и&nbsp;его&nbsp;клиента</div>
+                            </div>
+                        </div>
+                        <div class="main-prefs-item">
+                            <div class="main-prefs-item-inner">
+                                <div class="main-prefs-item-icon"><img src="files/program-prefs-7.svg" alt="" /></div>
+                                <div class="main-prefs-item-text">Персональный менеджер</div>
+                            </div>
+                        </div>
+                        <div class="main-prefs-item">
+                            <div class="main-prefs-item-inner">
+                                <div class="main-prefs-item-icon"><img src="files/program-prefs-8.svg" alt="" /></div>
+                                <div class="main-prefs-item-text">Участие в Партнерской Конференции</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="partner-prefs">
+                    <h2>Выгоды партнера от <span>работы с Yamato</span></h2>
+                    <div class="partner-prefs-list">
+                        <div class="partner-prefs-item">
+                            <div class="partner-prefs-item-inner">
+                                <div class="partner-prefs-item-number">01</div>
+                                <div class="partner-prefs-item-icon"><svg><use xlink:href="images/sprite.svg#partner-pref-icon"></use></svg></div>
+                                <div class="partner-prefs-item-text"><strong>Создание УТП</strong> (уникальных торговых предложений) для&nbsp;тендеров</div>
+                            </div>
+                        </div>
+                        <div class="partner-prefs-item">
+                            <div class="partner-prefs-item-inner">
+                                <div class="partner-prefs-item-number">02</div>
+                                <div class="partner-prefs-item-icon"><svg><use xlink:href="images/sprite.svg#partner-pref-icon"></use></svg></div>
+                                <div class="partner-prefs-item-text">Возможность предложения моделей, <strong>отсутствующих у конкурентов</strong></div>
+                            </div>
+                        </div>
+                        <div class="partner-prefs-item">
+                            <div class="partner-prefs-item-inner">
+                                <div class="partner-prefs-item-number">03</div>
+                                <div class="partner-prefs-item-icon"><svg><use xlink:href="images/sprite.svg#partner-pref-icon"></use></svg></div>
+                                <div class="partner-prefs-item-text">Возможность резко повысить соотношение <strong>цена/качество</strong> в&nbsp;предложении</div>
+                            </div>
+                        </div>
+                        <div class="partner-prefs-item">
+                            <div class="partner-prefs-item-inner">
+                                <div class="partner-prefs-item-number">04</div>
+                                <div class="partner-prefs-item-icon"><svg><use xlink:href="images/sprite.svg#partner-pref-icon"></use></svg></div>
+                                <div class="partner-prefs-item-text">Возможность<br /> <strong>большего заработка</strong></div>
+                            </div>
+                        </div>
+                        <div class="partner-prefs-item">
+                            <div class="partner-prefs-item-inner">
+                                <div class="partner-prefs-item-number">05</div>
+                                <div class="partner-prefs-item-icon"><svg><use xlink:href="images/sprite.svg#partner-pref-icon"></use></svg></div>
+                                <div class="partner-prefs-item-text">Гарантированные повторные продажи из-за высокого уровня <strong>удовлетворенности клиента продуктом</strong></div>
+                            </div>
+                        </div>
+                        <div class="partner-prefs-item">
+                            <div class="partner-prefs-item-inner">
+                                <div class="partner-prefs-item-number">06</div>
+                                <div class="partner-prefs-item-icon"><svg><use xlink:href="images/sprite.svg#partner-pref-icon"></use></svg></div>
+                                <div class="partner-prefs-item-text"><strong>Уменьшение расходов</strong> вследствие ничтожно малого количества гарантийных случаев</div>
+                            </div>
+                        </div>
+                        <div class="partner-prefs-item">
+                            <div class="partner-prefs-item-inner">
+                                <div class="partner-prefs-item-number">07</div>
+                                <div class="partner-prefs-item-icon"><svg><use xlink:href="images/sprite.svg#partner-pref-icon"></use></svg></div>
+                                <div class="partner-prefs-item-text">Уверенность в&nbsp;представлении надежного <strong>престижного бренда</strong></div>
+                            </div>
+                        </div>
+                        <div class="partner-prefs-item">
+                            <div class="partner-prefs-item-inner">
+                                <div class="partner-prefs-item-number">08</div>
+                                <div class="partner-prefs-item-icon"><svg><use xlink:href="images/sprite.svg#partner-pref-icon"></use></svg></div>
+                                <div class="partner-prefs-item-text">Легкость отстройки <strong>от&nbsp;конкурентов</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="levels-header">
+                    <h2>Уровни партнерства <span>Yamato</span></h2>
+                    <div class="levels-header-text">Каждому уровню партнерства соответствует определенный набор преимуществ – инструментов, скидок, а также поддержки в продажах, маркетинге и сервисе. Они разработаны для помощи в увеличении Ваших продаж, роста бизнеса и дальнейшего развития партнерства с Yamato. С ростом Вашей приверженности к бренду ViBRA Вы сможете повышать Ваш уровень партнерства и получать дополнительные преимущества.</div>
+                </div>
+                <div class="levels-list">
+                    <div class="levels-list-inner">
+                        <div class="levels-item levels-item-1">
+                            <svg><use xlink:href="images/sprite.svg#level-icon"></use></svg>
+                            <div class="levels-item-title">Авторизованный<br /> партнер</div>
+                            <div class="levels-item-text">Стартовый уровень партнерства для компаний, начинающих работать на рынке, либо начинающих работать с брендом Yamato. Авторизованный Партнер получает базовую скидку и необходимую поддержку для выхода на стабильные объемы закупок.</div>
+                        </div>
+                        <div class="levels-item levels-item-2">
+                            <svg><use xlink:href="images/sprite.svg#level-icon"></use></svg>
+                            <div class="levels-item-title">Серебряный<br /> партнер</div>
+                            <div class="levels-item-text">Компании со стабильным объемом закупок, проявляющие высокую лояльность к бренду, имеющие активную позицию на рынке и стремление к постоянному росту. Серебряные Партнеры получают интенсивную поддержку от Yamato для роста и перехода на следующий уровень.</div>
+                        </div>
+                        <div class="levels-item levels-item-3">
+                            <svg><use xlink:href="images/sprite.svg#level-icon"></use></svg>
+                            <div class="levels-item-title">Золотой<br /> партнер</div>
+                            <div class="levels-item-text">Компании-лидеры рынка с высокими объемами закупок, высокой лояльностью к бренду и глубоким знанием продукта, демонстрирующие профессиональную работу и активное продвижение бренда Yamato. Золотой Партнер получает максимальный уровень скидки и поддержки продаж, работая в тесной кооперации с Yamato.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="levels-link">
+                    <div class="levels-link-inner"><a href="#" class="btn">Стать партнером</a></div>
+                </div>
+
+            </div>
+            <!-- container END -->
+
+            <footer>
+                <div class="container">
+                    <div class="footer-nav">
+                        <div class="footer-catalogue">
+                            <div class="footer-catalogue-title"><a href="#">Каталог</a></div>
+                            <div class="footer-catalogue-menu">
+                                <ul>
+                                    <li><a href="#">Сушильные шкафы</a></li>
+                                    <li><a href="#">Муфельные печи</a></li>
+                                    <li><a href="#">Инкубаторы</a></li>
+                                    <li><a href="#">Промышленное оборудование по&nbsp;индивидуальному заказу</a></li>
+                                    <li><a href="#">Ротационные испарители</a></li>
+                                    <li><a href="#">Стерилизаторы и автоклавы</a></li>
+                                    <li><a href="#">Распылительные сушилки</a></li>
+                                    <li><a href="#">Лиофильные (сублимационные) сушилки</a></li>
+                                    <li><a href="#">Охладители (чиллеры) лабораторные и&nbsp;холодовые ловушки Cool Trap</a></li>
+                                    <li><a href="#">Системы очистки воды</a></li>
+                                    <li><a href="#">Бани лабораторные</a></li>
+                                    <li><a href="#">Машины посудомоечные лабораторные</a></li>
+                                    <li><a href="#">Плиты нагревательные лабораторные</a></li>
+                                    <li><a href="#">Мешалки и шейкеры лабораторные</a></li>
+                                    <li><a href="#">Абсорбциометры</a></li>
+                                    <li><a href="#">Насосы и компрессоры</a></li>
+                                    <li><a href="#">Дополнительное оборудование и&nbsp;принадлежности</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="#">Поддержка</a></li>
+                                <li><a href="#">Документы и инструкции</a></li>
+                                <li><a href="#">Партнерам</a></li>
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">Контакты</a></li>
+                                <li><a href="#">О компании</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer-container">
+                        <div class="footer-logo">
+                            <div class="footer-logo-img"></div>
+                            <div class="footer-logo-title">
+                                <div class="footer-logo-title-text-1">Лабораторное научное оборудование</div>
+                                <div class="footer-logo-title-text-2">Yamato Scientific Co., Ltd.</div>
+                            </div>
+                        </div>
+
+                        <div class="footer-social">
+                            <a href="#" target="_blank" class="footer-social-fb"><svg><use xlink:href="images/sprite.svg#icon-fb"></use></svg></a>
+                            <a href="#" target="_blank" class="footer-social-twitter"><svg><use xlink:href="images/sprite.svg#icon-twitter"></use></svg></a>
+                            <a href="#" target="_blank" class="footer-social-vk"><svg><use xlink:href="images/sprite.svg#icon-vk-square"></use></svg></a>
+                        </div>
+
+                        <div class="footer-contacts">
+                            <div class="footer-contacts-title"><a href="tel:+74957406871">+7 495 740-68-71</a></div>
+                            <div class="footer-contacts-text">08:00–18:00 пн-чт, 08:00–17:00 пт</div>
+                        </div>
+
+                        <div class="footer-contacts">
+                            <div class="header-contacts-title">Москва</div>
+                            <div class="footer-contacts-text">Павелецкая наб., д. 2, стр. 3, оф. 119</div>
+                        </div>
+                    </div>
+
+                    <div class="footer-bottom">
+                        <div class="footer-links">
+                            <div class="footer-link"><a href="#">Карта сайта</a></div>
+                            <div class="footer-link"><a href="#">Пользовательское соглашение</a></div>
+                            <div class="footer-link"><a href="#">Политику конфиденциальности”</a></div>
+                        </div>
+                        <div class="footer-copyrights">Copyright © Yamato Scientific co., ltd. All rights reserved.</div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+        <!-- wrapper END -->
+
+        <a href="#" class="up-link"><svg><use xlink:href="images/sprite.svg#up-link"></use></svg></a>
+
+        <script>
+            var pathTemplate = './';
+        </script>
+        <script src="js/fonts.js"></script>
+
+        <script src="js/svg4everybody.min.js"></script>
+        <script>svg4everybody();</script>
+
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/slick/slick.min.js"></script>
+        <script src="js/jquery.mask.min.js"></script>
+        <script src="js/validation/jquery.validate.min.js"></script>
+        <script src="js/validation/messages_ru.js"></script>
+        <script src="js/select2/select2.min.js"></script>
+        <script src="js/select2/ru.js"></script>
+        <script src="js/air-datepicker/datepicker.min.js"></script>
+        <script src="js/tools.js"></script>
+
+    </body>
+</html>

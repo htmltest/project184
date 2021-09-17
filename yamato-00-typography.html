@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title>Yamato</title>
+
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="js/slick/slick.css" />
+        <link rel="stylesheet" href="js/select2/select2.css" />
+        <link rel="stylesheet" href="js/air-datepicker/datepicker.css" />
+
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width" />
+    </head>
+
+    <body>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+
+            <header>
+                <div class="header-container">
+                    <div class="container">
+                        <div class="logo">
+                            <a href="#">
+                                <div class="logo-img"></div>
+                                <div class="logo-title">
+                                    <div class="logo-title-text-1">Лабораторное научное оборудование</div>
+                                    <div class="logo-title-text-2">Yamato Scientific Co., Ltd.</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <a href="#" class="mobile-menu-link"><svg><use xlink:href="images/sprite.svg#mobile-menu-link"></use></svg><svg><use xlink:href="images/sprite.svg#mobile-menu-close"></use></svg></a>
+
+                        <div class="header-search">
+                            <a href="#" class="header-search-link"><svg><use xlink:href="images/sprite.svg#header-search"></use></svg></a>
+                        </div>
+
+                        <div class="header-callback">
+                            <a href="windows/callback.html" class="window-link">Обратный звонок</a>
+                        </div>
+
+                        <div class="header-contacts">
+                            <div class="header-contacts-title"><a href="tel:+74957406871">+7 495 740-68-71</a></div>
+                            <div class="header-contacts-text">08:00–18:00 пн-чт, 08:00–17:00 пт</div>
+                        </div>
+
+                        <div class="header-contacts">
+                            <div class="header-contacts-title">Москва</div>
+                            <div class="header-contacts-text">Павелецкая наб., д. 2, стр. 3, оф. 119</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav">
+                    <div class="container">
+                        <ul>
+                            <li><a href="#">О компании</a></li>
+                            <li class="nav-catalogue">
+                                <a href="#">Каталог<svg><use xlink:href="images/sprite.svg#nav-arrow"></use></svg></a>
+                                <div class="nav-catalogue-sub">
+                                    <div class="nav-catalogue-sub-inner">
+                                        <div class="container">
+                                            <ul>
+                                                <li><a href="#">Сушильные шкафы</a></li>
+                                                <li><a href="#">Муфельные печи</a></li>
+                                                <li><a href="#">Инкубаторы</a></li>
+                                                <li><a href="#">Промышленное оборудование по&nbsp;индивидуальному заказу</a></li>
+                                                <li><a href="#">Ротационные испарители</a></li>
+                                                <li><a href="#">Стерилизаторы и автоклавы</a></li>
+                                                <li><a href="#">Распылительные сушилки</a></li>
+                                                <li><a href="#">Лиофильные (сублимационные) сушилки</a></li>
+                                                <li><a href="#">Охладители (чиллеры) лабораторные и&nbsp;холодовые ловушки Cool Trap</a></li>
+                                                <li><a href="#">Системы очистки воды</a></li>
+                                                <li><a href="#">Бани лабораторные</a></li>
+                                                <li><a href="#">Машины посудомоечные лабораторные</a></li>
+                                                <li><a href="#">Плиты нагревательные лабораторные</a></li>
+                                                <li><a href="#">Мешалки и шейкеры лабораторные</a></li>
+                                                <li><a href="#">Абсорбциометры</a></li>
+                                                <li><a href="#">Насосы и компрессоры</a></li>
+                                                <li><a href="#">Дополнительное оборудование и&nbsp;принадлежности</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="#">Поддержка</a></li>
+                            <li class="active"><a href="#">Документы и инструкции</a></li>
+                            <li>
+                                <a href="#">Партнерам<svg><use xlink:href="images/sprite.svg#nav-arrow"></use></svg></a>
+                                <ul>
+                                    <li><a href="#">Партнерская программа</a></li>
+                                    <li><a href="#">Стать партнером</a></li>
+                                    <li><a href="#">Партнерская сеть</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                        <div class="nav-contacts">
+                            <div class="nav-contacts-item">
+                                <svg><use xlink:href="images/sprite.svg#main-contacts-icon-address"></use></svg>
+                                <div class="nav-contacts-item-title">Москва</div>
+                                <div class="nav-contacts-item-text">Павелецкая наб., д. 2, стр. 3, оф. 119 БЦ «Loft Ville»</div>
+                            </div>
+
+                            <div class="nav-contacts-item">
+                                <svg><use xlink:href="images/sprite.svg#main-contacts-icon-phone"></use></svg>
+                                <div class="nav-contacts-item-title"><a href="tel:+74957406871">+7 495 740-68-71</a></div>
+                                <div class="nav-contacts-item-title"><a href="tel:+74957409196">+7 495 740-91-96</a></div>
+                                <div class="nav-contacts-item-text">08:00–18:00 пн-чт, 08:00–17:00 пт</div>
+                            </div>
+
+                            <div class="nav-contacts-item">
+                                <svg><use xlink:href="images/sprite.svg#main-contacts-icon-address"></use></svg>
+                                <div class="nav-contacts-item-title"><a href="mailto:sales@yamatorussia.ru">sales@yamatorussia.ru</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- container -->
+            <div class="container">
+
+                <h1>h1 В рамках концепции Акоффа и Стэка, спонсорство синхронизирует имидж.</h1>
+                <p>Рекламный блок версифицирован. Управление брендом, безусловно, разнородно специфицирует бюджет на размещение. Целевой трафик изменяет социометрический рекламный блок. <a href="#">Рыночная ситуация</a> тормозит диктат потребителя. Мониторинг активности, на первый взгляд, спонтанно переворачивает социальный статус, отвоевывая рыночный сегмент.</p>
+                <h2>h2 В рамках концепции Акоффа и Стэка, спонсорство синхронизирует имидж.</h2>
+                <p>Рекламный блок версифицирован. Управление брендом, безусловно, разнородно специфицирует бюджет на размещение. Целевой трафик изменяет социометрический рекламный блок. <a href="#">Рыночная ситуация</a> тормозит диктат потребителя. Мониторинг активности, на первый взгляд, спонтанно переворачивает социальный статус, отвоевывая рыночный сегмент.</p>
+                <h3>h3 В рамках концепции Акоффа и Стэка, спонсорство синхронизирует имидж.</h3>
+                <p>Рекламный блок версифицирован. Управление брендом, безусловно, разнородно специфицирует бюджет на размещение. Целевой трафик изменяет социометрический рекламный блок. <a href="#">Рыночная ситуация</a> тормозит диктат потребителя. Мониторинг активности, на первый взгляд, спонтанно переворачивает социальный статус, отвоевывая рыночный сегмент.</p>
+                <h4>h4 В рамках концепции Акоффа и Стэка, спонсорство синхронизирует имидж.</h4>
+                <p>Рекламный блок версифицирован. Управление брендом, безусловно, разнородно специфицирует бюджет на размещение. Целевой трафик изменяет социометрический рекламный блок. Рыночная ситуация тормозит диктат потребителя. Мониторинг активности, на первый взгляд, спонтанно переворачивает социальный статус, отвоевывая рыночный сегмент.</p>
+                <p class="anonce-text">Рекламный блок версифицирован. Управление брендом, безусловно, разнородно специфицирует бюджет на размещение. Целевой трафик изменяет социометрический рекламный блок. Рыночная ситуация тормозит диктат потребителя. Мониторинг активности, на первый взгляд, спонтанно переворачивает социальный статус, отвоевывая рыночный сегмент.</p>
+                <blockquote>Рекламный блок версифицирован. Управление брендом, безусловно, разнородно специфицирует бюджет на размещение. Целевой трафик изменяет социометрический рекламный блок. Рыночная ситуация тормозит диктат потребителя. Мониторинг активности, на первый взгляд, спонтанно переворачивает социальный статус, отвоевывая рыночный сегмент.<div class="blockquote-author">Иван Иванов</div></blockquote>
+
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <div class="gallery-item-photo"><img src="files/typography-gallery-1.jpg" alt="" /></div>
+                        <div class="gallery-item-title">Проект реализуется с июня 2016 года, с каждым выпуском увеличивая число участников, диапазон предложений и географию. </div>
+                    </div>
+                </div>
+                <p>Рекламный блок версифицирован. Управление брендом, безусловно, разнородно специфицирует бюджет на размещение. Целевой трафик изменяет социометрический рекламный блок. Рыночная ситуация тормозит диктат потребителя. Мониторинг активности, на первый взгляд, спонтанно переворачивает социальный статус, отвоевывая рыночный сегмент.</p>
+
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <div class="gallery-item-photo"><img src="files/typography-gallery-1.jpg" alt="" /></div>
+                        <div class="gallery-item-title">Проект реализуется с июня 2016 года, с каждым выпуском увеличивая число участников, диапазон предложений и географию.</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-item-photo"><img src="files/typography-gallery-1.jpg" alt="" /></div>
+                        <div class="gallery-item-title">Рекламный блок версифицирован. Управление брендом, безусловно, разнородно специфицирует бюджет на размещение. Целевой трафик изменяет социометрический рекламный блок. Рыночная ситуация тормозит диктат потребителя. Мониторинг активности, на первый взгляд, спонтанно переворачивает социальный статус, отвоевывая рыночный сегмент.</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-item-photo"><img src="files/typography-gallery-1.jpg" alt="" /></div>
+                        <div class="gallery-item-title">Проект реализуется с июня 2016 года, с каждым выпуском увеличивая число участников, диапазон предложений и географию.</div>
+                    </div>
+                </div>
+                <p>Рекламный блок версифицирован. Управление брендом, безусловно, разнородно специфицирует бюджет на размещение. Целевой трафик изменяет социометрический рекламный блок. Рыночная ситуация тормозит диктат потребителя. Мониторинг активности, на первый взгляд, спонтанно переворачивает социальный статус, отвоевывая рыночный сегмент.</p>
+
+                <ol>
+                    <li>Выключатели</li>
+                    <li>Термостаты</li>
+                    <li>Розетки</li>
+                    <li>
+                        Внешний вид документов о соответствии довольно часто интересует компании, которые выставляют наличие сертификата ГОСТ ISO 9001-2011 в качестве условия заключения контрактов с новыми поставщиками. На этот счет в известном журнале «Quality Digest» опубликована специальная статья Мириам Будро, президента консалтинговой компании «Mireaux Management Solutions».
+                        <ol>
+                            <li>Выключатели</li>
+                            <li>Термостаты</li>
+                            <li>Розетки</li>
+                        </ol>
+                    </li>
+                    <li>Выключатели</li>
+                    <li>Термостаты</li>
+                    <li>Внешний вид документов о соответствии довольно часто интересует компании, которые выставляют наличие сертификата ГОСТ ISO 9001-2011 в качестве условия заключения контрактов с новыми поставщиками. На этот счет в известном журнале «Quality Digest» опубликована специальная статья Мириам Будро, президента консалтинговой компании «Mireaux Management Solutions».</li>
+                    <li>Внешний вид документов о соответствии довольно часто интересует компании, которые выставляют наличие сертификата ГОСТ ISO 9001-2011 в качестве условия заключения контрактов с новыми поставщиками. На этот счет в известном журнале «Quality Digest» опубликована специальная статья Мириам Будро, президента консалтинговой компании «Mireaux Management Solutions».</li>
+                </ol>
+
+                <p>Рекламный блок версифицирован. Управление брендом, безусловно, разнородно специфицирует бюджет на размещение. Целевой трафик изменяет социометрический рекламный блок. Рыночная ситуация тормозит диктат потребителя. Мониторинг активности, на первый взгляд, спонтанно переворачивает социальный статус, отвоевывая рыночный сегмент.</p>
+
+                <ul>
+                    <li>Выключатели</li>
+                    <li>Термостаты</li>
+                    <li>Розетки</li>
+                    <li>
+                        Внешний вид документов о соответствии довольно часто интересует компании, которые выставляют наличие сертификата ГОСТ ISO 9001-2011 в качестве условия заключения контрактов с новыми поставщиками. На этот счет в известном журнале «Quality Digest» опубликована специальная статья Мириам Будро, президента консалтинговой компании «Mireaux Management Solutions».
+                        <ul>
+                            <li>Выключатели</li>
+                            <li>Термостаты</li>
+                            <li>Розетки</li>
+                        </ul>
+                    </li>
+                    <li>Выключатели</li>
+                    <li>Термостаты</li>
+                    <li>Внешний вид документов о соответствии довольно часто интересует компании, которые выставляют наличие сертификата ГОСТ ISO 9001-2011 в качестве условия заключения контрактов с новыми поставщиками. На этот счет в известном журнале «Quality Digest» опубликована специальная статья Мириам Будро, президента консалтинговой компании «Mireaux Management Solutions».</li>
+                    <li>Внешний вид документов о соответствии довольно часто интересует компании, которые выставляют наличие сертификата ГОСТ ISO 9001-2011 в качестве условия заключения контрактов с новыми поставщиками. На этот счет в известном журнале «Quality Digest» опубликована специальная статья Мириам Будро, президента консалтинговой компании «Mireaux Management Solutions».</li>
+                </ul>
+
+                <p>Рекламный блок версифицирован. Управление брендом, безусловно, разнородно специфицирует бюджет на размещение. Целевой трафик изменяет социометрический рекламный блок. Рыночная ситуация тормозит диктат потребителя. Мониторинг активности, на первый взгляд, спонтанно переворачивает социальный статус, отвоевывая рыночный сегмент.</p>
+
+                <div class="table-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="text-align:left; width:40%">Название</th>
+                                <th style="width:20%">Значение&nbsp;1</th>
+                                <th style="width:20%">Значение&nbsp;2</th>
+                                <th style="width:20%">Значение&nbsp;3</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Внешний вид документов о соответствии довольно часто интересует компании, которые выставляют наличие сертификата ГОСТ ISO 9001-2011 в качестве условия</td>
+                                <td style="text-align:center"><strong>1 223</strong></td>
+                                <td style="text-align:center"><strong>4 213</strong></td>
+                                <td style="text-align:center"><strong>4 213</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Документов о соответствии довольно часто интересует компании, которые выставляют наличие сертификата ГОСТ ISO 9001-2011 в качестве условия</td>
+                                <td style="text-align:center"><strong>8 991</strong></td>
+                                <td style="text-align:center"><strong>90</strong></td>
+                                <td style="text-align:center"><strong>4 213</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Внешний вид документов о соответствии довольно</td>
+                                <td style="text-align:center"><strong>1 223</strong></td>
+                                <td style="text-align:center"><strong>4 213</strong></td>
+                                <td style="text-align:center"><strong>4 111</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Наличие сертификата ГОСТ ISO 9001-2011 в качестве условия</td>
+                                <td style="text-align:center"><strong>44</strong></td>
+                                <td style="text-align:center"><strong>4 213</strong></td>
+                                <td style="text-align:center"><strong>4 213</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Компании, которые выставляют наличие сертификата ГОСТ ISO 9001-2011 в качестве условия</td>
+                                <td style="text-align:center"><strong>1 223</strong></td>
+                                <td style="text-align:center"><strong>4 213</strong></td>
+                                <td style="text-align:center"><strong>4 213</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Cоответствии довольно часто интересует компании, которые выставляют наличие сертификата ГОСТ ISO 9001-2011 в качестве условия</td>
+                                <td style="text-align:center"><strong>1 223</strong></td>
+                                <td style="text-align:center"><strong>4 213</strong></td>
+                                <td style="text-align:center"><strong>4 213</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>Рекламный блок версифицирован. Управление брендом, безусловно, разнородно специфицирует бюджет на размещение. Целевой трафик изменяет социометрический рекламный блок. Рыночная ситуация тормозит диктат потребителя. Мониторинг активности, на первый взгляд, спонтанно переворачивает социальный статус, отвоевывая рыночный сегмент.</p>
+
+                <div class="table-scroll">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td style="width:40%">Внешний вид документов о соответствии довольно часто интересует компании, которые выставляют наличие сертификата ГОСТ ISO 9001-2011 в качестве условия</td>
+                                <td style="width:20%; text-align:center"><strong>1 223</strong></td>
+                                <td style="width:20%; text-align:center"><strong>4 213</strong></td>
+                                <td style="width:20%; text-align:center"><strong>4 213</strong></td>
+                            </tr>
+                            <tr>
+                                <td style="width:40%">Документов о соответствии довольно часто интересует компании, которые выставляют наличие сертификата ГОСТ ISO 9001-2011 в качестве условия</td>
+                                <td style="width:20%; text-align:center"><strong>8 991</strong></td>
+                                <td style="width:20%; text-align:center"><strong>90</strong></td>
+                                <td style="width:20%; text-align:center"><strong>4 213</strong></td>
+                            </tr>
+                            <tr>
+                                <td style="width:40%">Внешний вид документов о соответствии довольно</td>
+                                <td style="width:20%; text-align:center"><strong>1 223</strong></td>
+                                <td style="width:20%; text-align:center"><strong>4 213</strong></td>
+                                <td style="width:20%; text-align:center"><strong>4 111</strong></td>
+                            </tr>
+                            <tr>
+                                <td style="width:40%">Наличие сертификата ГОСТ ISO 9001-2011 в качестве условия</td>
+                                <td style="width:20%; text-align:center"><strong>44</strong></td>
+                                <td style="width:20%; text-align:center"><strong>4 213</strong></td>
+                                <td style="width:20%; text-align:center"><strong>4 213</strong></td>
+                            </tr>
+                            <tr>
+                                <td style="width:40%">Компании, которые выставляют наличие сертификата ГОСТ ISO 9001-2011 в качестве условия</td>
+                                <td style="width:20%; text-align:center"><strong>1 223</strong></td>
+                                <td style="width:20%; text-align:center"><strong>4 213</strong></td>
+                                <td style="width:20%; text-align:center"><strong>4 213</strong></td>
+                            </tr>
+                            <tr>
+                                <td style="width:40%">Cоответствии довольно часто интересует компании, которые выставляют наличие сертификата ГОСТ ISO 9001-2011 в качестве условия</td>
+                                <td style="width:20%; text-align:center"><strong>1 223</strong></td>
+                                <td style="width:20%; text-align:center"><strong>4 213</strong></td>
+                                <td style="width:20%; text-align:center"><strong>4 213</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>Рекламный блок версифицирован. Управление брендом, безусловно, разнородно специфицирует бюджет на размещение. Целевой трафик изменяет социометрический рекламный блок. Рыночная ситуация тормозит диктат потребителя. Мониторинг активности, на первый взгляд, спонтанно переворачивает социальный статус, отвоевывая рыночный сегмент.</p>
+
+                <h4>Файлы для скачивания</h4>
+                <div class="file-link">
+                    <a href="#">
+                        <div class="file-link-icon"><svg><use xlink:href="images/sprite.svg#file-icon"></use></svg>pdf</div>
+                        <div class="file-link-title">Пресс-релиз PDF</div>
+                        <div class="file-link-info">№ 1233-00 &nbsp;<span>|</span>&nbsp; 15 апреля 2020 &nbsp;<span>|</span>&nbsp; 2.4 Мб</div>
+                    </a>
+                </div>
+                <div class="file-link">
+                    <a href="#">
+                        <div class="file-link-icon"><svg><use xlink:href="images/sprite.svg#file-icon"></use></svg>xls</div>
+                        <div class="file-link-title">Пресс-релиз PDF</div>
+                        <div class="file-link-info">№ 1233-00 &nbsp;<span>|</span>&nbsp; 15 апреля 2020 &nbsp;<span>|</span>&nbsp; 2.4 Мб</div>
+                    </a>
+                </div>
+                <div class="file-link">
+                    <a href="#">
+                        <div class="file-link-icon"><svg><use xlink:href="images/sprite.svg#file-icon"></use></svg>doc</div>
+                        <div class="file-link-title">Пресс-релиз PDF</div>
+                        <div class="file-link-info">№ 1233-00 &nbsp;<span>|</span>&nbsp; 15 апреля 2020 &nbsp;<span>|</span>&nbsp; 2.4 Мб</div>
+                    </a>
+                </div>
+                <div class="file-link">
+                    <a href="#">
+                        <div class="file-link-icon"><svg><use xlink:href="images/sprite.svg#file-icon"></use></svg>ppt</div>
+                        <div class="file-link-title">Пресс-релиз PDF</div>
+                        <div class="file-link-info">№ 1233-00 &nbsp;<span>|</span>&nbsp; 15 апреля 2020 &nbsp;<span>|</span>&nbsp; 2.4 Мб</div>
+                    </a>
+                </div>
+                <div class="file-link">
+                    <a href="#">
+                        <div class="file-link-icon"><svg><use xlink:href="images/sprite.svg#file-icon"></use></svg>img</div>
+                        <div class="file-link-title">Пресс-релиз PDF</div>
+                        <div class="file-link-info">№ 1233-00 &nbsp;<span>|</span>&nbsp; 15 апреля 2020 &nbsp;<span>|</span>&nbsp; 2.4 Мб</div>
+                    </a>
+                </div>
+
+                <p>Рекламный блок версифицирован. Управление брендом, безусловно, разнородно специфицирует бюджет на размещение. Целевой трафик изменяет социометрический рекламный блок. Рыночная ситуация тормозит диктат потребителя. Мониторинг активности, на первый взгляд, спонтанно переворачивает социальный статус, отвоевывая рыночный сегмент.</p>
+
+                <h4>Форма</h4>
+
+                <form action="#" method="post" style="max-width:674px">
+                    <p>Рекламный блок версифицирован. Управление брендом, безусловно, разнородно специфицирует бюджет на размещение. Целевой трафик изменяет социометрический рекламный блок. Рыночная ситуация тормозит диктат потребителя. Мониторинг активности, на первый взгляд, спонтанно переворачивает социальный статус, отвоевывая рыночный сегмент.</p>
+
+                    <div class="message message-success">
+                        <div class="message-title">Отправлено</div>
+                        <div class="message-text">
+                            <p>Рекламный блок версифицирован. Управление брендом, безусловно, разнородно специфицирует бюджет на размещение. Целевой трафик изменяет социометрический рекламный блок. Рыночная ситуация тормозит диктат потребителя.</p>
+                        </div>
+                    </div>
+
+                    <div class="message message-error">
+                        <div class="message-title">Ошибка</div>
+                        <div class="message-text">
+                            Рекламный блок версифицирован. Управление брендом, безусловно, разнородно специфицирует бюджет на размещение. Целевой трафик изменяет социометрический рекламный блок. Рыночная ситуация тормозит диктат потребителя.
+                        </div>
+                    </div>
+
+                    <div class="form-input"><span>Фамилия</span><input type="text" name="lastname" value="" class="required" /></div>
+
+                    <div class="form-input"><span>Номер телефона</span><input type="text" name="phone" value="+7 (999) 129-94-11" class="required phoneRU" /></div>
+
+                    <div class="form-input form-input-date"><span>Дата</span><input type="text" name="date" value="" /></div>
+
+                    <div class="form-input"><span>Фамилия</span><input type="text" name="lastname2" value="" disabled="disabled" /></div>
+
+                    <div class="form-select">
+                        <select name="city1" data-placeholder="Город" class="required">
+                            <option value=""></option>
+                            <option value="1">Москва</option>
+                            <option value="2">Санкт-Петербург</option>
+                            <option value="3">Новосибирск</option>
+                            <option value="4">Самара</option>
+                            <option value="5">Омск</option>
+                            <option value="6">Краснодар</option>
+                        </select>
+                    </div>
+
+                    <div class="form-select">
+                        <select name="city2" data-placeholder="Город" multiple="multiple">
+                            <option value=""></option>
+                            <option value="1">Москва</option>
+                            <option value="2">Санкт-Петербург</option>
+                            <option value="3">Новосибирск</option>
+                            <option value="4">Самара</option>
+                            <option value="5">Омск</option>
+                            <option value="6">Краснодар</option>
+                        </select>
+                    </div>
+
+                    <div class="form-file">
+                        <div class="form-file-input"><input type="file" name="file" class="required" /><span data-placeholder="Загрузка файла">Загрузка файла</span></div>
+                    </div>
+
+                    <div class="form-input form-textarea"><span>Сообщение</span><textarea name="message" cols="5" rows="3">С каждым выпуском увеличивая число участников, диапазон предложений и географию. Так, 8-я выставка-платформа собрала рекордное количество экспонентов — 133 компании из полутора десятка стран. Они принимали заказы на пошив большинства категорий продукции: женской, мужской, детской одежды (включая школьную форму), больших размеров, верхней одежды,</textarea></div>
+
+                    <h4>Запомнить меня на этом компьютере</h4>
+                    <div class="form-checkbox">
+                        <label><input type="checkbox" name="checkbox1" class="required" /><span>Запомнить меня на этом компьютере</span></label>
+                    </div>
+                    <div class="form-checkbox">
+                        <label><input type="checkbox" name="checkbox2" /><span>С каждым выпуском увеличивая число участников, диапазон предложений и географию. Так, 8-я выставка-платформа собрала рекордное количество экспонентов — 133 компании из полутора десятка стран. Они принимали заказы на пошив большинства категорий продукции: женской, мужской, детской одежды (включая школьную форму), больших размеров, верхней одежды,</span></label>
+                    </div>
+                    <div class="form-checkbox">
+                        <label><input type="checkbox" name="checkbox3" checked="checked" /><span>Запомнить меня на этом компьютере</span></label>
+                    </div>
+                    <div class="form-checkbox">
+                        <label><input type="checkbox" name="checkbox4" disabled="disabled" /><span>С каждым выпуском увеличивая число участников, диапазон предложений и географию. Так, 8-я выставка-платформа собрала рекордное количество экспонентов — 133 компании из полутора десятка стран. Они принимали заказы на пошив большинства категорий продукции: женской, мужской, детской одежды (включая школьную форму), больших размеров, верхней одежды,</span></label>
+                    </div>
+
+                    <h4>Запомнить меня на этом компьютере</h4>
+                    <div class="form-radio">
+                        <label><input type="radio" name="radio" value="1" checked="checked" /><span>Запомнить меня на этом компьютере</span></label>
+                    </div>
+                    <div class="form-radio">
+                        <label><input type="radio" name="radio" value="2" /><span>С каждым выпуском увеличивая число участников, диапазон предложений и географию. Так, 8-я выставка-платформа собрала рекордное количество экспонентов — 133 компании из полутора десятка стран. Они принимали заказы на пошив большинства категорий продукции: женской, мужской, детской одежды (включая школьную форму), больших размеров, верхней одежды,</span></label>
+                    </div>
+                    <div class="form-radio">
+                        <label><input type="radio" name="radio" value="3" /><span>Запомнить меня на этом компьютере</span></label>
+                    </div>
+                    <div class="form-radio">
+                        <label><input type="radio" name="radio" value="4" disabled="disabled" /><span>Запомнить меня на этом компьютере</span></label>
+                    </div>
+
+                    <div class="form-checkbox"><label><input type="checkbox" name="policy" checked="checked" class="required" /><span>Согласен с <a href="#">политикой обработки данных</a> <em>*</em></span></label></div>
+
+                    <div class="form-ctrl">
+                        <div class="form-submit"><button type="submit" class="btn">Отправить</button></div>
+                        <div class="form-reset"><button type="reset">Очистить форму</button></div>
+                    </div>
+                </form>
+
+                <div class="pager">
+                    <a href="#" class="pager-prev"><svg><use xlink:href="images/sprite.svg#pager-prev"></use></svg></a>
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <span>...</span>
+                    <a href="#">13</a>
+                    <a href="#">14</a>
+                    <a href="#">15</a>
+                    <a href="#" class="pager-next"><svg><use xlink:href="images/sprite.svg#pager-next"></use></svg></a>
+                </div>
+
+                <p><a href="#" class="btn">Отправить</a></p>
+                <p><a href="#" class="btn btn-big">Стать партнером</a></p>
+                <p><a href="#" class="btn"><img src="images/icon-doc.svg" alt="" />Скачать прайс xls</a></p>
+
+                <p>
+                    <span class="text-with-hint">
+                        <a href="#" class="text-with-hint-link">Подробнее</a>
+                        <span class="text-with-hint-popup">
+                            <span class="text-with-hint-popup-photo"><img src="files/text-with-hint-popup-photo.jpg" alt="" /></span>
+                            <span class="text-with-hint-popup-content">
+                                <span class="text-with-hint-popup-title">h4 В рамках концепции</span>
+                                <span class="text-with-hint-popup-text">Рекламный блок версифицирован. Управление брендом, безусловно, разнородно специфицирует бюджет на размещение. Целевой трафик изменяет социометрический рекламный блок.</span>
+                            </span>
+                            <span class="text-with-hint-popup-links">
+                                <a href="#" class="btn">Отправить</a>
+                            </span>
+                            <a href="#" class="text-with-hint-popup-close"></a>
+                        </span>
+                    </span>
+                </p>
+
+                <p style="text-align:right">
+                    <span class="text-with-hint">
+                        <a href="#" class="text-with-hint-link">Подробнее</a>
+                        <span class="text-with-hint-popup">
+                            <span class="text-with-hint-popup-photo"><img src="files/text-with-hint-popup-photo.jpg" alt="" /></span>
+                            <span class="text-with-hint-popup-content">
+                                <span class="text-with-hint-popup-title">h4 В рамках концепции</span>
+                                <span class="text-with-hint-popup-text">Рекламный блок версифицирован. Управление брендом, безусловно, разнородно специфицирует бюджет на размещение. Целевой трафик изменяет социометрический рекламный блок.</span>
+                            </span>
+                            <span class="text-with-hint-popup-links">
+                                <a href="#" class="btn">Отправить</a>
+                            </span>
+                            <a href="#" class="text-with-hint-popup-close"></a>
+                        </span>
+                    </span>
+                </p>
+
+            </div>
+            <!-- container END -->
+
+            <footer>
+                <div class="container">
+                    <div class="footer-nav">
+                        <div class="footer-catalogue">
+                            <div class="footer-catalogue-title"><a href="#">Каталог</a></div>
+                            <div class="footer-catalogue-menu">
+                                <ul>
+                                    <li><a href="#">Сушильные шкафы</a></li>
+                                    <li><a href="#">Муфельные печи</a></li>
+                                    <li><a href="#">Инкубаторы</a></li>
+                                    <li><a href="#">Промышленное оборудование по&nbsp;индивидуальному заказу</a></li>
+                                    <li><a href="#">Ротационные испарители</a></li>
+                                    <li><a href="#">Стерилизаторы и автоклавы</a></li>
+                                    <li><a href="#">Распылительные сушилки</a></li>
+                                    <li><a href="#">Лиофильные (сублимационные) сушилки</a></li>
+                                    <li><a href="#">Охладители (чиллеры) лабораторные и&nbsp;холодовые ловушки Cool Trap</a></li>
+                                    <li><a href="#">Системы очистки воды</a></li>
+                                    <li><a href="#">Бани лабораторные</a></li>
+                                    <li><a href="#">Машины посудомоечные лабораторные</a></li>
+                                    <li><a href="#">Плиты нагревательные лабораторные</a></li>
+                                    <li><a href="#">Мешалки и шейкеры лабораторные</a></li>
+                                    <li><a href="#">Абсорбциометры</a></li>
+                                    <li><a href="#">Насосы и компрессоры</a></li>
+                                    <li><a href="#">Дополнительное оборудование и&nbsp;принадлежности</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="#">Поддержка</a></li>
+                                <li><a href="#">Документы и инструкции</a></li>
+                                <li><a href="#">Партнерам</a></li>
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">Контакты</a></li>
+                                <li><a href="#">О компании</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer-container">
+                        <div class="footer-logo">
+                            <div class="footer-logo-img"></div>
+                            <div class="footer-logo-title">
+                                <div class="footer-logo-title-text-1">Лабораторное научное оборудование</div>
+                                <div class="footer-logo-title-text-2">Yamato Scientific Co., Ltd.</div>
+                            </div>
+                        </div>
+
+                        <div class="footer-social">
+                            <a href="#" target="_blank" class="footer-social-fb"><svg><use xlink:href="images/sprite.svg#icon-fb"></use></svg></a>
+                            <a href="#" target="_blank" class="footer-social-twitter"><svg><use xlink:href="images/sprite.svg#icon-twitter"></use></svg></a>
+                            <a href="#" target="_blank" class="footer-social-vk"><svg><use xlink:href="images/sprite.svg#icon-vk-square"></use></svg></a>
+                        </div>
+
+                        <div class="footer-contacts">
+                            <div class="footer-contacts-title"><a href="tel:+74957406871">+7 495 740-68-71</a></div>
+                            <div class="footer-contacts-text">08:00–18:00 пн-чт, 08:00–17:00 пт</div>
+                        </div>
+
+                        <div class="footer-contacts">
+                            <div class="header-contacts-title">Москва</div>
+                            <div class="footer-contacts-text">Павелецкая наб., д. 2, стр. 3, оф. 119</div>
+                        </div>
+                    </div>
+
+                    <div class="footer-bottom">
+                        <div class="footer-links">
+                            <div class="footer-link"><a href="#">Карта сайта</a></div>
+                            <div class="footer-link"><a href="#">Пользовательское соглашение</a></div>
+                            <div class="footer-link"><a href="#">Политику конфиденциальности”</a></div>
+                        </div>
+                        <div class="footer-copyrights">Copyright © Yamato Scientific co., ltd. All rights reserved.</div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+        <!-- wrapper END -->
+
+        <a href="#" class="up-link"><svg><use xlink:href="images/sprite.svg#up-link"></use></svg></a>
+
+        <script>
+            var pathTemplate = './';
+        </script>
+        <script src="js/fonts.js"></script>
+
+        <script src="js/svg4everybody.min.js"></script>
+        <script>svg4everybody();</script>
+
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/slick/slick.min.js"></script>
+        <script src="js/jquery.mask.min.js"></script>
+        <script src="js/validation/jquery.validate.min.js"></script>
+        <script src="js/validation/messages_ru.js"></script>
+        <script src="js/select2/select2.min.js"></script>
+        <script src="js/select2/ru.js"></script>
+        <script src="js/air-datepicker/datepicker.min.js"></script>
+        <script src="js/tools.js"></script>
+
+    </body>
+</html>

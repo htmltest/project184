@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title>Yamato</title>
+
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="js/slick/slick.css" />
+        <link rel="stylesheet" href="js/select2/select2.css" />
+        <link rel="stylesheet" href="js/air-datepicker/datepicker.css" />
+
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width" />
+    </head>
+
+    <body>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+
+            <header>
+                <div class="header-container">
+                    <div class="container">
+                        <div class="logo">
+                            <a href="#">
+                                <div class="logo-img"></div>
+                                <div class="logo-title">
+                                    <div class="logo-title-text-1">Лабораторное научное оборудование</div>
+                                    <div class="logo-title-text-2">Yamato Scientific Co., Ltd.</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <a href="#" class="mobile-menu-link"><svg><use xlink:href="images/sprite.svg#mobile-menu-link"></use></svg><svg><use xlink:href="images/sprite.svg#mobile-menu-close"></use></svg></a>
+
+                        <div class="header-search">
+                            <a href="#" class="header-search-link"><svg><use xlink:href="images/sprite.svg#header-search"></use></svg></a>
+                        </div>
+
+                        <div class="header-callback">
+                            <a href="windows/callback.html" class="window-link">Обратный звонок</a>
+                        </div>
+
+                        <div class="header-contacts">
+                            <div class="header-contacts-title"><a href="tel:+74957406871">+7 495 740-68-71</a></div>
+                            <div class="header-contacts-text">08:00–18:00 пн-чт, 08:00–17:00 пт</div>
+                        </div>
+
+                        <div class="header-contacts">
+                            <div class="header-contacts-title">Москва</div>
+                            <div class="header-contacts-text">Павелецкая наб., д. 2, стр. 3, оф. 119</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav">
+                    <div class="container">
+                        <ul>
+                            <li><a href="#">О компании</a></li>
+                            <li class="nav-catalogue">
+                                <a href="#">Каталог<svg><use xlink:href="images/sprite.svg#nav-arrow"></use></svg></a>
+                                <div class="nav-catalogue-sub">
+                                    <div class="nav-catalogue-sub-inner">
+                                        <div class="container">
+                                            <ul>
+                                                <li><a href="#">Сушильные шкафы</a></li>
+                                                <li><a href="#">Муфельные печи</a></li>
+                                                <li><a href="#">Инкубаторы</a></li>
+                                                <li><a href="#">Промышленное оборудование по&nbsp;индивидуальному заказу</a></li>
+                                                <li><a href="#">Ротационные испарители</a></li>
+                                                <li><a href="#">Стерилизаторы и автоклавы</a></li>
+                                                <li><a href="#">Распылительные сушилки</a></li>
+                                                <li><a href="#">Лиофильные (сублимационные) сушилки</a></li>
+                                                <li><a href="#">Охладители (чиллеры) лабораторные и&nbsp;холодовые ловушки Cool Trap</a></li>
+                                                <li><a href="#">Системы очистки воды</a></li>
+                                                <li><a href="#">Бани лабораторные</a></li>
+                                                <li><a href="#">Машины посудомоечные лабораторные</a></li>
+                                                <li><a href="#">Плиты нагревательные лабораторные</a></li>
+                                                <li><a href="#">Мешалки и шейкеры лабораторные</a></li>
+                                                <li><a href="#">Абсорбциометры</a></li>
+                                                <li><a href="#">Насосы и компрессоры</a></li>
+                                                <li><a href="#">Дополнительное оборудование и&nbsp;принадлежности</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="#">Поддержка</a></li>
+                            <li><a href="#">Документы и инструкции</a></li>
+                            <li>
+                                <a href="#">Партнерам<svg><use xlink:href="images/sprite.svg#nav-arrow"></use></svg></a>
+                                <ul>
+                                    <li><a href="#">Партнерская программа</a></li>
+                                    <li><a href="#">Стать партнером</a></li>
+                                    <li><a href="#">Партнерская сеть</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                        <div class="nav-contacts">
+                            <div class="nav-contacts-item">
+                                <svg><use xlink:href="images/sprite.svg#main-contacts-icon-address"></use></svg>
+                                <div class="nav-contacts-item-title">Москва</div>
+                                <div class="nav-contacts-item-text">Павелецкая наб., д. 2, стр. 3, оф. 119 БЦ «Loft Ville»</div>
+                            </div>
+
+                            <div class="nav-contacts-item">
+                                <svg><use xlink:href="images/sprite.svg#main-contacts-icon-phone"></use></svg>
+                                <div class="nav-contacts-item-title"><a href="tel:+74957406871">+7 495 740-68-71</a></div>
+                                <div class="nav-contacts-item-title"><a href="tel:+74957409196">+7 495 740-91-96</a></div>
+                                <div class="nav-contacts-item-text">08:00–18:00 пн-чт, 08:00–17:00 пт</div>
+                            </div>
+
+                            <div class="nav-contacts-item">
+                                <svg><use xlink:href="images/sprite.svg#main-contacts-icon-address"></use></svg>
+                                <div class="nav-contacts-item-title"><a href="mailto:sales@yamatorussia.ru">sales@yamatorussia.ru</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="page-404">
+                <div class="page-404-title">404</div>
+                <div class="page-404-text">Страницы не существует</div>
+                <div class="page-404-link"><a href="#" class="btn">На главную</a></div>
+            </div>
+
+            <!-- main catalogue -->
+            <div class="main-catalogue">
+                <div class="container">
+                    <div class="main-catalogue-list">
+                        <a href="#" class="main-catalogue-item" target="_blank">
+                            <div class="main-catalogue-item-preview"><img src="files/catalogue-01.jpg" alt="" /></div>
+                            <div class="main-catalogue-item-title">
+                                <div class="main-catalogue-item-title-inner">Сушильные шкафы</div>
+                            </div>
+                        </a>
+                        <a href="#" class="main-catalogue-item" target="_blank">
+                            <div class="main-catalogue-item-preview"><img src="files/catalogue-02.jpg" alt="" /></div>
+                            <div class="main-catalogue-item-title">
+                                <div class="main-catalogue-item-title-inner">Муфельные печи</div>
+                            </div>
+                        </a>
+                        <a href="#" class="main-catalogue-item" target="_blank">
+                            <div class="main-catalogue-item-preview"><img src="files/catalogue-03.jpg" alt="" /></div>
+                            <div class="main-catalogue-item-title">
+                                <div class="main-catalogue-item-title-inner">Инкубаторы</div>
+                            </div>
+                        </a>
+                        <a href="#" class="main-catalogue-item" target="_blank">
+                            <div class="main-catalogue-item-preview"><img src="files/catalogue-04.jpg" alt="" /></div>
+                            <div class="main-catalogue-item-title">
+                                <div class="main-catalogue-item-title-inner">Промышленное оборудование по&nbsp;индивидуальному заказу</div>
+                            </div>
+                        </a>
+                        <a href="#" class="main-catalogue-item" target="_blank">
+                            <div class="main-catalogue-item-preview"><img src="files/catalogue-05.jpg" alt="" /></div>
+                            <div class="main-catalogue-item-title">
+                                <div class="main-catalogue-item-title-inner">Ротационные испарители</div>
+                            </div>
+                        </a>
+                        <a href="#" class="main-catalogue-item" target="_blank">
+                            <div class="main-catalogue-item-preview"><img src="files/catalogue-06.jpg" alt="" /></div>
+                            <div class="main-catalogue-item-title">
+                                <div class="main-catalogue-item-title-inner">Стерилизаторы и автоклавы</div>
+                            </div>
+                        </a>
+                        <a href="#" class="main-catalogue-item" target="_blank">
+                            <div class="main-catalogue-item-preview"><img src="files/catalogue-07.jpg" alt="" /></div>
+                            <div class="main-catalogue-item-title">
+                                <div class="main-catalogue-item-title-inner">Распылительные сушилки</div>
+                            </div>
+                        </a>
+                        <a href="#" class="main-catalogue-item" target="_blank">
+                            <div class="main-catalogue-item-preview"><img src="files/catalogue-08.jpg" alt="" /></div>
+                            <div class="main-catalogue-item-title">
+                                <div class="main-catalogue-item-title-inner">Лиофильные (сублимационные) сушилки</div>
+                            </div>
+                        </a>
+                        <a href="#" class="main-catalogue-item" target="_blank">
+                            <div class="main-catalogue-item-preview"><img src="files/catalogue-09.jpg" alt="" /></div>
+                            <div class="main-catalogue-item-title">
+                                <div class="main-catalogue-item-title-inner">Чиллеры и охладители</div>
+                            </div>
+                        </a>
+                        <a href="#" class="main-catalogue-item" target="_blank">
+                            <div class="main-catalogue-item-preview"><img src="files/catalogue-10.jpg" alt="" /></div>
+                            <div class="main-catalogue-item-title">
+                                <div class="main-catalogue-item-title-inner">Оборудование для производства чистой воды</div>
+                            </div>
+                        </a>
+                        <a href="#" class="main-catalogue-item" target="_blank">
+                            <div class="main-catalogue-item-preview"><img src="files/catalogue-11.jpg" alt="" /></div>
+                            <div class="main-catalogue-item-title">
+                                <div class="main-catalogue-item-title-inner">Водяные и масляные бани</div>
+                            </div>
+                        </a>
+                        <a href="#" class="main-catalogue-item" target="_blank">
+                            <div class="main-catalogue-item-preview"><img src="files/catalogue-12.jpg" alt="" /></div>
+                            <div class="main-catalogue-item-title">
+                                <div class="main-catalogue-item-title-inner">Моечные машины</div>
+                            </div>
+                        </a>
+                        <a href="#" class="main-catalogue-item" target="_blank">
+                            <div class="main-catalogue-item-preview"><img src="files/catalogue-13.jpg" alt="" /></div>
+                            <div class="main-catalogue-item-title">
+                                <div class="main-catalogue-item-title-inner">Нагревательные плиты</div>
+                            </div>
+                        </a>
+                        <a href="#" class="main-catalogue-item" target="_blank">
+                            <div class="main-catalogue-item-preview"><img src="files/catalogue-14.jpg" alt="" /></div>
+                            <div class="main-catalogue-item-title">
+                                <div class="main-catalogue-item-title-inner">Мешалки и шейкеры</div>
+                            </div>
+                        </a>
+                        <a href="#" class="main-catalogue-item" target="_blank">
+                            <div class="main-catalogue-item-preview"><img src="files/catalogue-15.jpg" alt="" /></div>
+                            <div class="main-catalogue-item-title">
+                                <div class="main-catalogue-item-title-inner">Абсорбциометры</div>
+                            </div>
+                        </a>
+                        <a href="#" class="main-catalogue-item" target="_blank">
+                            <div class="main-catalogue-item-preview"><img src="files/catalogue-16.jpg" alt="" /></div>
+                            <div class="main-catalogue-item-title">
+                                <div class="main-catalogue-item-title-inner">Насосы и компрессоры</div>
+                            </div>
+                        </a>
+                        <a href="#" class="main-catalogue-item" target="_blank">
+                            <div class="main-catalogue-item-preview"><img src="files/catalogue-17.png" alt="" /></div>
+                            <div class="main-catalogue-item-title">
+                                <div class="main-catalogue-item-title-inner">Дополнительное оборудование и&nbsp;принадлежности</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="main-catalogue-links">
+                        <div class="main-catalogue-link"><a href="#" class="btn" target="_blank"><svg><use xlink:href="images/sprite.svg#main-catalogue-link"></use></svg>Скачать каталог PDF</a></div>
+                        <div class="main-catalogue-link"><a href="#" class="btn" target="_blank"><svg><use xlink:href="images/sprite.svg#main-catalogue-link"></use></svg>Скачать прайс XLS</a></div>
+                    </div>
+                </div>
+            </div>
+            <!-- main catalogue END -->
+
+            <footer>
+                <div class="container">
+                    <div class="footer-nav">
+                        <div class="footer-catalogue">
+                            <div class="footer-catalogue-title"><a href="#">Каталог</a></div>
+                            <div class="footer-catalogue-menu">
+                                <ul>
+                                    <li><a href="#">Сушильные шкафы</a></li>
+                                    <li><a href="#">Муфельные печи</a></li>
+                                    <li><a href="#">Инкубаторы</a></li>
+                                    <li><a href="#">Промышленное оборудование по&nbsp;индивидуальному заказу</a></li>
+                                    <li><a href="#">Ротационные испарители</a></li>
+                                    <li><a href="#">Стерилизаторы и автоклавы</a></li>
+                                    <li><a href="#">Распылительные сушилки</a></li>
+                                    <li><a href="#">Лиофильные (сублимационные) сушилки</a></li>
+                                    <li><a href="#">Охладители (чиллеры) лабораторные и&nbsp;холодовые ловушки Cool Trap</a></li>
+                                    <li><a href="#">Системы очистки воды</a></li>
+                                    <li><a href="#">Бани лабораторные</a></li>
+                                    <li><a href="#">Машины посудомоечные лабораторные</a></li>
+                                    <li><a href="#">Плиты нагревательные лабораторные</a></li>
+                                    <li><a href="#">Мешалки и шейкеры лабораторные</a></li>
+                                    <li><a href="#">Абсорбциометры</a></li>
+                                    <li><a href="#">Насосы и компрессоры</a></li>
+                                    <li><a href="#">Дополнительное оборудование и&nbsp;принадлежности</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="#">Поддержка</a></li>
+                                <li><a href="#">Документы и инструкции</a></li>
+                                <li><a href="#">Партнерам</a></li>
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">Контакты</a></li>
+                                <li><a href="#">О компании</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer-container">
+                        <div class="footer-logo">
+                            <div class="footer-logo-img"></div>
+                            <div class="footer-logo-title">
+                                <div class="footer-logo-title-text-1">Лабораторное научное оборудование</div>
+                                <div class="footer-logo-title-text-2">Yamato Scientific Co., Ltd.</div>
+                            </div>
+                        </div>
+
+                        <div class="footer-social">
+                            <a href="#" target="_blank" class="footer-social-fb"><svg><use xlink:href="images/sprite.svg#icon-fb"></use></svg></a>
+                            <a href="#" target="_blank" class="footer-social-twitter"><svg><use xlink:href="images/sprite.svg#icon-twitter"></use></svg></a>
+                            <a href="#" target="_blank" class="footer-social-vk"><svg><use xlink:href="images/sprite.svg#icon-vk-square"></use></svg></a>
+                        </div>
+
+                        <div class="footer-contacts">
+                            <div class="footer-contacts-title"><a href="tel:+74957406871">+7 495 740-68-71</a></div>
+                            <div class="footer-contacts-text">08:00–18:00 пн-чт, 08:00–17:00 пт</div>
+                        </div>
+
+                        <div class="footer-contacts">
+                            <div class="header-contacts-title">Москва</div>
+                            <div class="footer-contacts-text">Павелецкая наб., д. 2, стр. 3, оф. 119</div>
+                        </div>
+                    </div>
+
+                    <div class="footer-bottom">
+                        <div class="footer-links">
+                            <div class="footer-link"><a href="#">Карта сайта</a></div>
+                            <div class="footer-link"><a href="#">Пользовательское соглашение</a></div>
+                            <div class="footer-link"><a href="#">Политику конфиденциальности”</a></div>
+                        </div>
+                        <div class="footer-copyrights">Copyright © Yamato Scientific co., ltd. All rights reserved.</div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+        <!-- wrapper END -->
+
+        <a href="#" class="up-link"><svg><use xlink:href="images/sprite.svg#up-link"></use></svg></a>
+
+        <script>
+            var pathTemplate = './';
+        </script>
+        <script src="js/fonts.js"></script>
+
+        <script src="js/svg4everybody.min.js"></script>
+        <script>svg4everybody();</script>
+
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/slick/slick.min.js"></script>
+        <script src="js/jquery.mask.min.js"></script>
+        <script src="js/validation/jquery.validate.min.js"></script>
+        <script src="js/validation/messages_ru.js"></script>
+        <script src="js/select2/select2.min.js"></script>
+        <script src="js/select2/ru.js"></script>
+        <script src="js/air-datepicker/datepicker.min.js"></script>
+        <script src="js/tools.js"></script>
+
+    </body>
+</html>
