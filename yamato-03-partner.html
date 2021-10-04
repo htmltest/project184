@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="js/slick/slick.css" />
         <link rel="stylesheet" href="js/select2/select2.css" />
         <link rel="stylesheet" href="js/air-datepicker/datepicker.css" />
+        <link rel="stylesheet" href="js/mcustomscrollbar/jquery.mCustomScrollbar.css" />
 
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width" />
@@ -35,6 +36,13 @@
 
                         <div class="header-search">
                             <a href="#" class="header-search-link"><svg><use xlink:href="images/sprite.svg#header-search"></use></svg></a>
+                            <div class="header-search-window">
+                                <form action="#" method="post">
+                                    <div class="form-input"><span>Поиск</span><input type="text" name="search" value="" /></div>
+                                    <div class="header-search-submit"><button type="submit"><svg><use xlink:href="images/sprite.svg#header-search"></use></svg></button></div>
+                                </form>
+                                <a href="#" class="header-search-close"><svg><use xlink:href="images/sprite.svg#header-search-close"></use></svg></a>
+                            </div>
                         </div>
 
                         <div class="header-callback">
@@ -54,6 +62,7 @@
                 </div>
                 <div class="nav">
                     <div class="container">
+                        <div class="nav-logo"><a href="#"></a></div>
                         <ul>
                             <li><a href="#">О компании</a></li>
                             <li class="nav-catalogue">
@@ -116,6 +125,9 @@
                                 <div class="nav-contacts-item-title"><a href="mailto:sales@yamatorussia.ru">sales@yamatorussia.ru</a></div>
                             </div>
                         </div>
+                        <div class="nav-phone">
+                            <a href="windows/callback.html" class="window-link"><svg><use xlink:href="images/sprite.svg#main-contacts-icon-phone"></use></svg></a>
+                        </div>
                     </div>
                 </div>
             </header>
@@ -126,7 +138,7 @@
                 <div class="breadcrumbs"><a href="#">Yamato</a> &nbsp;/&nbsp; <span>Партнерская программа</span></div>
 
                 <div class="program-header">
-                    <h1>Стать партнером</h1>
+                    <h1>Партнёрская программа</h1>
                     <div class="program-header-text">
                         <p class="anonce-text">Разрабатывая Партнерскую Программу Yamato, мы заложили в нее наше стремление создать сообщество компаний, работающих в области точного взвешивания в духе высокого профессионализма, глубокого понимания потребностей клиентов, взаимовыгодного сотрудничества и преданности своему делу.</p>
                         <p>Мы стремимся создать оптимальные условия поддержки Партнеров для обеспечения стабильного роста их бизнеса. Мы уверены, что вместе мы сможем добиться выдающихся успехов, предоставляя нашим клиентам решения их задач с помощью самых современных и уникальных технологий Yamato.</p>
@@ -287,8 +299,77 @@
                         </div>
                     </div>
                 </div>
-                <div class="levels-link">
-                    <div class="levels-link-inner"><a href="#" class="btn">Стать партнером</a></div>
+
+                <div class="partner-reg">
+                    <h2>Стать партнером</h2>
+
+                    <div class="partner-reg-steps">
+                        <div class="partner-reg-steps-inner">
+                            <div class="partner-reg-step">
+                                <svg><use xlink:href="images/sprite.svg#partner-reg-step"></use></svg>
+                                <div class="partner-reg-step-number">01</div>
+                                <div class="partner-reg-step-title">Заполните заявку на участие в <strong>Партнерской Программе</strong></div>
+                            </div>
+                            <div class="partner-reg-step">
+                                <svg><use xlink:href="images/sprite.svg#partner-reg-step"></use></svg>
+                                <div class="partner-reg-step-number">02</div>
+                                <div class="partner-reg-step-title">После рассмотрения заявки с Вами <strong>свяжется наш сотрудник</strong></div>
+                            </div>
+                            <div class="partner-reg-step">
+                                <svg><use xlink:href="images/sprite.svg#partner-reg-step"></use></svg>
+                                <div class="partner-reg-step-number">03</div>
+                                <div class="partner-reg-step-title">Подписание Партнерского договора и <strong>присвоение статуса Партнера</strong></div>
+                            </div>
+                            <div class="partner-reg-step">
+                                <svg><use xlink:href="images/sprite.svg#partner-reg-step"></use></svg>
+                                <div class="partner-reg-step-number">04</div>
+                                <div class="partner-reg-step-title">Вы получите стартовый маркетинговый <strong>пакет Партнера Yamato</strong></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Заявка на участие в партнерской программе</h2>
+
+                    <div class="partner-reg-form">
+                        <form action="ajax/success.html" method="post" class="ajax-form">
+                            <h3>Контакты представителя</h3>
+                            <div class="form-input"><span>ФИО <em>*</em></span><input type="text" name="name" value="" class="required" /></div>
+                            <div class="partner-reg-form-row">
+                                <div class="partner-reg-form-row-field">
+                                    <div class="form-input"><span>Номер телефона <em>*</em></span><input type="text" name="phone" value="" class="required phoneRU" /></div>
+                                </div>
+                                <div class="partner-reg-form-row-field">
+                                    <div class="form-input"><span>E-mail <em>*</em></span><input type="text" name="email" value="" class="required email" /></div>
+                                </div>
+                            </div>
+
+                            <h3>Данные компании</h3>
+                            <div class="form-input"><span>Название компании <em>*</em></span><input type="text" name="company" value="" class="required" /></div>
+                            <div class="partner-reg-form-row">
+                                <div class="partner-reg-form-row-field">
+                                    <div class="form-input"><span>Сфера деятельности <em>*</em></span><input type="text" name="area" value="" class="required" /></div>
+                                </div>
+                                <div class="partner-reg-form-row-field">
+                                    <div class="form-input"><span>Веб-сайт</span><input type="text" name="url" value="" /></div>
+                                </div>
+                            </div>
+                            <div class="partner-reg-form-row">
+                                <div class="partner-reg-form-row-field">
+                                    <div class="form-input"><span>ИНН <em>*</em></span><input type="text" name="inn" value="" class="required" /></div>
+                                </div>
+                                <div class="partner-reg-form-row-field">
+                                    <div class="form-input"><span>Адрес <em>*</em></span><input type="text" name="address" value="" class="required" /></div>
+                                </div>
+                            </div>
+                            <div class="form-input"><span>Почему Вы хотите стать партнером Yamato?</span><textarea name="message" cols="10" rows="5"></textarea></div>
+                            <div class="partner-reg-form-row">
+                                <div class="form-ctrl">
+                                    <div class="form-checkbox form-checkbox-policy"><label><input type="checkbox" name="policy" checked="checked" class="required" /><span>Согласен с <a href="#">политикой обработки данных</a> <em>*</em></span></label></div>
+                                    <div class="form-submit"><input type="submit" class="btn" value="Отправить" /></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
 
             </div>
@@ -391,6 +472,8 @@
         <script src="js/select2/select2.min.js"></script>
         <script src="js/select2/ru.js"></script>
         <script src="js/air-datepicker/datepicker.min.js"></script>
+        <script src="js/mcustomscrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="js/clipboard.min.js"></script>
         <script src="js/tools.js"></script>
 
     </body>

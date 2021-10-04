@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title>Yamato</title>
+
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="js/slick/slick.css" />
+        <link rel="stylesheet" href="js/select2/select2.css" />
+        <link rel="stylesheet" href="js/air-datepicker/datepicker.css" />
+        <link rel="stylesheet" href="js/mcustomscrollbar/jquery.mCustomScrollbar.css" />
+
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width" />
+    </head>
+
+    <body>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+
+            <header>
+                <div class="header-container">
+                    <div class="container">
+                        <div class="logo">
+                            <a href="#">
+                                <div class="logo-img"></div>
+                                <div class="logo-title">
+                                    <div class="logo-title-text-1">Лабораторное научное оборудование</div>
+                                    <div class="logo-title-text-2">Yamato Scientific Co., Ltd.</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <a href="#" class="mobile-menu-link"><svg><use xlink:href="images/sprite.svg#mobile-menu-link"></use></svg><svg><use xlink:href="images/sprite.svg#mobile-menu-close"></use></svg></a>
+
+                        <div class="header-search">
+                            <a href="#" class="header-search-link"><svg><use xlink:href="images/sprite.svg#header-search"></use></svg></a>
+                            <div class="header-search-window">
+                                <form action="#" method="post">
+                                    <div class="form-input"><span>Поиск</span><input type="text" name="search" value="" /></div>
+                                    <div class="header-search-submit"><button type="submit"><svg><use xlink:href="images/sprite.svg#header-search"></use></svg></button></div>
+                                </form>
+                                <a href="#" class="header-search-close"><svg><use xlink:href="images/sprite.svg#header-search-close"></use></svg></a>
+                            </div>
+                        </div>
+
+                        <div class="header-callback">
+                            <a href="windows/callback.html" class="window-link">Обратный звонок</a>
+                        </div>
+
+                        <div class="header-contacts">
+                            <div class="header-contacts-title"><a href="tel:+74957406871">+7 495 740-68-71</a></div>
+                            <div class="header-contacts-text">08:00–18:00 пн-чт, 08:00–17:00 пт</div>
+                        </div>
+
+                        <div class="header-contacts">
+                            <div class="header-contacts-title">Москва</div>
+                            <div class="header-contacts-text">Павелецкая наб., д. 2, стр. 3, оф. 119</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav">
+                    <div class="container">
+                        <div class="nav-logo"><a href="#"></a></div>
+                        <ul>
+                            <li class="active"><a href="#">О компании</a></li>
+                            <li class="nav-catalogue">
+                                <a href="#">Каталог<svg><use xlink:href="images/sprite.svg#nav-arrow"></use></svg></a>
+                                <div class="nav-catalogue-sub">
+                                    <div class="nav-catalogue-sub-inner">
+                                        <div class="container">
+                                            <ul>
+                                                <li><a href="#">Сушильные шкафы</a></li>
+                                                <li><a href="#">Муфельные печи</a></li>
+                                                <li><a href="#">Инкубаторы</a></li>
+                                                <li><a href="#">Промышленное оборудование по&nbsp;индивидуальному заказу</a></li>
+                                                <li><a href="#">Ротационные испарители</a></li>
+                                                <li><a href="#">Стерилизаторы и автоклавы</a></li>
+                                                <li><a href="#">Распылительные сушилки</a></li>
+                                                <li><a href="#">Лиофильные (сублимационные) сушилки</a></li>
+                                                <li><a href="#">Охладители (чиллеры) лабораторные и&nbsp;холодовые ловушки Cool Trap</a></li>
+                                                <li><a href="#">Системы очистки воды</a></li>
+                                                <li><a href="#">Бани лабораторные</a></li>
+                                                <li><a href="#">Машины посудомоечные лабораторные</a></li>
+                                                <li><a href="#">Плиты нагревательные лабораторные</a></li>
+                                                <li><a href="#">Мешалки и шейкеры лабораторные</a></li>
+                                                <li><a href="#">Абсорбциометры</a></li>
+                                                <li><a href="#">Насосы и компрессоры</a></li>
+                                                <li><a href="#">Дополнительное оборудование и&nbsp;принадлежности</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="#">Поддержка</a></li>
+                            <li><a href="#">Документы и инструкции</a></li>
+                            <li>
+                                <a href="#">Партнерам<svg><use xlink:href="images/sprite.svg#nav-arrow"></use></svg></a>
+                                <ul>
+                                    <li><a href="#">Партнерская программа</a></li>
+                                    <li><a href="#">Стать партнером</a></li>
+                                    <li><a href="#">Партнерская сеть</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                        <div class="nav-contacts">
+                            <div class="nav-contacts-item">
+                                <svg><use xlink:href="images/sprite.svg#main-contacts-icon-address"></use></svg>
+                                <div class="nav-contacts-item-title">Москва</div>
+                                <div class="nav-contacts-item-text">Павелецкая наб., д. 2, стр. 3, оф. 119 БЦ «Loft Ville»</div>
+                            </div>
+
+                            <div class="nav-contacts-item">
+                                <svg><use xlink:href="images/sprite.svg#main-contacts-icon-phone"></use></svg>
+                                <div class="nav-contacts-item-title"><a href="tel:+74957406871">+7 495 740-68-71</a></div>
+                                <div class="nav-contacts-item-title"><a href="tel:+74957409196">+7 495 740-91-96</a></div>
+                                <div class="nav-contacts-item-text">08:00–18:00 пн-чт, 08:00–17:00 пт</div>
+                            </div>
+
+                            <div class="nav-contacts-item">
+                                <svg><use xlink:href="images/sprite.svg#main-contacts-icon-address"></use></svg>
+                                <div class="nav-contacts-item-title"><a href="mailto:sales@yamatorussia.ru">sales@yamatorussia.ru</a></div>
+                            </div>
+                        </div>
+                        <div class="nav-phone">
+                            <a href="windows/callback.html" class="window-link"><svg><use xlink:href="images/sprite.svg#main-contacts-icon-phone"></use></svg></a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- container -->
+            <div class="container">
+
+                <div class="breadcrumbs"><a href="#">Yamato</a> &nbsp;/&nbsp; <span>О компании</span></div>
+
+                <h1>О компании</h1>
+
+                <h2>Корпоративное резюме</h2>
+
+                <!-- about resume -->
+                <div class="about-resume">
+                    <div class="about-resume-row">
+                        <div class="about-resume-row-title">Название компании</div>
+                        <div class="about-resume-row-value">Yamato Scientific Co., Ltd.</div>
+                    </div>
+                    <div class="about-resume-row">
+                        <div class="about-resume-row-title">Президент</div>
+                        <div class="about-resume-row-value">Satoshi Morikawa</div>
+                    </div>
+                    <div class="about-resume-row">
+                        <div class="about-resume-row-title">Штаб-квартира</div>
+                        <div class="about-resume-row-value">Harumi Triton Square Office Tower Y (36F)<br /> 1-8-11 Harumi, Chuo-ku, Tokyo 104-6136, JAPAN</div>
+                    </div>
+                    <div class="about-resume-row">
+                        <div class="about-resume-row-title">Фонд</div>
+                        <div class="about-resume-row-value">March 4, 1889</div>
+                    </div>
+                    <div class="about-resume-row">
+                        <div class="about-resume-row-title">Инкорпорированный</div>
+                        <div class="about-resume-row-value">November 27, 1946</div>
+                    </div>
+                    <div class="about-resume-row">
+                        <div class="about-resume-row-title">Капитал</div>
+                        <div class="about-resume-row-value">100,000,000 yen ($950,000)</div>
+                    </div>
+                    <div class="about-resume-row">
+                        <div class="about-resume-row-title">Отчетный период</div>
+                        <div class="about-resume-row-value">сентябрь</div>
+                    </div>
+                    <div class="about-resume-row">
+                        <div class="about-resume-row-title">Валовые продажи</div>
+                        <div class="about-resume-row-value">Неконсолидированная база 30,8 млрд иен<br /> Yamato Group Всего 93,2 млрд иен<br /> * По состоянию на апрель 2019 г.</div>
+                    </div>
+                    <div class="about-resume-row">
+                        <div class="about-resume-row-title">Работник</div>
+                        <div class="about-resume-row-value">Неконсолидированная база 764<br /> Группа Ямато Всего 1422<br /> * По состоянию на апрель 2019 г.</div>
+                    </div>
+                    <div class="about-resume-row">
+                        <div class="about-resume-row-title">Заводы и офисы</div>
+                        <div class="about-resume-row-value">Штаб-квартира, Токийский технологический центр, завод Минами-Альпы, Центр исследований и разработок, Центр перспективных исследований, Токийский технологический центр, Центр исследований и разработок Сайтама, внутренняя база (Саппоро, Сендай, Маэбаси, Цукуба, Кита-Канто, Тиба, Токио, Токио-Кита, Токио -Ниси, Кавасаки, Йокогама, Ацуги, Нагано, Сидзуока, Нагоя, Хокурику, Кейджи, Кансай, Хиросима, Фукуока)</div>
+                    </div>
+                </div>
+                <!-- about resume END -->
+
+                <h2>Officer</h2>
+
+                <h4>Совет директоров</h4>
+                <!-- about resume -->
+                <div class="about-resume">
+                    <div class="about-resume-row">
+                        <div class="about-resume-row-title">Президент</div>
+                        <div class="about-resume-row-value">Satoshi Morikawa</div>
+                    </div>
+                    <div class="about-resume-row">
+                        <div class="about-resume-row-title">Директор</div>
+                        <div class="about-resume-row-value">Nobuo Kakehi</div>
+                    </div>
+                    <div class="about-resume-row">
+                        <div class="about-resume-row-title">Директор</div>
+                        <div class="about-resume-row-value">Takashi Morikawa</div>
+                    </div>
+                    <div class="about-resume-row">
+                        <div class="about-resume-row-title">Директор</div>
+                        <div class="about-resume-row-value">Kikunobu Inaki</div>
+                    </div>
+                </div>
+                <!-- about resume END -->
+
+                <h4>Аудитор</h4>
+                <!-- about resume -->
+                <div class="about-resume">
+                    <div class="about-resume-row">
+                        <div class="about-resume-row-title">Аудитор</div>
+                        <div class="about-resume-row-value">Satoshi Morikawa</div>
+                    </div>
+                </div>
+                <!-- about resume END -->
+
+                <h4>Руководители</h4>
+                <!-- about resume -->
+                <div class="about-resume">
+                    <div class="about-resume-row">
+                        <div class="about-resume-row-title">Старший управляющий директор</div>
+                        <div class="about-resume-row-value">Nobuo Kakehi</div>
+                    </div>
+                    <div class="about-resume-row">
+                        <div class="about-resume-row-title">Управляющий исполнительный директор</div>
+                        <div class="about-resume-row-value">Kikunobu Inaki</div>
+                    </div>
+                    <div class="about-resume-row">
+                        <div class="about-resume-row-title">Управляющий исполнительный директор</div>
+                        <div class="about-resume-row-value">Akira Yoshida</div>
+                    </div>
+                    <div class="about-resume-row">
+                        <div class="about-resume-row-title">Специально назначенный исполнительный директор</div>
+                        <div class="about-resume-row-value">Shinichi Fujita</div>
+                    </div>
+                    <div class="about-resume-row">
+                        <div class="about-resume-row-title">Специально назначенный исполнительный директор</div>
+                        <div class="about-resume-row-value">Katsuhiko Kihara</div>
+                    </div>
+                    <div class="about-resume-row">
+                        <div class="about-resume-row-title">Исполнительный директор</div>
+                        <div class="about-resume-row-value">Yutaka Inoue</div>
+                    </div>
+                    <div class="about-resume-row">
+                        <div class="about-resume-row-title">Исполнительный директор</div>
+                        <div class="about-resume-row-value">Tsutomu Fujiya</div>
+                    </div>
+                    <div class="about-resume-row">
+                        <div class="about-resume-row-title">Исполнительный директор</div>
+                        <div class="about-resume-row-value">Katsuhiro Matsumura</div>
+                    </div>
+                    <div class="about-resume-row">
+                        <div class="about-resume-row-title">Исполнительный директор</div>
+                        <div class="about-resume-row-value">Hiroyuki Honma</div>
+                    </div>
+                    <div class="about-resume-row">
+                        <div class="about-resume-row-title">Исполнительный директор</div>
+                        <div class="about-resume-row-value">Shuichi Seki</div>
+                    </div>
+                    <div class="about-resume-row">
+                        <div class="about-resume-row-title">Исполнительный директор</div>
+                        <div class="about-resume-row-value">Toshiyuki Matsushita</div>
+                    </div>
+                </div>
+                <!-- about resume END -->
+
+                <h2>Деловое содержание</h2>
+                <ol>
+                    <li>Разработка, производство и продажа на внутреннем и внешнем рынках научных инструментов, испытательного и исследовательского оборудования, устройств для анализа и измерения, устройств для обследований и инспекций, а также медицинского оборудования.</li>
+                    <li>Услуги по инспектированию, калибровке и профилактическому обслуживанию вышеуказанного содержания.</li>
+                    <li>Проектирование, строительство, полное перемещение, реформирование и консультационные услуги для исследовательских центров в университетах, институтах и ​​т. Д.</li>
+                </ol>
+
+                <h2>Сертификация ISO</h2>
+                <p>Мы всегда пытались улучшить качество работы, получая сертификат ISO.</p>
+                <div class="about-serts">
+                    <div class="about-sert">
+                        <a href="files/about-sert-1-max.jpg">
+                            <img src="files/about-sert-1.jpg" alt="" />
+                            <div class="about-sert-title">ISO14001</div>
+                            <div class="about-sert-text">Minami Alps Factory</div>
+                        </a>
+                    </div>
+                    <div class="about-sert">
+                        <a href="files/about-sert-2-max.jpg">
+                            <img src="files/about-sert-2.jpg" alt="" />
+                            <div class="about-sert-title">ISO13485</div>
+                            <div class="about-sert-text">Minami Alps Factory</div>
+                        </a>
+                    </div>
+                    <div class="about-sert">
+                        <a href="files/about-sert-3-max.jpg">
+                            <img src="files/about-sert-3.jpg" alt="" />
+                            <div class="about-sert-title">ISO9001</div>
+                            <div class="about-sert-text">Minami Alps Factory</div>
+                        </a>
+                    </div>
+                    <div class="about-sert">
+                        <a href="files/about-sert-4-max.jpg">
+                            <img src="files/about-sert-4.jpg" alt="" />
+                            <div class="about-sert-title">ISO9001</div>
+                            <div class="about-sert-text">Field Engineering Department</div>
+                        </a>
+                    </div>
+                </div>
+
+                <h2>Каникулы</h2>
+                <p>Суббота, воскресенье, летние каникулы, конец года и Новый год (124 праздника в году)</p>
+
+                <h2>Программы льгот</h2>
+                <ol>
+                    <li>40 санаторно-курортных комплексов по контракту</li>
+                    <li>Медицинское страхование, социальная пенсия, страхование сотрудников и страхование компенсаций</li>
+                    <li>Пенсионное пособие, корпоративная пенсия, схема сбережений сотрудников и профсоюз холдинговых акций сотрудников</li>
+                </ol>
+
+                <h2>Образование, обучение</h2>
+                <p>Новые курсы обучения сотрудников, курсы различного уровня, компенсация за получение квалификации и системы MVP / MIP / MIG</p>
+
+                <h2>Организации, участвующие в</h2>
+                <p>Японская федерация ассоциаций научных приборов, Японская ассоциация аналитических приборов, Японская ассоциация фармацевтического оборудования и машин, Японское общество медицинских приборов, Токийская ассоциация производителей стекла (TOGA), Японское химическое общество, Японское общество аналитической химии, Токийская палата Торговля и промышленность, Токийская ассоциация бизнеса, Японское общество аналитической химии, Японское общество биологических наук, биотехнологии и агрохимии, Токийская ассоциация измерений, Токийский торговый центр, Метрология, Ассоциация контроля измерений и Японский центр международного сотрудничества, Японская ассоциация содействия развитию научного образования и оборудования.</p>
+
+                <h2>Банки (головные офисы)</h2>
+                <p>Mizuho Bank Ltd.<br /> Банковская корпорация Sumitomo Mitsui.<br /> Резона Банк<br /> Шоко Чукин Банк</p>
+
+                <h2>История</h2>
+                <div class="about-history">
+                    <div class="about-history-year">
+                        <div class="about-history-year-title">1889</div>
+                        <div class="about-history-year-text">Основана как "Компания Ямато Сосуке Морикава" Сосуке Морикава, первым президентом</div>
+                    </div>
+                    <div class="about-history-year">
+                        <div class="about-history-year-title">1915</div>
+                        <div class="about-history-year-text">Выпущен первый полный каталог Первая разработка и производство рентгеновской трубки в Японии.</div>
+                    </div>
+                    <div class="about-history-year">
+                        <div class="about-history-year-title">1941</div>
+                        <div class="about-history-year-text">Основана компания Yamato Scientific Instruments Ltd. Сосуке Морикава-младший стал вторым президентом.</div>
+                    </div>
+                    <div class="about-history-year">
+                        <div class="about-history-year-title">1946</div>
+                        <div class="about-history-year-text">Yamato Scientific Instruments, Ltd. реорганизована в Yamato Scientific Instruments Co, Ltd.</div>
+                    </div>
+                    <div class="about-history-year">
+                        <div class="about-history-year-title">1948</div>
+                        <div class="about-history-year-text">Созданы дистрибьюторские сети в регионах Хоккайдо, Тохоку, Канто, Синецу, Хокурику, Чубу, Кинки и Кюсю.</div>
+                    </div>
+                    <div class="about-history-year">
+                        <div class="about-history-year-title">1966</div>
+                        <div class="about-history-year-text">Проведено 1-е собрание отечественных дистрибьюторов.</div>
+                    </div>
+                    <div class="about-history-year">
+                        <div class="about-history-year-title">1968</div>
+                        <div class="about-history-year-text">Завершение строительства завода Atsugi во внутреннем индустриальном парке Канагава.</div>
+                    </div>
+                    <div class="about-history-year">
+                        <div class="about-history-year-title">1972</div>
+                        <div class="about-history-year-text">Компания Yamato Scientific Instruments Co., Ltd. переименована в Yamato Scientific Co., Ltd. Тацуми Морикава стал третьим президентом. Основание компании Yamato Express Co ,. ООО</div>
+                    </div>
+                    <div class="about-history-year">
+                        <div class="about-history-year-title">1976</div>
+                        <div class="about-history-year-text">Открытие распределительного центра Ацуги в районе фабрики Ацуги.</div>
+                    </div>
+                    <div class="about-history-year">
+                        <div class="about-history-year-title">1877</div>
+                        <div class="about-history-year-text">Создана компания Yamato Lab-Tech Co., Ltd. после включения фабрики Ацуги и отдела исследований.</div>
+                    </div>
+                    <div class="about-history-year">
+                        <div class="about-history-year-title">1981</div>
+                        <div class="about-history-year-text">Завершение строительства фабрики Яманаси в индустриальном парке Косай (нынешняя фабрика Минами-Альпы)</div>
+                    </div>
+                    <div class="about-history-year">
+                        <div class="about-history-year-title">1982</div>
+                        <div class="about-history-year-text">Основание Yamato USA, Inc. в Иллинойсе Основание компании по продаже медицинского оборудования Yamato Medical Co. Ltd.</div>
+                    </div>
+                    <div class="about-history-year">
+                        <div class="about-history-year-title">1989</div>
+                        <div class="about-history-year-text">Отмеченное 100-летие учреждения</div>
+                    </div>
+                    <div class="about-history-year">
+                        <div class="about-history-year-title">1995</div>
+                        <div class="about-history-year-text">Основание научно-исследовательского института экологических технологий Ямато</div>
+                    </div>
+                    <div class="about-history-year">
+                        <div class="about-history-year-title">1999</div>
+                        <div class="about-history-year-text">Сатоши Морикава стал 4-м президентом Yamato Glass Co., Ltd., зарегистрированным на JASDAQ.</div>
+                    </div>
+                    <div class="about-history-year">
+                        <div class="about-history-year-title">2000</div>
+                        <div class="about-history-year-text">
+                            <p>Основание Morikawa Yamato Medical Co. Ltd. (слияние Yamato Medical Co. Ltd. и Morikawa Medical device Manufacture Co. Ltd.).</p>
+                            <p>Создание SUNMEDIX Co., Ltd. (слияние Morikawa Yamato Medical Co. Ltd. и Ishii Medical Factory Co. Ltd. )</p>
+                        </div>
+                    </div>
+                    <div class="about-history-year">
+                        <div class="about-history-year-title">2003</div>
+                        <div class="about-history-year-text">Началась «Кампания Возрождения Ямато» по продвижению продукции бренда Ямато.</div>
+                    </div>
+                    <div class="about-history-year">
+                        <div class="about-history-year-title">2004</div>
+                        <div class="about-history-year-text">Основание Yamato Scientific Shanghai Corp.</div>
+                    </div>
+                    <div class="about-history-year">
+                        <div class="about-history-year-title">2005</div>
+                        <div class="about-history-year-text">Основана компания Yamato Scientific Chongqing Co., Ltd.</div>
+                    </div>
+                    <div class="about-history-year">
+                        <div class="about-history-year-title">2006</div>
+                        <div class="about-history-year-text">
+                            <p>Новый научно-исследовательский центр открылся на заводе Minami Alps Factory</p>
+                            <p>Yamato Glass Co., Ltd., переименованной в Yamato Material Co., Ltd.</p>
+                        </div>
+                    </div>
+                    <div class="about-history-year">
+                        <div class="about-history-year-title">2010</div>
+                        <div class="about-history-year-text">Открытие пристройки Монзеннака-чо</div>
+                    </div>
+                    <div class="about-history-year">
+                        <div class="about-history-year-title">2012</div>
+                        <div class="about-history-year-text">Основана компания Yamato Techno Engineering Co., Ltd.</div>
+                    </div>
+                    <div class="about-history-year">
+                        <div class="about-history-year-title">2013</div>
+                        <div class="about-history-year-text">Перенос штаб-квартиры (Нихонбаси Муромати, Токио)</div>
+                    </div>
+                    <div class="about-history-year">
+                        <div class="about-history-year-title">2014</div>
+                        <div class="about-history-year-text">К 125-летию со дня рождения</div>
+                    </div>
+                    <div class="about-history-year">
+                        <div class="about-history-year-title">2015</div>
+                        <div class="about-history-year-text">Основана компания Lab Design Systems Co., Ltd.</div>
+                    </div>
+                    <div class="about-history-year">
+                        <div class="about-history-year-title">2016</div>
+                        <div class="about-history-year-text">Завершение строительства нового завода Yamato Scientific Chongqing Co., Ltd.</div>
+                    </div>
+                    <div class="about-history-year">
+                        <div class="about-history-year-title">2019</div>
+                        <div class="about-history-year-text">Перенос штаб-квартиры (Харуми, Тюо-ку, Токио)</div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- container END -->
+
+            <footer>
+                <div class="container">
+                    <div class="footer-nav">
+                        <div class="footer-catalogue">
+                            <div class="footer-catalogue-title"><a href="#">Каталог</a></div>
+                            <div class="footer-catalogue-menu">
+                                <ul>
+                                    <li><a href="#">Сушильные шкафы</a></li>
+                                    <li><a href="#">Муфельные печи</a></li>
+                                    <li><a href="#">Инкубаторы</a></li>
+                                    <li><a href="#">Промышленное оборудование по&nbsp;индивидуальному заказу</a></li>
+                                    <li><a href="#">Ротационные испарители</a></li>
+                                    <li><a href="#">Стерилизаторы и автоклавы</a></li>
+                                    <li><a href="#">Распылительные сушилки</a></li>
+                                    <li><a href="#">Лиофильные (сублимационные) сушилки</a></li>
+                                    <li><a href="#">Охладители (чиллеры) лабораторные и&nbsp;холодовые ловушки Cool Trap</a></li>
+                                    <li><a href="#">Системы очистки воды</a></li>
+                                    <li><a href="#">Бани лабораторные</a></li>
+                                    <li><a href="#">Машины посудомоечные лабораторные</a></li>
+                                    <li><a href="#">Плиты нагревательные лабораторные</a></li>
+                                    <li><a href="#">Мешалки и шейкеры лабораторные</a></li>
+                                    <li><a href="#">Абсорбциометры</a></li>
+                                    <li><a href="#">Насосы и компрессоры</a></li>
+                                    <li><a href="#">Дополнительное оборудование и&nbsp;принадлежности</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="#">Поддержка</a></li>
+                                <li><a href="#">Документы и инструкции</a></li>
+                                <li><a href="#">Партнерам</a></li>
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">Контакты</a></li>
+                                <li><a href="#">О компании</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer-container">
+                        <div class="footer-logo">
+                            <div class="footer-logo-img"></div>
+                            <div class="footer-logo-title">
+                                <div class="footer-logo-title-text-1">Лабораторное научное оборудование</div>
+                                <div class="footer-logo-title-text-2">Yamato Scientific Co., Ltd.</div>
+                            </div>
+                        </div>
+
+                        <div class="footer-social">
+                            <a href="#" target="_blank" class="footer-social-fb"><svg><use xlink:href="images/sprite.svg#icon-fb"></use></svg></a>
+                            <a href="#" target="_blank" class="footer-social-twitter"><svg><use xlink:href="images/sprite.svg#icon-twitter"></use></svg></a>
+                            <a href="#" target="_blank" class="footer-social-vk"><svg><use xlink:href="images/sprite.svg#icon-vk-square"></use></svg></a>
+                        </div>
+
+                        <div class="footer-contacts">
+                            <div class="footer-contacts-title"><a href="tel:+74957406871">+7 495 740-68-71</a></div>
+                            <div class="footer-contacts-text">08:00–18:00 пн-чт, 08:00–17:00 пт</div>
+                        </div>
+
+                        <div class="footer-contacts">
+                            <div class="header-contacts-title">Москва</div>
+                            <div class="footer-contacts-text">Павелецкая наб., д. 2, стр. 3, оф. 119</div>
+                        </div>
+                    </div>
+
+                    <div class="footer-bottom">
+                        <div class="footer-links">
+                            <div class="footer-link"><a href="#">Карта сайта</a></div>
+                            <div class="footer-link"><a href="#">Пользовательское соглашение</a></div>
+                            <div class="footer-link"><a href="#">Политику конфиденциальности”</a></div>
+                        </div>
+                        <div class="footer-copyrights">Copyright © Yamato Scientific co., ltd. All rights reserved.</div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+        <!-- wrapper END -->
+
+        <a href="#" class="up-link"><svg><use xlink:href="images/sprite.svg#up-link"></use></svg></a>
+
+        <script>
+            var pathTemplate = './';
+        </script>
+        <script src="js/fonts.js"></script>
+
+        <script src="js/svg4everybody.min.js"></script>
+        <script>svg4everybody();</script>
+
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/slick/slick.min.js"></script>
+        <script src="js/jquery.mask.min.js"></script>
+        <script src="js/validation/jquery.validate.min.js"></script>
+        <script src="js/validation/messages_ru.js"></script>
+        <script src="js/select2/select2.min.js"></script>
+        <script src="js/select2/ru.js"></script>
+        <script src="js/air-datepicker/datepicker.min.js"></script>
+        <script src="js/mcustomscrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="js/clipboard.min.js"></script>
+        <script src="js/tools.js"></script>
+
+    </body>
+</html>

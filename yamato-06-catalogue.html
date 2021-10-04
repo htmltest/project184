@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="js/slick/slick.css" />
         <link rel="stylesheet" href="js/select2/select2.css" />
         <link rel="stylesheet" href="js/air-datepicker/datepicker.css" />
+        <link rel="stylesheet" href="js/mcustomscrollbar/jquery.mCustomScrollbar.css" />
 
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width" />
@@ -35,6 +36,13 @@
 
                         <div class="header-search">
                             <a href="#" class="header-search-link"><svg><use xlink:href="images/sprite.svg#header-search"></use></svg></a>
+                            <div class="header-search-window">
+                                <form action="#" method="post">
+                                    <div class="form-input"><span>Поиск</span><input type="text" name="search" value="" /></div>
+                                    <div class="header-search-submit"><button type="submit"><svg><use xlink:href="images/sprite.svg#header-search"></use></svg></button></div>
+                                </form>
+                                <a href="#" class="header-search-close"><svg><use xlink:href="images/sprite.svg#header-search-close"></use></svg></a>
+                            </div>
                         </div>
 
                         <div class="header-callback">
@@ -54,9 +62,10 @@
                 </div>
                 <div class="nav">
                     <div class="container">
+                        <div class="nav-logo"><a href="#"></a></div>
                         <ul>
                             <li><a href="#">О компании</a></li>
-                            <li class="nav-catalogue">
+                            <li class="nav-catalogue active">
                                 <a href="#">Каталог<svg><use xlink:href="images/sprite.svg#nav-arrow"></use></svg></a>
                                 <div class="nav-catalogue-sub">
                                     <div class="nav-catalogue-sub-inner">
@@ -86,11 +95,11 @@
                             </li>
                             <li><a href="#">Поддержка</a></li>
                             <li><a href="#">Документы и инструкции</a></li>
-                            <li class="active">
+                            <li>
                                 <a href="#">Партнерам<svg><use xlink:href="images/sprite.svg#nav-arrow"></use></svg></a>
                                 <ul>
                                     <li><a href="#">Партнерская программа</a></li>
-                                    <li class="active"><a href="#">Стать партнером</a></li>
+                                    <li><a href="#">Стать партнером</a></li>
                                     <li><a href="#">Партнерская сеть</a></li>
                                 </ul>
                             </li>
@@ -116,6 +125,9 @@
                                 <div class="nav-contacts-item-title"><a href="mailto:sales@yamatorussia.ru">sales@yamatorussia.ru</a></div>
                             </div>
                         </div>
+                        <div class="nav-phone">
+                            <a href="windows/callback.html" class="window-link"><svg><use xlink:href="images/sprite.svg#main-contacts-icon-phone"></use></svg></a>
+                        </div>
                     </div>
                 </div>
             </header>
@@ -123,60 +135,118 @@
             <!-- container -->
             <div class="container">
 
-                <div class="breadcrumbs"><a href="#">Yamato</a> &nbsp;/&nbsp; <span>Стать партнером</span></div>
+                <div class="breadcrumbs"><a href="#">Yamato</a> &nbsp;/&nbsp; <span>Лабораторное научное и промышленное оборудование</span></div>
 
-                <h1>Стать партнером</h1>
+                <h1>Лабораторное научное и промышленное оборудование</h1>
 
-                <div class="partner-reg-steps">
-                    <div class="partner-reg-steps-inner">
-                        <div class="partner-reg-step">
-                            <svg><use xlink:href="images/sprite.svg#partner-reg-step"></use></svg>
-                            <div class="partner-reg-step-number">01</div>
-                            <div class="partner-reg-step-title">Заполните заявку на участие в <strong>Партнерской Программе</strong></div>
+                <div class="main-catalogue-list">
+                    <a href="#" class="main-catalogue-item" target="_blank">
+                        <div class="main-catalogue-item-preview"><img src="files/catalogue-01.jpg" alt="" /></div>
+                        <div class="main-catalogue-item-title">
+                            <div class="main-catalogue-item-title-inner">Сушильные шкафы</div>
                         </div>
-                        <div class="partner-reg-step">
-                            <svg><use xlink:href="images/sprite.svg#partner-reg-step"></use></svg>
-                            <div class="partner-reg-step-number">02</div>
-                            <div class="partner-reg-step-title">После рассмотрения заявки с Вами <strong>свяжется наш сотрудник</strong></div>
+                    </a>
+                    <a href="#" class="main-catalogue-item" target="_blank">
+                        <div class="main-catalogue-item-preview"><img src="files/catalogue-02.jpg" alt="" /></div>
+                        <div class="main-catalogue-item-title">
+                            <div class="main-catalogue-item-title-inner">Муфельные печи</div>
                         </div>
-                        <div class="partner-reg-step">
-                            <svg><use xlink:href="images/sprite.svg#partner-reg-step"></use></svg>
-                            <div class="partner-reg-step-number">03</div>
-                            <div class="partner-reg-step-title">Подписание Партнерского договора и <strong>присвоение статуса Партнера</strong></div>
+                    </a>
+                    <a href="#" class="main-catalogue-item" target="_blank">
+                        <div class="main-catalogue-item-preview"><img src="files/catalogue-03.jpg" alt="" /></div>
+                        <div class="main-catalogue-item-title">
+                            <div class="main-catalogue-item-title-inner">Инкубаторы</div>
                         </div>
-                        <div class="partner-reg-step">
-                            <svg><use xlink:href="images/sprite.svg#partner-reg-step"></use></svg>
-                            <div class="partner-reg-step-number">04</div>
-                            <div class="partner-reg-step-title">Вы получите стартовый маркетинговый <strong>пакет Партнера Yamato</strong></div>
+                    </a>
+                    <a href="#" class="main-catalogue-item" target="_blank">
+                        <div class="main-catalogue-item-preview"><img src="files/catalogue-04.jpg" alt="" /></div>
+                        <div class="main-catalogue-item-title">
+                            <div class="main-catalogue-item-title-inner">Промышленное оборудование по&nbsp;индивидуальному заказу</div>
                         </div>
-                    </div>
+                    </a>
+                    <a href="#" class="main-catalogue-item" target="_blank">
+                        <div class="main-catalogue-item-preview"><img src="files/catalogue-05.jpg" alt="" /></div>
+                        <div class="main-catalogue-item-title">
+                            <div class="main-catalogue-item-title-inner">Ротационные испарители</div>
+                        </div>
+                    </a>
+                    <a href="#" class="main-catalogue-item" target="_blank">
+                        <div class="main-catalogue-item-preview"><img src="files/catalogue-06.jpg" alt="" /></div>
+                        <div class="main-catalogue-item-title">
+                            <div class="main-catalogue-item-title-inner">Стерилизаторы и автоклавы</div>
+                        </div>
+                    </a>
+                    <a href="#" class="main-catalogue-item" target="_blank">
+                        <div class="main-catalogue-item-preview"><img src="files/catalogue-07.jpg" alt="" /></div>
+                        <div class="main-catalogue-item-title">
+                            <div class="main-catalogue-item-title-inner">Распылительные сушилки</div>
+                        </div>
+                    </a>
+                    <a href="#" class="main-catalogue-item" target="_blank">
+                        <div class="main-catalogue-item-preview"><img src="files/catalogue-08.jpg" alt="" /></div>
+                        <div class="main-catalogue-item-title">
+                            <div class="main-catalogue-item-title-inner">Лиофильные (сублимационные) сушилки</div>
+                        </div>
+                    </a>
+                    <a href="#" class="main-catalogue-item" target="_blank">
+                        <div class="main-catalogue-item-preview"><img src="files/catalogue-09.jpg" alt="" /></div>
+                        <div class="main-catalogue-item-title">
+                            <div class="main-catalogue-item-title-inner">Чиллеры и охладители</div>
+                        </div>
+                    </a>
+                    <a href="#" class="main-catalogue-item" target="_blank">
+                        <div class="main-catalogue-item-preview"><img src="files/catalogue-10.jpg" alt="" /></div>
+                        <div class="main-catalogue-item-title">
+                            <div class="main-catalogue-item-title-inner">Оборудование для производства чистой воды</div>
+                        </div>
+                    </a>
+                    <a href="#" class="main-catalogue-item" target="_blank">
+                        <div class="main-catalogue-item-preview"><img src="files/catalogue-11.jpg" alt="" /></div>
+                        <div class="main-catalogue-item-title">
+                            <div class="main-catalogue-item-title-inner">Водяные и масляные бани</div>
+                        </div>
+                    </a>
+                    <a href="#" class="main-catalogue-item" target="_blank">
+                        <div class="main-catalogue-item-preview"><img src="files/catalogue-12.jpg" alt="" /></div>
+                        <div class="main-catalogue-item-title">
+                            <div class="main-catalogue-item-title-inner">Моечные машины</div>
+                        </div>
+                    </a>
+                    <a href="#" class="main-catalogue-item" target="_blank">
+                        <div class="main-catalogue-item-preview"><img src="files/catalogue-13.jpg" alt="" /></div>
+                        <div class="main-catalogue-item-title">
+                            <div class="main-catalogue-item-title-inner">Нагревательные плиты</div>
+                        </div>
+                    </a>
+                    <a href="#" class="main-catalogue-item" target="_blank">
+                        <div class="main-catalogue-item-preview"><img src="files/catalogue-14.jpg" alt="" /></div>
+                        <div class="main-catalogue-item-title">
+                            <div class="main-catalogue-item-title-inner">Мешалки и шейкеры</div>
+                        </div>
+                    </a>
+                    <a href="#" class="main-catalogue-item" target="_blank">
+                        <div class="main-catalogue-item-preview"><img src="files/catalogue-15.jpg" alt="" /></div>
+                        <div class="main-catalogue-item-title">
+                            <div class="main-catalogue-item-title-inner">Абсорбциометры</div>
+                        </div>
+                    </a>
+                    <a href="#" class="main-catalogue-item" target="_blank">
+                        <div class="main-catalogue-item-preview"><img src="files/catalogue-16.jpg" alt="" /></div>
+                        <div class="main-catalogue-item-title">
+                            <div class="main-catalogue-item-title-inner">Насосы и компрессоры</div>
+                        </div>
+                    </a>
+                    <a href="#" class="main-catalogue-item" target="_blank">
+                        <div class="main-catalogue-item-preview"><img src="files/catalogue-17.png" alt="" /></div>
+                        <div class="main-catalogue-item-title">
+                            <div class="main-catalogue-item-title-inner">Дополнительное оборудование и&nbsp;принадлежности</div>
+                        </div>
+                    </a>
                 </div>
 
-                <h2>Заявка на участие в партнерской программе</h2>
-
-                <div class="partner-reg-form">
-                    <form action="ajax/success.html" method="post" class="ajax-form">
-                        <div class="partner-reg-form-col">
-                            <h3>Контакты представителя</h3>
-                            <div class="form-input"><span>ФИО <em>*</em></span><input type="text" name="name" value="" class="required" /></div>
-                            <div class="form-input"><span>Номер телефона <em>*</em></span><input type="text" name="phone" value="" class="required phoneRU" /></div>
-                            <div class="form-input"><span>E-mail <em>*</em></span><input type="text" name="email" value="" class="required email" /></div>
-                        </div>
-
-                        <div class="partner-reg-form-col">
-                            <h3>Данные компании</h3>
-                            <div class="form-input"><span>Название компании <em>*</em></span><input type="text" name="company" value="" class="required" /></div>
-                            <div class="form-input"><span>Сфера деятельности <em>*</em></span><input type="text" name="area" value="" class="required" /></div>
-                            <div class="form-input"><span>ИНН <em>*</em></span><input type="text" name="inn" value="" class="required" /></div>
-                            <div class="form-input"><span>Веб-сайт</span><input type="text" name="url" value="" /></div>
-                            <div class="form-input"><span>Адрес <em>*</em></span><input type="text" name="address" value="" class="required" /></div>
-                            <div class="form-input"><span>Почему Вы хотите стать партнером Yamato?</span><textarea name="message" cols="10" rows="5"></textarea></div>
-                            <div class="form-ctrl">
-                                <div class="form-checkbox form-checkbox-policy"><label><input type="checkbox" name="policy" checked="checked" class="required" /><span>Согласен с <a href="#">политикой обработки данных</a> <em>*</em></span></label></div>
-                                <div class="form-submit"><input type="submit" class="btn" value="Отправить" /></div>
-                            </div>
-                        </div>
-                    </form>
+                <div class="main-catalogue-links">
+                    <div class="main-catalogue-link"><a href="#" class="btn" target="_blank"><svg><use xlink:href="images/sprite.svg#main-catalogue-link"></use></svg>Скачать каталог PDF</a></div>
+                    <div class="main-catalogue-link"><a href="#" class="btn" target="_blank"><svg><use xlink:href="images/sprite.svg#main-catalogue-link"></use></svg>Скачать прайс XLS</a></div>
                 </div>
 
             </div>
@@ -279,6 +349,8 @@
         <script src="js/select2/select2.min.js"></script>
         <script src="js/select2/ru.js"></script>
         <script src="js/air-datepicker/datepicker.min.js"></script>
+        <script src="js/mcustomscrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="js/clipboard.min.js"></script>
         <script src="js/tools.js"></script>
 
     </body>

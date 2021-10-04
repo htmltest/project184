@@ -312,11 +312,25 @@ header {height:170px; position:relative; z-index:99; background:#fff}
 
 .header-search {float:right; margin:42px 0 0 37px}
 .header-search-link {display:block}
-.header-search-link svg {display:block; width:26px; height:26px; fill:none; stroke:#e02f21}
+.header-search-link svg {display:block; width:26px; height:26px; fill:none; stroke:#e02f21; transition:stroke 0.2s}
+.header-search-link:hover svg {stroke:#cd1103}
 
 @media screen and (max-width:1199px) {
     .header-search {margin:29px 0 0 0}
 }
+
+.header-search-window {display:none; position:absolute; right:calc(50% - 600px); top:0; left:calc(50% - 270px); padding:0 122px 0 323px; height:110px; background:#fff; z-index:2}
+.header-search-open .header-search-window {display:block}
+.header-search-window form {margin:0; margin:23px 0 0 0; position:relative}
+.header-search-window .form-input {margin:0}
+.header-search-window .form-input input {padding-right:62px}
+.header-search-submit {position:absolute; right:0; top:0}
+.header-search-submit button {display:block; vertical-align:top; margin:0; padding:0; width:66px; height:64px; overflow:visible; outline:none; text-decoration:none; background:transparent; border:none; border-radius:0; position:relative; -webkit-appearance:none; cursor:pointer; box-sizing:border-box; opacity:0.3; transition:opacity 0.2s}
+.header-search-submit button:hover {opacity:1}
+.header-search-submit button svg {display:block; width:26px; height:26px; position:absolute; left:50%; top:50%; margin:-13px 0 0 -13px; fill:none; stroke:#e02f21}
+.header-search-close {display:block; position:absolute; right:20px; top:41px; width:28px; height:28px}
+.header-search-close svg {display:block; width:28px; height:28px; fill:#e02f21; transition:fill 0.2s}
+.header-search-close:hover svg {fill:#cd1103}
 
 .header-callback {float:right; margin:33px 0 0 0}
 .header-callback a {display:block; height:43px; border:1px solid #e02f21; color:#4a4a4a; font-weight:normal; font-size:15px; line-height:41px; padding:0 15px; text-decoration:none; transition:background 0.2s, color 0.2s}
@@ -382,9 +396,17 @@ header {height:170px; position:relative; z-index:99; background:#fff}
 .nav ul li.nav-catalogue.active ul li a,
 .nav ul li.nav-catalogue:hover ul li a {padding:10px 0}
 .nav-contacts {display:none}
+.nav-logo {display:none; float:left; margin:3px 0 0 -10px; width:55px; height:50px; background:url(../images/logo-nav.png) no-repeat; position:relative}
+.nav-logo a {display:block; position:absolute; left:0; top:0; right:0; bottom:0}
+.nav-phone {display:none; float:right; margin:18px 0 0 0}
+.nav-phone a {display:block}
+.nav-phone a svg {display:block; width:25px; height:25px; fill:#fff}
 
 @media screen and (min-width:1200px) {
     header.fixed .nav {position:fixed; left:0; top:0; right:0; z-index:99}
+    header.fixed .nav-logo {display:block}
+    header.fixed .nav ul {margin:0 0 0 53px; float:left}
+    header.fixed .nav-phone {display:block}
 }
 
 @media screen and (max-width:1199px) {
@@ -662,7 +684,7 @@ header {height:170px; position:relative; z-index:99; background:#fff}
 .program-header-text p {margin:0}
 .program-header-text p+p {margin:10px 0 0 0}
 
-.program-contacts {margin:66px 0 0 0}
+.program-contacts {margin:66px 0}
 .program-contacts::after {content:""; display:block; clear:both}
 .program-contacts-info {float:left; width:50%; padding:0 10px 0 0}
 .program-contacts-info h2 {margin:0 0 27px 0}
@@ -708,11 +730,8 @@ header {height:170px; position:relative; z-index:99; background:#fff}
 .levels-item-title {position:absolute; left:30px; top:32px; max-width:235px; font-weight:bold; font-size:24px; line-height:31px}
 .levels-item-text {font-weight:normal; font-size:18px; line-height:27px}
 
-.levels-link {margin:47px -10px 0 -10px}
-.levels-link-inner {display:block; width:33.33%; padding:0 10px; margin:0 auto}
-.levels-link a {display:block; width:100%; padding:15px 0; font-size:20px; line-height:30px}
-
-.partner-reg-steps {margin:28px -20px 86px -20px}
+.partner-reg {margin:86px 0 0 0}
+.partner-reg-steps {margin:22px -20px 86px -20px}
 .partner-reg-steps-inner {display:table; width:100%; border-collapse:separate; border-spacing:20px 0}
 .partner-reg-step {display:table-cell; vertical-align:bottom; position:relative; border:1px solid #e8e8e8; background:#e02f21; width:25%; padding:53px 19px 19px 19px; color:#fff; font-weight:normal}
 .partner-reg-step svg {display:block; width:36px; height:39px; position:absolute; left:-28px; top:50%; margin-top:-20px; fill:none}
@@ -721,12 +740,17 @@ header {height:170px; position:relative; z-index:99; background:#fff}
 .partner-reg-step-title {font-size:18px; line-height:27px}
 .partner-reg-step-title strong {font-weight:bold}
 
-.partner-reg-form {margin:33px -10px 0 -10px}
+.partner-reg-form {margin:33px 0 0 0}
 .partner-reg-form::after {content:""; display:block; clear:both}
 .partner-reg-form form {margin:0; padding:0}
-.partner-reg-form-col {float:left; width:50%; padding:0 10px}
-.partner-reg-form-col h3 {margin:0 0 26px 0}
-.partner-reg-form-col .form-input {margin:14px 0}
+.partner-reg-form h3 {margin:60px 0 26px 0}
+.partner-reg-form .form-input {margin:14px 0}
+.partner-reg-form-row {margin:14px -10px}
+.partner-reg-form-row::after {content:""; display:block; clear:both}
+.partner-reg-form-row-field {float:left; width:50%; padding:0 10px}
+.partner-reg-form-row-field .form-input {margin:0}
+.partner-reg-form-row .form-ctrl {margin:26px 10px 0 0; float:right}
+.partner-reg-form-row .form-checkbox-policy {margin-right:140px}
 
 .contacts-info {margin:48px 0 0 0; display:table; width:100%}
 .contacts-info-item {display:table-cell; vertical-align:top; border-left:1px solid rgba(188, 188, 188, 0.6); position:relative}
@@ -751,6 +775,43 @@ header {height:170px; position:relative; z-index:99; background:#fff}
 .ways-item {float:left; width:50%; padding:0 40px}
 .ways-list h3 {margin:0 0 10px 0; color:#1f1f1f}
 .ways-list p {margin:10px 0 0 0}
+
+.about-resume {margin:27px 0; max-width:782px}
+.about-resume-row {padding:18px 20px; color:#000}
+.about-resume-row:nth-child(odd) {background:#f9f9f9}
+.about-resume-row::after {content:""; display:block; clear:both}
+.about-resume-row-title {float:left; width:305px; font-weight:normal}
+.about-resume-row-value {margin:0 0 0 335px}
+
+.about-serts {margin:12px 0 0 -20px; font-size:0; line-height:0; letter-spacing:-1px}
+.about-sert {display:inline-block; vertical-align:top; width:200px; margin:20px 0 0 20px}
+.about-sert a {display:block; color:#4a4a4a; position:relative; top:0; transition:top 0.2s; text-decoration:none}
+.about-sert a:hover {top:-5px}
+.about-sert img {display:block; width:100%}
+.about-sert-title {margin:16px 0 0 0; font-size:21px; line-height:32px; letter-spacing:0; font-weight:bold}
+.about-sert-text {font-size:18px; line-height:27px; letter-spacing:0; font-weight:normal}
+
+.about-history {margin:27px 0; width:767px; border-bottom:1px solid #e8e8e8; display:table; border-collapse:collapse}
+.about-history-year {display:table-row}
+.about-history-year-title {float:left; font-size:48px; line-height:48px; font-weight:normal; color:#e02f21; border-top:1px solid #e8e8e8; padding:20px 20px 20px 0; width:197px; vertical-align:top; display:table-cell}
+.about-history-year-text {font-weight:normal; font-size:18px; line-height:27px; color:#4a4a4a; border-top:1px solid #e8e8e8; padding:20px 0; vertical-align:middle; display:table-cell}
+.about-history-year-text *:first-child {margin-top:0}
+.about-history-year-text *:last-child {margin-bottom:0}
+
+.manuals {margin:38px 0 0 0}
+.manuals::after {content:""; display:block; clear:both}
+.manuals h3 {margin:0}
+.manuals-main {float:left; width:66.66%; padding:0 30px 0 0}
+.manuals-side {float:left; width:33.33%; padding:0 0 0 30px; border-left:1px solid rgba(196, 196, 196, 0.4)}
+.manuals-list {margin:20px 0 -20px 0}
+.manuals-main .manuals-list {column-count:2; column-gap:60px}
+.manuals-block {padding:0 0 20px 0; -webkit-column-break-inside:avoid; page-break-inside:avoid; break-inside:avoid; break-inside:avoid-column}
+.manuals-block-title {font-weight:normal; font-size:18px; line-height:27px; color:#000}
+.manuals-block-docs {margin:6px 0 0 0}
+.manuals-block-doc {margin:6px 0 0 0}
+.manuals-block-doc span {color:#e02f21}
+.manuals-block-doc a {color:#000; text-decoration:underline}
+.manuals-block-doc a:hover {color:#e02f21}
 
 footer {background:#efefef; margin:80px 0 0 0}
 
@@ -873,3 +934,63 @@ footer {background:#efefef; margin:80px 0 0 0}
     .up-link::before {content:""; display:block; position:absolute; left:-40px; top:-40px; right:-40px; bottom:-40px}
     .up-link svg {width:28px; height:28px; margin:-14px 0 0 -14px}
 }
+
+.window-photo-open,
+.window-photo-open body {overflow:hidden; position:fixed; left:0; top:0; right:0; bottom:0}
+
+.window-photo {position:fixed; left:0; top:0; right:0; bottom:0; z-index:9999; background:#000}
+.window-photo-preview {position:fixed; left:0; top:0; bottom:0; z-index:99; width:166px}
+.window-photo-preview-inner {position:absolute; left:0; top:0; right:0; bottom:0; overflow:auto}
+.window-photo-preview-list {margin:0 0 0 20px; width:120px}
+.window-photo-preview-list-item {padding:4px 0}
+.window-photo-preview-list-item a {display:block; position:relative}
+.window-photo-preview-list-item a::after {content:""; display:block; position:absolute; left:0; top:0; right:0; bottom:0; border:4px solid #ff2f66; opacity:0; transition:all 0.2s}
+.window-photo-preview-list-item a:hover::after,
+.window-photo-preview-list-item.active a::after {opacity:1}
+.window-photo-preview-list-item a img {display:block; width:100%}
+.window-photo-preview .mCSB_inside > .mCSB_container {margin:0}
+.window-photo-preview .mCSB_scrollTools {opacity:1; width:6px}
+.window-photo-preview .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {background:#98d5c4; border-radius:3px}
+.window-photo-preview .mCSB_scrollTools .mCSB_draggerRail {background:#535353; width:6px; border-radius:3px}
+
+.window-photo-close {display:block; position:absolute; right:19px; top:19px}
+.window-photo-close svg {display:block; fill:none; stroke:#fff; transition:all 0.2s; width:17px; height:17px}
+.window-photo-close:hover svg {stroke:#ff2f66}
+
+.window-photo-download {display:block; position:absolute; right:58px; top:20px}
+.window-photo-download svg {display:block; fill:none; stroke:#fff; transition:all 0.2s; width:17px; height:16px}
+.window-photo-download:hover svg {stroke:#ff2f66}
+
+.window-photo-social {display:block; position:absolute; right:98px; top:20px}
+.window-photo-social-icon svg {display:block; fill:none; stroke:#fff; transition:all 0.2s; width:17px; height:16px}
+.window-photo-social-window {display:none; position:absolute; z-index:99; left:50%; top:100%; margin:14px 0 0 -72px; padding:9px 0 0 17px; width:144px; height:47px; background:#424242; box-shadow:6px 6px 20px rgba(36, 36, 36, 0.13)}
+.window-photo-social-window::before {content:""; display:block; position:absolute; left:50%; top:-7px; width:14px; height:14px; background:#424242; margin-left:-7px; transform:rotate(45deg)}
+.window-photo-social-window::after {content:""; display:block; position:absolute; left:-1px; top:-15px; right:-1px; height:16px; background:url(../images/blank.gif)}
+.window-photo-social:hover .window-photo-social-window {display:block}
+.window-photo-social-item {float:left; width:29px; margin:0 0 0 14px; position:relative}
+.window-photo-social-item:first-child {margin:0}
+.window-photo-social-item svg {display:block; width:29px; height:29px; transition:all 0.2s}
+.window-photo-social-item.window-photo-social-item-link {background:#fff; border-radius:50%}
+.window-photo-social-item.window-photo-social-item-link:hover {background:#ff2f66}
+.window-photo-social-item.window-photo-social-item-link svg {stroke:#000; fill:none}
+.window-photo-social-item.window-photo-social-item-fb svg {fill:#fff}
+.window-photo-social-item.window-photo-social-item-vk svg {fill:#fff}
+.window-photo-social-item.window-photo-social-item-link:hover svg {stroke:#fff}
+.window-photo-social-item.window-photo-social-item-fb:hover svg {fill:#ff2f66}
+.window-photo-social-item.window-photo-social-item-vk:hover svg {fill:#ff2f66}
+
+.window-photo-slider {position:absolute; left:312px; top:88px; right:65px; bottom:134px; font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap}
+.window-photo-slider-list {position:relative; overflow:hidden}
+.window-photo-slider-list-item {display:inline-block; vertical-align:top; width:100%}
+.window-photo-slider-list-item-inner {display:block; width:100%; height:calc(100vh - 222px); line-height:calc(100vh - 222px); text-align:center}
+.window-photo-slider .slick-slide img,
+.window-photo-slider-list-item-inner img {display:inline-block; vertical-align:middle; max-height:100%}
+
+.window-photo-slider .slick-prev,
+.window-photo-slider .slick-next {display:block; position:absolute; z-index:2; top:50%; width:40px; height:40px; border:none; border-radius:0; margin:-20px 0 0 0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; background:#363636; transition:all 0.2s}
+.window-photo-slider .slick-prev:hover,
+.window-photo-slider .slick-next:hover {background:#ff2f66}
+.window-photo-slider .slick-prev {left:0}
+.window-photo-slider .slick-next {right:0}
+.window-photo-slider .slick-prev svg {display:block; position:absolute; left:50%; top:50%; width:10px; height:16px; margin:-8px 0 0 -6px; fill:none; stroke:#fff}
+.window-photo-slider .slick-next svg {display:block; position:absolute; left:50%; top:50%; width:10px; height:16px; margin:-8px 0 0 -4px; fill:none; stroke:#fff}
