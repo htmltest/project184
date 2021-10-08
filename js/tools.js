@@ -266,11 +266,10 @@ $(document).ready(function() {
         alert('OK');
     });
 
-    $('body').on('click', '.about-sert a', function(e) {
-        var curLink = $(this);
-        var curItem = curLink.parents().filter('.about-sert');
-        var curGallery = curItem.parents().filter('.about-serts');
-        var curIndex = curGallery.find('.about-sert').index(curItem);
+    $('body').on('click', '[data-lightbox]', function(e) {
+        var curItem = $(this);
+        var curGallery = $('[data-lightbox]');
+        var curIndex = curGallery.index(curItem);
 
         var curPadding = $('.wrapper').width();
         var curScroll = $(window).scrollTop();
@@ -284,10 +283,10 @@ $(document).ready(function() {
                                     '<div class="window-photo-preview-inner">' +
                                         '<div class="window-photo-preview-list">';
 
-        var galleryLength = curGallery.find('.about-sert').length;
+        var galleryLength = curGallery.length;
+
         for (var i = 0; i < galleryLength; i++) {
-            var curTitle = '';
-            var curGalleryItem = curGallery.find('.about-sert').eq(i);
+            var curGalleryItem = curGallery.eq(i);
             windowHTML +=                   '<div class="window-photo-preview-list-item"><a href="#"><img src="' + curGalleryItem.find('img').attr('src') + '" alt="" /></a></div>';
         }
         windowHTML +=                   '</div>' +
@@ -309,9 +308,9 @@ $(document).ready(function() {
                                     '<div class="window-photo-slider-list">';
 
         for (var i = 0; i < galleryLength; i++) {
-            var curGalleryItem = curGallery.find('.about-sert').eq(i);
+            var curGalleryItem = curGallery.eq(i);
             windowHTML +=               '<div class="window-photo-slider-list-item">' +
-                                            '<div class="window-photo-slider-list-item-inner"><img src="' + pathTemplate + 'images/loading.gif" data-src="' + curGalleryItem.find('a').attr('href') + '" alt="" /></div>' +
+                                            '<div class="window-photo-slider-list-item-inner"><img src="' + pathTemplate + 'images/loading.gif" data-src="' + curGalleryItem.attr('href') + '" alt="" /></div>' +
                                         '</div>';
         }
         windowHTML +=               '</div>' +
@@ -416,6 +415,94 @@ $(document).ready(function() {
                 $('.window-photo-close').trigger('click');
             }
         }
+    });
+
+    $('.batch-gallery-preview-list').slick({
+        infinite: false,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        vertical: true,
+        accessibility: false,
+        prevArrow: '<button type="button" class="slick-prev"><svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#gallery-prev"></use></svg></button>',
+        nextArrow: '<button type="button" class="slick-next"><svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#gallery-next"></use></svg></button>',
+        dots: false,
+        asNavFor: '.batch-gallery-big-list'
+    });
+
+    $('body').on('click', '.batch-gallery-preview-item a', function(e) {
+        var curIndex = $('.batch-gallery-preview-item').index($(this).parent());
+        $('.batch-gallery-big-list').slick('slickGoTo', curIndex);
+        e.preventDefault();
+    });
+
+    $('.batch-gallery-big-list').slick({
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: false,
+        asNavFor: '.batch-gallery-preview-list'
+    }).on('setPosition', function(event, slick) {
+        var currentSlide = $('.batch-gallery-big-list').slick('slickCurrentSlide');
+        $('.batch-gallery-preview-item.active').removeClass('active');
+        $('.batch-gallery-preview-item').eq(currentSlide).addClass('active');
+    });
+
+    $('.tabs').each(function() {
+        var curTabs = $(this);
+        curTabs.find('.tabs-menu-inner').html('');
+        curTabs.find('.tabs-content').each(function() {
+            var curTab = $(this);
+            curTabs.find('.tabs-menu-inner').append('<div class="tabs-menu-item"><a href="#">' + curTab.attr('data-title') + '</a></div>');
+        });
+        curTabs.find('.tabs-content').eq(0).addClass('active');
+        curTabs.find('.tabs-menu-item').eq(0).addClass('active');
+    });
+
+    $('.tabs-menu-item a').click(function(e) {
+        var curItem = $(this).parent();
+        if (!curItem.hasClass('active')) {
+            var curTabs = curItem.parents().filter('.tabs');
+            curTabs.find('.tabs-menu-item.active').removeClass('active');
+            curItem.addClass('active');
+            var curIndex = curTabs.find('.tabs-menu-item').index(curItem);
+            curTabs.find('.tabs-content.active').removeClass('active');
+            curTabs.find('.tabs-content').eq(curIndex).addClass('active');
+        }
+        e.preventDefault();
+    });
+
+    $('.batch-info-params-link a').click(function(e) {
+        $('.tabs-menu-item').eq(0).find('a').trigger('click');
+        $('html, body').animate({'scrollTop': $('.tabs').offset().top - $('.nav').height()});
+        e.preventDefault();
+    });
+
+    $('body').on('click', '.news-detail-social-fb', function(e) {
+        var curTitle = encodeURIComponent($('title').html());
+        var curUrl = encodeURIComponent(window.location.href);
+
+        popupCenter('https://www.facebook.com/sharer/sharer.php?u=' + curUrl, curTitle);
+
+        e.preventDefault();
+    });
+
+    $('body').on('click', '.news-detail-social-vk', function(e) {
+        var curTitle = encodeURIComponent($('title').html());
+        var curUrl = encodeURIComponent(window.location.href);
+
+        popupCenter('https://vk.com/share.php?url=' + curUrl + '&description=' + curTitle, curTitle);
+
+        e.preventDefault();
+    });
+
+    $('body').on('click', '.news-detail-social-twitter', function(e) {
+        var curTitle = encodeURIComponent($('title').html());
+        var curUrl = encodeURIComponent(window.location.href);
+
+        popupCenter('https://twitter.com/share?url=' + curUrl + '&text=' + curTitle, curTitle);
+
+        e.preventDefault();
     });
 
 });

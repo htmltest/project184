@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title>Yamato</title>
+
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="js/slick/slick.css" />
+        <link rel="stylesheet" href="js/select2/select2.css" />
+        <link rel="stylesheet" href="js/air-datepicker/datepicker.css" />
+        <link rel="stylesheet" href="js/mcustomscrollbar/jquery.mCustomScrollbar.css" />
+
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width" />
+    </head>
+
+    <body>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+
+            <header>
+                <div class="header-container">
+                    <div class="container">
+                        <div class="logo">
+                            <a href="#">
+                                <div class="logo-img"></div>
+                                <div class="logo-title">
+                                    <div class="logo-title-text-1">Лабораторное научное оборудование</div>
+                                    <div class="logo-title-text-2">Yamato Scientific Co., Ltd.</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <a href="#" class="mobile-menu-link"><svg><use xlink:href="images/sprite.svg#mobile-menu-link"></use></svg><svg><use xlink:href="images/sprite.svg#mobile-menu-close"></use></svg></a>
+
+                        <div class="header-search">
+                            <a href="#" class="header-search-link"><svg><use xlink:href="images/sprite.svg#header-search"></use></svg></a>
+                            <div class="header-search-window">
+                                <form action="#" method="post">
+                                    <div class="form-input"><span>Поиск</span><input type="text" name="search" value="" /></div>
+                                    <div class="header-search-submit"><button type="submit"><svg><use xlink:href="images/sprite.svg#header-search"></use></svg></button></div>
+                                </form>
+                                <a href="#" class="header-search-close"><svg><use xlink:href="images/sprite.svg#header-search-close"></use></svg></a>
+                            </div>
+                        </div>
+
+                        <div class="header-callback">
+                            <a href="windows/callback.html" class="window-link">Обратный звонок</a>
+                        </div>
+
+                        <div class="header-contacts">
+                            <div class="header-contacts-title"><a href="tel:+74957406871">+7 495 740-68-71</a></div>
+                            <div class="header-contacts-text">08:00–18:00 пн-чт, 08:00–17:00 пт</div>
+                        </div>
+
+                        <div class="header-contacts">
+                            <div class="header-contacts-title">Москва</div>
+                            <div class="header-contacts-text">Павелецкая наб., д. 2, стр. 3, оф. 119</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav">
+                    <div class="container">
+                        <div class="nav-logo"><a href="#"></a></div>
+                        <ul>
+                            <li><a href="#">О компании</a></li>
+                            <li class="nav-catalogue active">
+                                <a href="#">Каталог<svg><use xlink:href="images/sprite.svg#nav-arrow"></use></svg></a>
+                                <div class="nav-catalogue-sub">
+                                    <div class="nav-catalogue-sub-inner">
+                                        <div class="container">
+                                            <ul>
+                                                <li class="active"><a href="#">Сушильные шкафы</a></li>
+                                                <li><a href="#">Муфельные печи</a></li>
+                                                <li><a href="#">Инкубаторы</a></li>
+                                                <li><a href="#">Промышленное оборудование по&nbsp;индивидуальному заказу</a></li>
+                                                <li><a href="#">Ротационные испарители</a></li>
+                                                <li><a href="#">Стерилизаторы и автоклавы</a></li>
+                                                <li><a href="#">Распылительные сушилки</a></li>
+                                                <li><a href="#">Лиофильные (сублимационные) сушилки</a></li>
+                                                <li><a href="#">Охладители (чиллеры) лабораторные и&nbsp;холодовые ловушки Cool Trap</a></li>
+                                                <li><a href="#">Системы очистки воды</a></li>
+                                                <li><a href="#">Бани лабораторные</a></li>
+                                                <li><a href="#">Машины посудомоечные лабораторные</a></li>
+                                                <li><a href="#">Плиты нагревательные лабораторные</a></li>
+                                                <li><a href="#">Мешалки и шейкеры лабораторные</a></li>
+                                                <li><a href="#">Абсорбциометры</a></li>
+                                                <li><a href="#">Насосы и компрессоры</a></li>
+                                                <li><a href="#">Дополнительное оборудование и&nbsp;принадлежности</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="#">Поддержка</a></li>
+                            <li><a href="#">Документы и инструкции</a></li>
+                            <li>
+                                <a href="#">Партнерам<svg><use xlink:href="images/sprite.svg#nav-arrow"></use></svg></a>
+                                <ul>
+                                    <li><a href="#">Партнерская программа</a></li>
+                                    <li><a href="#">Стать партнером</a></li>
+                                    <li><a href="#">Партнерская сеть</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                        <div class="nav-contacts">
+                            <div class="nav-contacts-item">
+                                <svg><use xlink:href="images/sprite.svg#main-contacts-icon-address"></use></svg>
+                                <div class="nav-contacts-item-title">Москва</div>
+                                <div class="nav-contacts-item-text">Павелецкая наб., д. 2, стр. 3, оф. 119 БЦ «Loft Ville»</div>
+                            </div>
+
+                            <div class="nav-contacts-item">
+                                <svg><use xlink:href="images/sprite.svg#main-contacts-icon-phone"></use></svg>
+                                <div class="nav-contacts-item-title"><a href="tel:+74957406871">+7 495 740-68-71</a></div>
+                                <div class="nav-contacts-item-title"><a href="tel:+74957409196">+7 495 740-91-96</a></div>
+                                <div class="nav-contacts-item-text">08:00–18:00 пн-чт, 08:00–17:00 пт</div>
+                            </div>
+
+                            <div class="nav-contacts-item">
+                                <svg><use xlink:href="images/sprite.svg#main-contacts-icon-address"></use></svg>
+                                <div class="nav-contacts-item-title"><a href="mailto:sales@yamatorussia.ru">sales@yamatorussia.ru</a></div>
+                            </div>
+                        </div>
+                        <div class="nav-phone">
+                            <a href="windows/callback.html" class="window-link"><svg><use xlink:href="images/sprite.svg#main-contacts-icon-phone"></use></svg></a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- container -->
+            <div class="container">
+
+                <div class="breadcrumbs"><a href="#">Yamato</a> &nbsp;/&nbsp; <a href="#">Лабораторное научное и промышленное оборудование</a> &nbsp;/&nbsp; <span>Сушильные шкафы</span></div>
+
+                <div class="category-header">
+                    <h1>Высокотемпературные сушильные шкафы с принудительной конвекцией и инертным газом</h1>
+                    <div class="category-header-text">Мы стремимся создать оптимальные условия поддержки Партнеров для обеспечения стабильного роста их бизнеса. Мы уверены, что вместе мы сможем добиться выдающихся успехов, предоставляя нашим клиентам решения их задач с помощью самых современных и уникальных технологий Yamato.</div>
+                </div>
+
+                <!-- category batch -->
+                <div class="category-batch">
+                    <div class="category-batch-header">
+                        <h3>“Серия DG - Сушильный шкаф с естественной конвекцией для сушки инструментов и лабораторной посуды</h3>
+                        <div class="category-batch-header-text">Компактные шкафы постоянной температуры типа «SLIM», соответствующие нуждам образовательных площадок и лабораторий, благодаря компактным размерам при большой вместимости</div>
+                        <div class="category-batch-header-link"><a href="#" class="btn">Подробнее</a></div>
+                    </div>
+                    <div class="category-batch-list">
+                        <div class="category-batch-item">
+                            <a href="#">
+                                <div class="category-batch-item-preview"><img src="files/category-batch-01.jpg" alt="" /></div>
+                                <div class="category-batch-item-title">Серия DX - Сушильный шкаф с&nbsp;естественной конвекцией</div>
+                            </a>
+                        </div>
+                        <div class="category-batch-item">
+                            <a href="#">
+                                <div class="category-batch-item-preview"><img src="files/category-batch-02.jpg" alt="" /></div>
+                                <div class="category-batch-item-title">Серия DS - Сушильный шкаф с&nbsp;естественной конвекцией</div>
+                            </a>
+                        </div>
+                        <div class="category-batch-item">
+                            <a href="#">
+                                <div class="category-batch-item-preview"><img src="files/category-batch-03.jpg" alt="" /></div>
+                                <div class="category-batch-item-title">Серия DVS - Сушильный шкаф с&nbsp;естественной конвекцией</div>
+                            </a>
+                        </div>
+                        <div class="category-batch-item">
+                            <a href="#">
+                                <div class="category-batch-item-preview"><img src="files/category-batch-04.jpg" alt="" /></div>
+                                <div class="category-batch-item-title">Серия DS - Сушильный шкаф с&nbsp;естественной конвекцией</div>
+                            </a>
+                        </div>
+                        <div class="category-batch-item">
+                            <a href="#">
+                                <div class="category-batch-item-preview"><img src="files/category-batch-05.jpg" alt="" /></div>
+                                <div class="category-batch-item-title">Серия DY - Сушильный шкаф с&nbsp;естественной конвекцией</div>
+                            </a>
+                        </div>
+                        <div class="category-batch-item">
+                            <a href="#">
+                                <div class="category-batch-item-preview"><img src="files/category-batch-06.jpg" alt="" /></div>
+                                <div class="category-batch-item-title">Серия DG - Сушильный шкаф с естественной конвекцией для сушки инструментов и лабораторной посуды</div>
+                            </a>
+                        </div>
+                        <div class="category-batch-item">
+                            <a href="#">
+                                <div class="category-batch-item-preview"><img src="files/category-batch-07.jpg" alt="" /></div>
+                                <div class="category-batch-item-title">Серия DGS - Сушильный шкаф с естественной конвекцией для сушки инструментов и лабораторной посуды особозащищенный</div>
+                            </a>
+                        </div>
+                        <div class="category-batch-item">
+                            <a href="#">
+                                <div class="category-batch-item-preview"><img src="files/category-batch-08.jpg" alt="" /></div>
+                                <div class="category-batch-item-title">Серия DR - Высокотемпературный сушильный шкаф с естественной конвекцией</div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="category-batch-prefs">
+                        <h4>Преимущества серии</h4>
+                        <div class="category-batch-prefs-list">
+                            <ol>
+                                <li>Большое обзорное окно для удобства наблюдения</li>
+                                <li>Можно хранить инструменты после высушивания</li>
+                                <li>Высокоэффективный теплоизоляционный материал для внутренней и внешней структуры</li>
+                                <li>Регулируемая высота ножек для установки на неровных полах</li>
+                                <li>Снабжены трубчатым нагревателем из нержавеющей стали и поддоном для сбора воды</li>
+                                <li>Сушильная камера из нержавеющей стали с лёгким доступом для очистки и высокоустойчивая к коррозии</li>
+                                <li>Усовершенствованные функции безопасности и самодиагностики</li>
+                                <li>Вращательные ручки установки и цифровой дисплей для температуры и таймера</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="category-batch-security">
+                        <h4>Функции безопасности</h4>
+                        <p>Определение ошибки датчика температуры, блока SSR, короткого замыкания цепей, отсоединения нагревателя, ошибки памяти, перегрева и измерения температуры</p>
+                    </div>
+
+                    <div class="category-batch-add">
+                        <h4>Дополнительно</h4>
+                        <div class="category-batch-add-anonce">Преимущества моделей ADP-201/301</div>
+                        <ul>
+                            <li>Применяется внешняя система нагрева, в которой нагреватель расположен вне камеры Содержимое камеры нагревается за счет лучистого тепла от поверхности стенки. По сравнению с внутрикамерными системами нагрева, эта система имеет такие особенности, как отличное распределение температуры и меньший износ нагревателя</li>
+                            <li>Установлен новый контроллер типа VS6, благодаря которому точность установки температуры повысилась с ± 1,5 ℃ до ± 1 ℃ по сравнению с предыдущей серией</li>
+                            <li>Стандартные функции безопасности, такие как функция самодиагностики и предотвращение перегрева, дополнены выбором режима восстановления после аварийного отключения питания (в состояние ожидания или в состояние непосредственно перед отключением)</li>
+                            <li>Путем изменения структуры установки полок с штабельного типа предыдущей модели ADP200 / 300 на внутреннюю интегрированную конструкцию, вставка и вытаскивание полок стали более удобными</li>
+                            <li>Удобство применения для термической обработки металлов, которые легко окисляются при высоких температурах / Дегазации и предотвращения вспенивания  жидкостей / Сушка красок и клеев / Сушка влажных адсорбентов сложной структуры и активированного угля</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- category batch END -->
+
+                <!-- category batch -->
+                <div class="category-batch">
+                    <div class="category-batch-header">
+                        <h3>Серия DX - Сушильный шкаф с естественной конвекцией</h3>
+                        <div class="category-batch-header-text">Компактные шкафы постоянной температуры типа «SLIM», соответствующие нуждам образовательных площадок и лабораторий, благодаря компактным размерам при большой вместимости</div>
+                        <div class="category-batch-header-link"><a href="#" class="btn">Подробнее</a></div>
+                    </div>
+                    <div class="category-batch-list">
+                        <div class="category-batch-item">
+                            <a href="#">
+                                <div class="category-batch-item-preview"><img src="files/category-batch-01.jpg" alt="" /></div>
+                                <div class="category-batch-item-title">Серия DX - Сушильный шкаф с&nbsp;естественной конвекцией</div>
+                            </a>
+                        </div>
+                        <div class="category-batch-item">
+                            <a href="#">
+                                <div class="category-batch-item-preview"><img src="files/category-batch-02.jpg" alt="" /></div>
+                                <div class="category-batch-item-title">Серия DS - Сушильный шкаф с&nbsp;естественной конвекцией</div>
+                            </a>
+                        </div>
+                        <div class="category-batch-item">
+                            <a href="#">
+                                <div class="category-batch-item-preview"><img src="files/category-batch-03.jpg" alt="" /></div>
+                                <div class="category-batch-item-title">Серия DVS - Сушильный шкаф с&nbsp;естественной конвекцией</div>
+                            </a>
+                        </div>
+                        <div class="category-batch-item">
+                            <a href="#">
+                                <div class="category-batch-item-preview"><img src="files/category-batch-04.jpg" alt="" /></div>
+                                <div class="category-batch-item-title">Серия DS - Сушильный шкаф с&nbsp;естественной конвекцией</div>
+                            </a>
+                        </div>
+                        <div class="category-batch-item">
+                            <a href="#">
+                                <div class="category-batch-item-preview"><img src="files/category-batch-05.jpg" alt="" /></div>
+                                <div class="category-batch-item-title">Серия DY - Сушильный шкаф с&nbsp;естественной конвекцией</div>
+                            </a>
+                        </div>
+                        <div class="category-batch-item">
+                            <a href="#">
+                                <div class="category-batch-item-preview"><img src="files/category-batch-06.jpg" alt="" /></div>
+                                <div class="category-batch-item-title">Серия DG - Сушильный шкаф с естественной конвекцией для сушки инструментов и лабораторной посуды</div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="category-batch-prefs">
+                        <h4>Преимущества серии</h4>
+                        <div class="category-batch-prefs-list">
+                            <ol>
+                                <li>Большое обзорное окно для удобства наблюдения</li>
+                                <li>Можно хранить инструменты после высушивания</li>
+                                <li>Высокоэффективный теплоизоляционный материал для внутренней и внешней структуры</li>
+                                <li>Регулируемая высота ножек для установки на неровных полах</li>
+                                <li>Снабжены трубчатым нагревателем из нержавеющей стали и поддоном для сбора воды</li>
+                                <li>Сушильная камера из нержавеющей стали с лёгким доступом для очистки и высокоустойчивая к коррозии</li>
+                                <li>Усовершенствованные функции безопасности и самодиагностики</li>
+                                <li>Вращательные ручки установки и цифровой дисплей для температуры и таймера</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="category-batch-security">
+                        <h4>Функции безопасности</h4>
+                        <p>Определение ошибки датчика температуры, блока SSR, короткого замыкания цепей, отсоединения нагревателя, ошибки памяти, перегрева и измерения температуры</p>
+                    </div>
+                </div>
+                <!-- category batch END -->
+                
+                <hr />
+
+                <!-- category parameters -->
+                <div class="category-parameters">
+                    <h2>Ключевые характеристики серий</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Серия</th>
+                                <th>Код продукта</th>
+                                <th>Метод циркуляции</th>
+                                <th>Объём рабочей<br /> камеры</th>
+                                <th>Диапазон рабочих<br /> температур</th>
+                                <th>Точность регулировки<br /> температуры</th>
+                                <th>Масса</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>DX</strong></td>
+                                <td>212010</td>
+                                <td>Естественная конвекция</td>
+                                <td>28 л</td>
+                                <td>280°C</td>
+                                <td>±1°C</td>
+                                <td>23 кг</td>
+                            </tr>
+                            <tr>
+                                <td><strong>DS</strong></td>
+                                <td>212010</td>
+                                <td>Естественная конвекция</td>
+                                <td>28 л</td>
+                                <td>280°C</td>
+                                <td>±1°C</td>
+                                <td>23 кг</td>
+                            </tr>
+                            <tr>
+                                <td><strong>DVS</strong></td>
+                                <td>212010</td>
+                                <td>Естественная конвекция</td>
+                                <td>28 л</td>
+                                <td>280°C</td>
+                                <td>±1°C</td>
+                                <td>23 кг</td>
+                            </tr>
+                            <tr>
+                                <td><strong>DXS</strong></td>
+                                <td>212010</td>
+                                <td>Естественная конвекция</td>
+                                <td>28 л</td>
+                                <td>280°C</td>
+                                <td>±1°C</td>
+                                <td>23 кг</td>
+                            </tr>
+                            <tr>
+                                <td><strong>DY</strong></td>
+                                <td>212010</td>
+                                <td>Естественная конвекция</td>
+                                <td>28 л</td>
+                                <td>280°C</td>
+                                <td>±1°C</td>
+                                <td>23 кг</td>
+                            </tr>
+                            <tr>
+                                <td><strong>DG</strong></td>
+                                <td>212010</td>
+                                <td>Естественная конвекция</td>
+                                <td>28 л</td>
+                                <td>280°C</td>
+                                <td>±1°C</td>
+                                <td>23 кг</td>
+                            </tr>
+                            <tr>
+                                <td><strong>DGS</strong></td>
+                                <td>212010</td>
+                                <td>Естественная конвекция</td>
+                                <td>28 л</td>
+                                <td>280°C</td>
+                                <td>±1°C</td>
+                                <td>23 кг</td>
+                            </tr>
+                            <tr>
+                                <td><strong>DKM</strong></td>
+                                <td>212010</td>
+                                <td>Естественная конвекция</td>
+                                <td>28 л</td>
+                                <td>280°C</td>
+                                <td>±1°C</td>
+                                <td>23 кг</td>
+                            </tr>
+                            <tr>
+                                <td><strong>DKN</strong></td>
+                                <td>212010</td>
+                                <td>Естественная конвекция</td>
+                                <td>28 л</td>
+                                <td>280°C</td>
+                                <td>±1°C</td>
+                                <td>23 кг</td>
+                            </tr>
+                            <tr>
+                                <td><strong>DNE</strong></td>
+                                <td>212010</td>
+                                <td>Естественная конвекция</td>
+                                <td>28 л</td>
+                                <td>280°C</td>
+                                <td>±1°C</td>
+                                <td>23 кг</td>
+                            </tr>
+                            <tr>
+                                <td><strong>DNF</strong></td>
+                                <td>212010</td>
+                                <td>Естественная конвекция</td>
+                                <td>28 л</td>
+                                <td>280°C</td>
+                                <td>±1°C</td>
+                                <td>23 кг</td>
+                            </tr>
+                            <tr>
+                                <td><strong>DKG</strong></td>
+                                <td>212010</td>
+                                <td>Естественная конвекция</td>
+                                <td>28 л</td>
+                                <td>280°C</td>
+                                <td>±1°C</td>
+                                <td>23 кг</td>
+                            </tr>
+                            <tr>
+                                <td><strong>DN</strong></td>
+                                <td>212010</td>
+                                <td>Естественная конвекция</td>
+                                <td>28 л</td>
+                                <td>280°C</td>
+                                <td>±1°C</td>
+                                <td>23 кг</td>
+                            </tr>
+                            <tr>
+                                <td><strong>DF</strong></td>
+                                <td>212010</td>
+                                <td>Естественная конвекция</td>
+                                <td>28 л</td>
+                                <td>280°C</td>
+                                <td>±1°C</td>
+                                <td>23 кг</td>
+                            </tr>
+                            <tr>
+                                <td><strong>DH</strong></td>
+                                <td>212010</td>
+                                <td>Естественная конвекция</td>
+                                <td>28 л</td>
+                                <td>280°C</td>
+                                <td>±1°C</td>
+                                <td>23 кг</td>
+                            </tr>
+                            <tr>
+                                <td><strong>DFS</strong></td>
+                                <td>212010</td>
+                                <td>Естественная конвекция</td>
+                                <td>28 л</td>
+                                <td>280°C</td>
+                                <td>±1°C</td>
+                                <td>23 кг</td>
+                            </tr>
+                            <tr>
+                                <td><strong>DHS</strong></td>
+                                <td>212010</td>
+                                <td>Естественная конвекция</td>
+                                <td>28 л</td>
+                                <td>280°C</td>
+                                <td>±1°C</td>
+                                <td>23 кг</td>
+                            </tr>
+                            <tr>
+                                <td><strong>DF</strong></td>
+                                <td>212010</td>
+                                <td>Естественная конвекция</td>
+                                <td>28 л</td>
+                                <td>280°C</td>
+                                <td>±1°C</td>
+                                <td>23 кг</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- category parameters END -->
+
+            </div>
+            <!-- container END -->
+
+            <footer>
+                <div class="container">
+                    <div class="footer-nav">
+                        <div class="footer-catalogue">
+                            <div class="footer-catalogue-title"><a href="#">Каталог</a></div>
+                            <div class="footer-catalogue-menu">
+                                <ul>
+                                    <li><a href="#">Сушильные шкафы</a></li>
+                                    <li><a href="#">Муфельные печи</a></li>
+                                    <li><a href="#">Инкубаторы</a></li>
+                                    <li><a href="#">Промышленное оборудование по&nbsp;индивидуальному заказу</a></li>
+                                    <li><a href="#">Ротационные испарители</a></li>
+                                    <li><a href="#">Стерилизаторы и автоклавы</a></li>
+                                    <li><a href="#">Распылительные сушилки</a></li>
+                                    <li><a href="#">Лиофильные (сублимационные) сушилки</a></li>
+                                    <li><a href="#">Охладители (чиллеры) лабораторные и&nbsp;холодовые ловушки Cool Trap</a></li>
+                                    <li><a href="#">Системы очистки воды</a></li>
+                                    <li><a href="#">Бани лабораторные</a></li>
+                                    <li><a href="#">Машины посудомоечные лабораторные</a></li>
+                                    <li><a href="#">Плиты нагревательные лабораторные</a></li>
+                                    <li><a href="#">Мешалки и шейкеры лабораторные</a></li>
+                                    <li><a href="#">Абсорбциометры</a></li>
+                                    <li><a href="#">Насосы и компрессоры</a></li>
+                                    <li><a href="#">Дополнительное оборудование и&nbsp;принадлежности</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="#">Поддержка</a></li>
+                                <li><a href="#">Документы и инструкции</a></li>
+                                <li><a href="#">Партнерам</a></li>
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">Контакты</a></li>
+                                <li><a href="#">О компании</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer-container">
+                        <div class="footer-logo">
+                            <div class="footer-logo-img"></div>
+                            <div class="footer-logo-title">
+                                <div class="footer-logo-title-text-1">Лабораторное научное оборудование</div>
+                                <div class="footer-logo-title-text-2">Yamato Scientific Co., Ltd.</div>
+                            </div>
+                        </div>
+
+                        <div class="footer-social">
+                            <a href="#" target="_blank" class="footer-social-fb"><svg><use xlink:href="images/sprite.svg#icon-fb"></use></svg></a>
+                            <a href="#" target="_blank" class="footer-social-twitter"><svg><use xlink:href="images/sprite.svg#icon-twitter"></use></svg></a>
+                            <a href="#" target="_blank" class="footer-social-vk"><svg><use xlink:href="images/sprite.svg#icon-vk-square"></use></svg></a>
+                        </div>
+
+                        <div class="footer-contacts">
+                            <div class="footer-contacts-title"><a href="tel:+74957406871">+7 495 740-68-71</a></div>
+                            <div class="footer-contacts-text">08:00–18:00 пн-чт, 08:00–17:00 пт</div>
+                        </div>
+
+                        <div class="footer-contacts">
+                            <div class="header-contacts-title">Москва</div>
+                            <div class="footer-contacts-text">Павелецкая наб., д. 2, стр. 3, оф. 119</div>
+                        </div>
+                    </div>
+
+                    <div class="footer-bottom">
+                        <div class="footer-links">
+                            <div class="footer-link"><a href="#">Карта сайта</a></div>
+                            <div class="footer-link"><a href="#">Пользовательское соглашение</a></div>
+                            <div class="footer-link"><a href="#">Политику конфиденциальности”</a></div>
+                        </div>
+                        <div class="footer-copyrights">Copyright © Yamato Scientific co., ltd. All rights reserved.</div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+        <!-- wrapper END -->
+
+        <a href="#" class="up-link"><svg><use xlink:href="images/sprite.svg#up-link"></use></svg></a>
+
+        <script>
+            var pathTemplate = './';
+        </script>
+        <script src="js/fonts.js"></script>
+
+        <script src="js/svg4everybody.min.js"></script>
+        <script>svg4everybody();</script>
+
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/slick/slick.min.js"></script>
+        <script src="js/jquery.mask.min.js"></script>
+        <script src="js/validation/jquery.validate.min.js"></script>
+        <script src="js/validation/messages_ru.js"></script>
+        <script src="js/select2/select2.min.js"></script>
+        <script src="js/select2/ru.js"></script>
+        <script src="js/air-datepicker/datepicker.min.js"></script>
+        <script src="js/mcustomscrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="js/clipboard.min.js"></script>
+        <script src="js/tools.js"></script>
+
+    </body>
+</html>
