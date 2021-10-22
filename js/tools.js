@@ -159,7 +159,8 @@ $(document).ready(function() {
                 {
                     breakpoint: 1199,
                     settings: {
-                        arrows: false
+                        arrows: false,
+                        dots: true
                     }
                 }
             ]
@@ -505,6 +506,42 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+    $('.nav li').each(function() {
+        var curLi = $(this);
+        if (curLi.find('ul').length > 0) {
+            curLi.append('<div class="nav-mobile-arrow"><svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#nav-mobile-arrow"></use></svg></div>');
+        }
+    });
+
+    $('.nav-mobile-arrow').click(function() {
+        $(this).parents().filter('li').toggleClass('open');
+        $('html').toggleClass('mobile-submenu-open');
+    });
+
+    $('.footer-catalogue-title').each(function() {
+        $(this).append('<div class="footer-catalogue-title-mobile"><svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#footer-catalogue-title"></use></svg></div>');
+    });
+
+    $('.footer-catalogue-title-mobile').click(function() {
+        $('.footer-catalogue').toggleClass('open');
+    });
+
+    $('.container table').each(function() {
+        var curTable = $(this);
+        if (!curTable.parent().hasClass('table-scroll')) {
+            curTable.wrap('<div class="table-scroll"></div>');
+        }
+    });
+
+    $('.levels-item-title').click(function() {
+        $(this).parent().toggleClass('open');
+    });
+
+    $('.news-search-mobile').click(function(e) {
+        $('.news-header').toggleClass('open');
+        e.preventDefault();
+    });
+
 });
 
 function initForm(curForm) {
@@ -793,3 +830,20 @@ function windowClose() {
         $(window).scrollTop($('.wrapper').data('curScroll'));
     }
 }
+
+$(window).on('load resize', function() {
+    if ($(window).width() > 1199) {
+        if ($('.table-scroll').length > 0) {
+            $('.table-scroll').mCustomScrollbar('destroy');
+        }
+    } else {
+        if ($('.table-scroll').length > 0) {
+            $('.table-scroll').each(function() {
+                var curTableScroll = $(this);
+                curTableScroll.mCustomScrollbar({
+                    axis: 'x'
+                });
+            });
+        }
+    }
+});
