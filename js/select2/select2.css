@@ -81,7 +81,7 @@
 .select2-container .select2-search--inline .select2-search__field:-ms-input-placeholder {opacity:1; color:#999999}
       @media screen and (max-width:1199px) {
         .select2-container .select2-search--inline .select2-search__field {
-            font-size: 18px;
+            font-size: 24px;
             line-height: 27px;
         }
       }
@@ -399,7 +399,8 @@
   border: none;
   outline: 0;
   box-shadow: none;
-  -webkit-appearance: textfield; }
+  border-radius: 0;
+  -webkit-appearance: none; }
 
 .select2-container--default .select2-results > .select2-results__options {
   max-height: 200px;
