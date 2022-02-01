@@ -211,6 +211,9 @@
   font-size: 14px;
   line-height: 21px;
   pointer-events: none; }
+  select.required+.select2-container--full::after {
+    content: attr(data-placeholder)' *';
+  }
 .select2-container--full-multiple::after {
   content: attr(data-placeholder)':';
   font-weight: normal;
@@ -259,6 +262,9 @@
     cursor: pointer;
     float: right;
     font-weight: bold; }
+  select.required+.select2-container--default .select2-selection--single .select2-selection__placeholder::after {
+    content: " *";
+    color: #f00; }
   .select2-container--default .select2-selection--single .select2-selection__placeholder {
     color: #999; }
   .select2-container--default .select2-selection--single .select2-selection__arrow {

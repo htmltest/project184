@@ -192,4 +192,9 @@
         <path d="M29.9102 14L14.0003 29.9099" stroke="#E02F21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
     </symbol>
 
+    <symbol viewBox="0 0 14 14" id="support-product-add">
+        <rect x="6" width="2" height="14" />
+        <rect x="14" y="6" width="2" height="14" transform="rotate(90 14 6)" />
+    </symbol>
+
 </svg>
