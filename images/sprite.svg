@@ -197,4 +197,9 @@
         <rect x="14" y="6" width="2" height="14" transform="rotate(90 14 6)" />
     </symbol>
 
+    <symbol viewBox="0 0 21 21" id="support-reg-link">
+        <rect x="9.5" width="2" height="21" />
+        <rect x="21" y="9.5" width="2" height="21" transform="rotate(90 21 9.5)" />
+    </symbol>
+
 </svg>

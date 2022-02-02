@@ -699,6 +699,10 @@ $(document).ready(function() {
         selectSeries.trigger('change');
     });
 
+    $('.support-reg-link a').click(function(e) {
+        $('.support-reg').toggleClass('open');
+        e.preventDefault();
+    });
 });
 
 function initForm(curForm) {
