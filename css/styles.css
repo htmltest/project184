@@ -53,6 +53,7 @@ hr {margin:50px 0; padding:0; height:1px; border:none; background:#e8e8e8}
     h3 {margin:30px 0 20px 0; font-size:22px; line-height:33px}
     h4 {margin:20px 0; font-size:22px; line-height:33px}
     p.anonce-text {font-size:22px; line-height:33px}
+    ul li::before {border-radius:50%; width:4px; height:4px; top:13px}
     blockquote {margin:30px 0; padding:0 0 0 27px; font-size:20px; line-height:30px; font-weight:300}
     .blockquote-author {font-weight:normal; color:#000; letter-spacing:0.03em}
 }
@@ -1780,8 +1781,13 @@ footer {background:#efefef; position:absolute; left:0; bottom:0; right:0}
 .support-reg {margin:60px 0; border-top:1px solid #e2e2e2; border-bottom:1px solid #e2e2e2; position:relative}
 .support-reg.open {border-bottom:none}
 .support-reg-link a {display:block; position:relative; padding:30px 0; font-weight:normal; font-size:18px; line-height:27px}
-.support-reg-link a svg {display:block; position:absolute; right:0; top:50%; width:21px; height:21px; margin-top:-12px; fill:#e02f21; transition:transform 0.2s}
+.support-reg-link a svg {display:block; position:absolute; right:0; top:50%; width:21px; height:21px; margin-top:-11px; fill:#e02f21; transition:transform 0.2s}
 .support-reg.open .support-reg-link a svg {transform:rotate(-45deg)}
+
+@media screen and (max-width:1199px) {
+    .support-reg-link a {font-size:22px; line-height:33px; padding-right:70px}
+    .support-reg-link a svg {width:28px; height:28px; margin-top:-14px}
+}
 
 .support-reg-form {position:absolute; left:-9999px; top:-9999px; width:100%; opacity:0; transition:opacity 0.5s; background:#f5f5f5; padding:56px 0 71px 0}
 .support-reg.open .support-reg-form {opacity:1; position:relative; left:auto; top:auto}
@@ -1791,12 +1797,26 @@ footer {background:#efefef; position:absolute; left:0; bottom:0; right:0}
 .support-reg-form-warning {margin:13px 0 38px 0; max-width:686px; padding:10px; background:#fee6e1; color:#000}
 .support-reg-form-warning span {color:#e02f21}
 
+@media screen and (max-width:1199px) {
+    .support-reg-form {padding:40px 0 68px 0}
+    .support-reg-form-warning {margin:19px 0 49px 0}
+}
+
 .support-levels {margin:30px -20px}
 .support-levels-inner {display:table; width:100%; border-collapse:separate; border-spacing:20px 0}
 .support-level {display:table-cell; vertical-align:top; width:25%; position:relative; background:#fcf7f6; padding:20px}
 .support-level-number {position:absolute; right:5px; top:11px; font-weight:normal; font-size:90px; line-height:90px; color:#e02f21; opacity:0.08}
 .support-level-title {position:relative; font-size:21px; line-height:32px; font-weight:normal; color:#000}
 .support-level-text {margin:17px 0 0 0; color:#000}
+
+@media screen and (max-width:1199px) {
+    .support-levels {margin:36px 0}
+    .support-levels-inner {display:block; width:auto}
+    .support-level {display:block; width:auto; margin:20px 0; padding:27px 30px 41px 30px}
+    .support-level-number {right:13px; top:13px}
+    .support-level-title {font-size:24px; line-height:31px; font-weight:bold; color:#4a4a4a}
+    .support-level-text {margin:20px 0 0 0; color:#4a4a4a; font-size:22px; line-height:33px; font-weight:normal}
+}
 
 .support-products-add {margin:20px 0 0 0}
 .support-products-add a {display:inline-block; vertical-align:top; padding:10px 24px; color:#000; background:#e8e8e8; text-decoration:none; transition:color 0.2s, background 0.2s}
@@ -1809,3 +1829,7 @@ footer {background:#efefef; position:absolute; left:0; bottom:0; right:0}
 
 .support-products .main-feedback-row+.main-feedback-row {margin-top:60px; padding-top:60px; border-top:1px solid #e5e5e5}
 .support-products-add-content {display:none}
+
+@media screen and (max-width:1199px) {
+    .support-products .main-feedback-row+.main-feedback-row {margin-top:40px; padding-top:40px}
+}
