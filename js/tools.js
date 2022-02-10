@@ -894,6 +894,11 @@ function initForm(curForm) {
                                                 $(this).val('').trigger('change blur').removeClass('error valid');
                                                 $(this).parent().removeClass('focus full');
                                             });
+                                            curForm.find('.support-products .main-feedback-row:gt(0)').remove();
+                                            curForm.find('.support-produce-select-series').html('<option value=""></option>');
+                                            curForm.find('.support-produce-select-series').trigger('change');
+                                            curForm.find('.support-produce-select-category option:selected').prop('selected', false);
+                                            curForm.find('.support-produce-select-category').trigger('change');
                                             curForm.prepend('<div class="message message-success">' + data.message + '</div>')
                                         } else {
                                             curForm.prepend('<div class="message message-error">' + data.message + '</div>')
@@ -926,6 +931,11 @@ function initForm(curForm) {
                                 $(this).val('').trigger('change blur').removeClass('error valid');
                                 $(this).parent().removeClass('focus full');
                             });
+                            curForm.find('.support-products .main-feedback-row:gt(0)').remove();
+                            curForm.find('.support-produce-select-series').html('<option value=""></option>');
+                            curForm.find('.support-produce-select-series').trigger('change');
+                            curForm.find('.support-produce-select-category option:selected').prop('selected', false);
+                            curForm.find('.support-produce-select-category').trigger('change');
                             curForm.prepend('<div class="message message-success">' + data.message + '</div>')
                         } else {
                             curForm.prepend('<div class="message message-error">' + data.message + '</div>')
@@ -973,6 +983,11 @@ function initForm(curForm) {
                                                 $(this).val('').trigger('change blur').removeClass('error valid');
                                                 $(this).parent().removeClass('focus full');
                                             });
+                                            curForm.find('.support-products .main-feedback-row:gt(0)').remove();
+                                            curForm.find('.support-produce-select-series').html('<option value=""></option>');
+                                            curForm.find('.support-produce-select-series').trigger('change');
+                                            curForm.find('.support-produce-select-category option:selected').prop('selected', false);
+                                            curForm.find('.support-produce-select-category').trigger('change');
                                             curForm.prepend('<div class="message message-success">' + data.message + '</div>')
                                         } else {
                                             curForm.prepend('<div class="message message-error">' + data.message + '</div>')
