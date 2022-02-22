@@ -1833,7 +1833,3 @@ footer {background:#efefef; position:absolute; left:0; bottom:0; right:0}
 @media screen and (max-width:1199px) {
     .support-products .main-feedback-row+.main-feedback-row {margin-top:40px; padding-top:40px}
 }
-
-.grecaptcha-badge {visibility:hidden}
-
-.form-notice {font-size:12px; line-height:18px; padding:10px 0 0 0}
