@@ -1621,12 +1621,14 @@ footer {background:#efefef; position:absolute; left:0; bottom:0; right:0}
     .footer-link a:hover {color:#e02f21}
 }
 .footer-copyrights {float:right}
+.footer-captcha {float:right; clear:right; font-size:12px; line-height:18px}
 
 @media screen and (max-width:1199px) {
     .footer-bottom {padding:37px 0 34px 0; border-top:1px solid #dedede; font-size:16px; line-height:24px}
     .footer-links {float:none}
     .footer-link {float:none; margin:0}
     .footer-copyrights {float:none; margin:21px 0 0 0}
+    .footer-captcha {float:none; margin:10px 0 0 0}
 }
 
 .window-open,
@@ -1833,3 +1835,5 @@ footer {background:#efefef; position:absolute; left:0; bottom:0; right:0}
 @media screen and (max-width:1199px) {
     .support-products .main-feedback-row+.main-feedback-row {margin-top:40px; padding-top:40px}
 }
+
+.grecaptcha-badge {visibility:hidden}
