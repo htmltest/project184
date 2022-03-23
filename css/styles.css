@@ -1701,7 +1701,7 @@ footer {background:#efefef; position:absolute; left:0; bottom:0; right:0}
 .window-photo-preview-list-item a {display:block; position:relative}
 .window-photo-preview-list-item a::after {content:""; display:block; position:absolute; left:0; top:0; right:0; bottom:0; border:2px solid #e02f21; opacity:0; transition:all 0.2s}
 @media screen and (min-width:1200px) {
-    .window-photo-preview-list-item a:hover::after {opacity:1}
+    .window-photo-preview-list-item a:hover::after {opacity:0.5}
 }
 .window-photo-preview-list-item.active a::after {opacity:1}
 .window-photo-preview-list-item a img {display:block; width:100%}
