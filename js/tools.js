@@ -703,6 +703,12 @@ $(document).ready(function() {
         $('.support-reg').toggleClass('open');
         e.preventDefault();
     });
+
+    $('body').on('click', '.main-feedback-row-close', function(e) {
+        $(this).parents().filter('.main-feedback-row').remove();
+        e.preventDefault();
+    });
+
 });
 
 function initForm(curForm) {

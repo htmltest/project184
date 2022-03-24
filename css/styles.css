@@ -745,7 +745,7 @@ header {height:170px; position:relative; z-index:99; background:#fff}
 .main-feedback h2 {margin-top:0}
 .main-feedback form {margin:46px 0 0 0; padding:0}
 .main-feedback h2+form {margin:0}
-.main-feedback-row {margin:0 -10px}
+.main-feedback-row {margin:0 -10px; position:relative}
 .main-feedback-row::after {content:""; display:block; clear:both}
 .main-feedback-col {float:left; width:50%; padding:0 10px}
 .main-feedback-row .form-input {margin:14px 0 0 0}
@@ -753,6 +753,12 @@ header {height:170px; position:relative; z-index:99; background:#fff}
 .main-feedback-row .form-select {margin:14px 0 0 0}
 .main-feedback-row .form-select:first-child {margin:0}
 .main-feedback-row .form-input textarea {min-height:298px}
+.main-feedback-row-close {display:block; position:absolute; right:10px; top:10px; width:24px; height:24px; background:#fff; border-radius:50%}
+.main-feedback-row-close svg {display:block; width:16px; height:16px; fill:#000; position:absolute; left:50%; top:50%; margin:-8px 0 0 -8px}
+@media screen and (min-width:1200px) {
+    .main-feedback-row-close:hover {background:#fcbebe}
+}
+
 
 @media screen and (max-width:1199px) {
     .main-feedback {padding:60px 0; margin:0 0 -60px 0}
@@ -893,7 +899,7 @@ header {height:170px; position:relative; z-index:99; background:#fff}
 .news-detail-social-links a:first-child {margin:0}
 .news-detail-social-links a svg {display:block; width:30px; height:30px; fill:#e02f21; transition:fill 0.2s; border-radius:50%}
 @media screen and (min-width:1200px) {
-    .news-detail-social-links a:hover svg {fill:#cd1103}
+    .news-detail-social-links a:hover svg {fill:#fcbebe}
 }
 .news-detail-container {margin:30px 0 0 0}
 
@@ -1398,7 +1404,10 @@ h4+.category-batch-add-anonce {margin-top:-18px}
 .batch-info-anonce {margin:15px 0 0 0; max-width:320px}
 .batch-info-discontinued {margin:30px 0 0 0}
 .batch-info-discontinued::after {content:""; display:block; clear:both}
-.batch-info-discontinued-like-link {margin:0 0 0 30px; padding:10px 0; display:inline-block; vertical-align:top; text-align:center; font-weight:normal}
+.batch-info-discontinued-like-link {margin:0 0 0 30px; padding:10px 0; display:inline-block; vertical-align:top; text-align:center; font-weight:normal; text-decoration:none}
+.batch-info-discontinued-like-link:hover {text-decoration:none}
+.batch-info-discontinued-like-link span {border-bottom:1px dashed transparent; transition:border-color 0.2s}
+.batch-info-discontinued-like-link:hover span {border-bottom-color:#e02f21}
 .batch-info-btn {margin:30px 0 0 0}
 .batch-info-params {margin:30px 0 0 0}
 .batch-info-param {margin:10px 0 0 0; color:#000; line-height:19px}
@@ -1406,6 +1415,8 @@ h4+.category-batch-add-anonce {margin-top:-18px}
 .batch-info-param-title {float:left; width:260px}
 .batch-info-param-value {margin:0 0 0 272px; font-weight:normal}
 .batch-info-params-link {margin:19px 0 0 0}
+.batch-info-params-link a {text-decoration:none; border-bottom:1px dashed transparent; transition:border-color 0.2s}
+.batch-info-params-link a:hover {border-bottom-color:#e02f21}
 
 @media screen and (max-width:1199px) {
     .batch-info {float:none; width:auto; padding:0}
@@ -1642,10 +1653,10 @@ footer {background:#efefef; position:absolute; left:0; bottom:0; right:0}
 .window-loading {position:absolute; left:0; top:0; right:0; bottom:0; background:url(../images/loading.gif) no-repeat center}
 .window-container {display:inline-block; vertical-align:middle; position:relative; text-align:left; background:#fff; margin:0; transition:opacity 0.2s}
 .window-container-preload {opacity:0}
-.window-close {display:block; position:absolute; right:22px; top:22px; width:40px; height:40px; border-radius:50%; background:#fff}
-.window-close svg {display:block; width:24px; height:24px; fill:#000; transition:fill 0.2s; position:absolute; left:50%; top:50%; margin:-12px 0 0 -12px}
+.window-close {display:block; position:absolute; right:22px; top:22px; width:40px; height:40px; border-radius:50%; background:#fff; transition:background 0.2s}
+.window-close svg {display:block; width:24px; height:24px; fill:#000; position:absolute; left:50%; top:50%; margin:-12px 0 0 -12px}
 @media screen and (min-width:1200px) {
-    .window-close:hover svg {fill:#e02f21}
+    .window-close:hover {background:#fcbebe}
 }
 
 @media screen and (max-width:1199px) {
@@ -1784,8 +1795,9 @@ footer {background:#efefef; position:absolute; left:0; bottom:0; right:0}
 
 .support-reg {margin:60px 0; border-top:1px solid #e2e2e2; border-bottom:1px solid #e2e2e2; position:relative}
 .support-reg.open {border-bottom:none}
-.support-reg-link a {display:block; position:relative; padding:30px 0; font-weight:normal; font-size:18px; line-height:27px}
-.support-reg-link a svg {display:block; position:absolute; right:0; top:50%; width:21px; height:21px; margin-top:-11px; fill:#e02f21; transition:transform 0.2s}
+.support-reg-link a {display:block; position:relative; padding:30px 20px; margin:0 -20px; font-weight:normal; font-size:18px; line-height:27px; transition:background 0.2s; text-decoration:none}
+.support-reg-link a:hover {background:#fff8f8}
+.support-reg-link a svg {display:block; position:absolute; right:20px; top:50%; width:21px; height:21px; margin-top:-11px; fill:#e02f21; transition:transform 0.2s}
 .support-reg.open .support-reg-link a svg {transform:rotate(-45deg)}
 
 @media screen and (max-width:1199px) {
