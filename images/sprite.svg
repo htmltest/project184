@@ -202,4 +202,12 @@
         <rect x="21" y="9.5" width="2" height="21" transform="rotate(90 21 9.5)" />
     </symbol>
 
+    <symbol viewBox="0 0 14 14" id="catalogue-category-descr-more">
+        <path d="M3.5 5.25L7 8.75L10.5 5.25" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+
+    <symbol viewBox="0 0 14 15" id="breadcrumbs-catalogue-title">
+        <path d="M3.5 5.75L7 9.25L10.5 5.75" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+
 </svg>
