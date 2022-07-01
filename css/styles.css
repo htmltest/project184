@@ -372,14 +372,14 @@ header {height:170px; position:relative; z-index:99; background:#fff}
 
 .logo {float:left; margin:17px 0 0 -7px}
 .logo a {display:block; text-decoration:none}
-.logo-img {float:left; width:55px; height:76px; background:url(../images/logo.png) no-repeat}
+.logo-img {float:left; width:55px; height:76px; background:url(../images/logo.svg) no-repeat; background-size:100%}
 .logo-title {float:left; margin:16px 0 0 20px}
 .logo-title-text-1 {font-weight:normal; font-size:14px; line-height:21px; color:#545454; letter-spacing:0.02em}
 .logo-title-text-2 {font-weight:bold; font-size:22px; line-height:33px; color:#000; margin:-7px 0 0 0}
 
 @media screen and (max-width:1199px) {
     .logo {margin:16px 0 0 0}
-    .logo-img {width:38px; height:54px; background:url(../images/logo-mobile.png) no-repeat}
+    .logo-img {width:38px; height:54px}
     .logo-title {margin:6px 0 0 20px}
     .logo-title-text-1 {font-size:12px; line-height:18px}
     .logo-title-text-2 {font-size:18px; line-height:27px; margin:-4px 0 0 0}
@@ -529,7 +529,7 @@ header {height:170px; position:relative; z-index:99; background:#fff}
 }
 .nav-mobile-arrow {display:none}
 .nav-contacts {display:none}
-.nav-logo {display:none; float:left; margin:3px 0 0 -10px; width:55px; height:50px; background:url(../images/logo-nav.png) no-repeat; position:relative}
+.nav-logo {display:none; float:left; margin:3px 0 0 -10px; width:55px; height:50px; background:url(../images/logo-nav.svg) no-repeat; background-size:100%; position:relative}
 .nav-logo a {display:block; position:absolute; left:0; top:0; right:0; bottom:0}
 .nav-phone {display:none; float:right; margin:18px 0 0 0}
 .nav-phone a {display:block}
@@ -789,7 +789,7 @@ header {height:170px; position:relative; z-index:99; background:#fff}
     .back-mobile-link a span svg {display:block; width:8px; height:13px; fill:none; stroke:#e02f21}
 }
 
-.breadcrumbs {margin:20px 0 0 0; font-size:16px; line-height:19px; font-weight:normal; color:rgba(44, 44, 44, 0.4)}
+.breadcrumbs {margin:20px 0 0 0; font-size:16px; line-height:21px; font-weight:normal; color:rgba(44, 44, 44, 0.4)}
 .breadcrumbs-center {text-align:center}
 .breadcrumbs+h1 {margin-top:40px}
 .breadcrumbs a {color:rgba(44, 44, 44, 0.4); text-decoration:none; transition:color 0.2s}
@@ -1253,18 +1253,17 @@ header {height:170px; position:relative; z-index:99; background:#fff}
     .manuals-list {column-count:1; column-gap:0}
 }
 
-.category-header {margin:28px 0 0 0}
+.category-header {margin:28px 0 49px 0}
 .category-header h1 {margin:0}
 .category-header-text {margin:18px 0 0 0}
 
 @media screen and (max-width:1199px) {
-    .category-header {margin:16px 0 0 0}
+    .category-header {margin:16px 0 40px 0}
     .category-header h1 {float:none; width:auto; padding:0}
     .category-header-text {float:none; width:auto; margin:27px 0 0 0; padding:0; font-size:22px; line-height:33px}
 }
 
-.category-batch {margin:49px 0 0 0; border-top:1px solid #e8e8e8; padding:50px 0 0 0}
-.category-batch+.category-batch {margin:78px 0 0 0}
+.category-batch {margin:49px 0 78px 0; border-top:1px solid #e8e8e8; padding:50px 0 0 0}
 .category-batch-header::after {content:""; display:block; clear:both}
 .category-batch-header h3 {margin:0; float:left; clear:left; width:50%; padding:0 10px 0 0}
 .category-batch-header-text {float:right; clear:right; width:50%; padding:6px 0 0 10px; color:#000}
@@ -1284,7 +1283,7 @@ header {height:170px; position:relative; z-index:99; background:#fff}
 
 @media screen and (max-width:1199px) {
     .category-batch {margin:40px 0 0 0; border-top:none; padding:0}
-    .category-batch+.category-batch {margin:90px 0 0 0}
+    .category-batch+.category-batch {margin:0 0 90px 0}
     .category-batch-header h3 {float:none; width:auto; padding:0}
     .category-batch-header-text {float:none; width:auto; margin:20px 0 0 0; padding:0}
     .category-batch-header-link {float:none; width:auto; margin:40px 0 0 0; padding:0}
@@ -1307,7 +1306,7 @@ hr+.category-parameters {margin:50px 0 0 0}
     .wrapper .category-parameters th br {display:none}
 }
 
-.category-batch-prefs {margin:26px 0 0 0}
+.category-batch-prefs {margin:0 0 40px 0}
 .category-batch-prefs h4 {margin-top:0; color:#000; font-weight:bold}
 .category-batch-prefs-list {margin:32px 0 -13px 0; color:#000}
 .category-batch-prefs-list ol {margin:0; padding:0; list-style:none; column-count:2; column-gap:100px}
@@ -1318,31 +1317,31 @@ hr+.category-parameters {margin:50px 0 0 0}
     .category-batch-prefs-list ol {column-count:1; column-gap:0}
 }
 
-.category-batch-security {margin:40px 0 0 0; color:#000}
+.category-batch-security {margin:0 0 40px 0; color:#000}
 .category-batch-security h4 {margin-top:0; color:#000; font-weight:bold}
 .category-batch-security h2 {color:#000; font-weight:bold}
 
 @media screen and (max-width:1199px) {
-    .category-batch-security {margin:60px 0 0 0; max-width:none; padding:0; font-size:20px; line-height:30px}
+    .category-batch-security {margin:0 0 60px 0; max-width:none; padding:0; font-size:20px; line-height:30px}
 }
 
-.category-batch-add {margin:40px 0 0 0}
+.category-batch-add {margin:0 0 40px 0}
 .category-batch-add h4 {color:#000; font-weight:bold}
 .category-batch-add-anonce {margin:40px 0 37px 0; color:#848484; font-size:24px; line-height:36px; font-weight:normal}
 h4+.category-batch-add-anonce {margin-top:-18px}
 .category-batch-add h2+h3 {margin-top:20px}
 
 @media screen and (max-width:1199px) {
-    .category-batch-add {margin:60px 0 0 0; max-width:none; padding:0}
+    .category-batch-add {margin:0 0 60px 0; max-width:none; padding:0}
     .category-batch-add h2+h3 {margin-top:-20px; font-weight:bold; color:#707070}
 }
 
-.batch-header {margin:50px 0 0 0}
+.batch-header {margin:50px 0 120px 0}
 .batch-header::after {content:""; display:block; clear:both}
 .batch-gallery {float:left; width:50%; padding:0 60px 0 0}
 
 @media screen and (max-width:1199px) {
-    .batch-header {margin:16px 0 0 0}
+    .batch-header {margin:16px 0 60px 0}
     .batch-gallery {float:none; width:auto; padding:0; margin:40px 0 0 0}
 }
 
@@ -1420,7 +1419,7 @@ h4+.category-batch-add-anonce {margin-top:-18px}
     .batch-info-params-link {margin:22px 0 0 0}
 }
 
-.batch-prefs {margin:120px 0 0 0; display:table; width:100%; border-collapse:collapse}
+.batch-prefs {margin:0 0 60px 0; display:table; width:100%; border-collapse:collapse}
 .batch-pref {display:table-cell; vertical-align:top; padding:0 0 0 20px}
 .batch-pref:first-child {padding:0}
 .batch-pref-inner {display:table}
@@ -1428,15 +1427,14 @@ h4+.category-batch-add-anonce {margin-top:-18px}
 .batch-pref-icon img {max-width:none}
 .batch-pref-text {display:table-cell; vertical-align:top; padding:0 0 0 10px; font-size:16px; line-height:24px; color:#000}
 
-.batch-prefs-category {margin-top:72px; border-top:1px solid #e8e8e8; border-bottom:1px solid #e8e8e8}
+.batch-prefs-category {border-top:1px solid #e8e8e8; border-bottom:1px solid #e8e8e8}
 .batch-prefs-category .batch-pref {padding-top:50px; padding-bottom:50px}
 
 @media screen and (max-width:1199px) {
     .batch-prefs {display:none}
 }
 
-.batch-models {margin:86px 0 0 0}
-.category-header+.batch-models {margin:60px 0 0 0}
+.batch-models {margin:0 0 60px 0}
 .batch-models .category-batch-list {margin-top:20px}
 
 .tabs {margin:60px 0}
@@ -1472,14 +1470,28 @@ h4+.category-batch-add-anonce {margin-top:-18px}
 .wrapper table.category-parameters-options th {width:290px}
 .wrapper table.category-parameters-options th:first-child {width:205px}
 .wrapper table.category-parameters-options td {width:290px}
-.wrapper table.category-parameters-options td:first-child {width:205px; white-space:nowrap}
+.wrapper table.category-parameters-options td:first-child {width:205px}
 
 .category-parameters .table-scroll {margin-top:40px; margin-bottom:0}
 .category-parameters table {margin:0}
 .category-parameters .table-scroll-with-fixed {position:relative}
-.category-parameters .table-scroll-fixed {display:none; position:absolute; left:0; top:0; background:#fff; box-shadow:10px 4px 40px rgba(0, 0, 0, 0.1)}
+.category-parameters .table-scroll-fixed {display:none; position:absolute; left:0; top:0; background:#fff; box-shadow:10px 4px 40px rgba(0, 0, 0, 0.1); width:205px}
 .category-parameters .table-scroll-fixed.visible {display:block}
 .wrapper .category-parameters .table-scroll-fixed th:first-child {padding-left:20px}
+.wrapper .category-parameters .table-scroll-fixed td:last-child {padding-right:0}
+
+.table-scroll-arrow-prev {display:none; width:36px; height:36px; position:absolute; left:0; top:75px; background:rgba(224, 47, 33, 0.2); transition:background 0.2s; cursor:pointer}
+.table-scroll-arrow-prev.visible {display:block}
+.table-scroll-arrow-prev svg {display:block; width:36px; height:36px; fill:#e02f21; transform:rotate(-180deg)}
+@media screen and (min-width:1200px) {
+    .table-scroll-arrow-prev:hover {background:rgba(224, 47, 33, 0.4)}
+}
+.table-scroll-arrow-next {display:none; width:36px; height:36px; position:absolute; right:0; top:75px; background:rgba(224, 47, 33, 0.2); transition:background 0.2s; cursor:pointer}
+.table-scroll-arrow-next.visible {display:block}
+.table-scroll-arrow-next svg {display:block; width:36px; height:36px; fill:#e02f21}
+@media screen and (min-width:1200px) {
+    .table-scroll-arrow-next:hover {background:rgba(224, 47, 33, 0.4)}
+}
 
 @media screen and (max-width:1199px) {
     .tabs-content .category-parameters {max-width:none}
@@ -1494,6 +1506,8 @@ h4+.category-batch-add-anonce {margin-top:-18px}
     .category-parameters-value-mobile {margin:2px 0 0 0; font-size:20px; line-height:30px; color:#000; font-weight:300}
 
     .category-parameters .table-scroll-fixed.visible {display:none}
+    .table-scroll-arrow-prev.visible {display:none}
+    .table-scroll-arrow-next.visible {display:none}
 }
 
 .batch-files {margin:0 0 -17px 0; column-count:2; column-gap:20px}
@@ -1579,14 +1593,14 @@ footer {background:#efefef; position:absolute; left:0; bottom:0; right:0}
 }
 
 .footer-logo {float:left; margin:-7px 0 0 0}
-.footer-logo-img {float:left; width:44px; height:60px; background:url(../images/footer-logo.png) no-repeat}
+.footer-logo-img {float:left; width:44px; height:60px; background:url(../images/logo.svg) no-repeat; background-size:100%}
 .footer-logo-title {float:left; margin:8px 0 0 21px}
 .footer-logo-title-text-1 {font-weight:normal; font-size:14px; line-height:21px; color:#545454; letter-spacing:0.02em}
 .footer-logo-title-text-2 {font-weight:bold; font-size:22px; line-height:33px; color:#000; margin:-7px 0 0 0}
 
 @media screen and (max-width:1199px) {
     .footer-logo {float:none; margin:0; position:absolute; left:0; bottom:-102px}
-    .footer-logo-img {float:none; width:55px; height:76px; background:url(../images/logo.png) no-repeat}
+    .footer-logo-img {float:none; width:55px; height:76px}
     .footer-logo-title {display:none}
 }
 
@@ -1857,7 +1871,7 @@ footer {background:#efefef; position:absolute; left:0; bottom:0; right:0}
 .catalogue-with-menu::after {content:""; display:block; clear:both}
 
 .catalogue-menu {float:left; width:226px; padding:15px 0 0 0; z-index:20; position:relative}
-.catalogue-menu ul {margin:0; padding:11px 0; list-style:none; background:#fff; border:1px solid #e8e8e8; box-shadow:4px 4px 30px rgba(0, 0, 0, 0.08); position:relative}
+.catalogue-menu ul {margin:0; padding:0; list-style:none; background:#fff; border:1px solid #e8e8e8; box-shadow:4px 4px 30px rgba(0, 0, 0, 0.08); position:relative}
 .catalogue-menu ul li {margin:0; padding:0; position:static}
 .catalogue-menu ul li::before {display:none}
 .catalogue-menu ul li > a {display:block; padding:10px 18px; color:#4a4a4a; text-decoration:none; line-height:19px; font-weight:normal; transition:background 0.2s; position:relative}

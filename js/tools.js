@@ -572,6 +572,7 @@ $(document).ready(function() {
                                 '</div>';
                 curTable.parent().wrap('<div class="table-scroll-with-fixed"></div>');
                 curTable.parent().parent().append(htmlFixed);
+                curTable.parent().parent().append('<div class="table-scroll-arrow-prev"><svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#table-scroll-arrow"></use></svg></div><div class="table-scroll-arrow-next"><svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#table-scroll-arrow"></use></svg></div>');
 
                 var curTableScroll = curTable.parents().filter('.table-scroll');
                 curTableScroll.mCustomScrollbar({
@@ -580,6 +581,7 @@ $(document).ready(function() {
                         onInit: function() {
                             if (curTableScroll.parents().filter('.category-parameters').length == 1) {
                                 curTableScroll.parent().find('.table-scroll-fixed').removeClass('visible');
+                                curTableScroll.parent().find('.table-scroll-arrow-next').addClass('visible');
                             }
                         },
 
@@ -587,8 +589,15 @@ $(document).ready(function() {
                             if (curTableScroll.parents().filter('.category-parameters').length == 1) {
                                 if (this.mcs.left == 0) {
                                     curTableScroll.parent().find('.table-scroll-fixed').removeClass('visible');
+                                    curTableScroll.parent().find('.table-scroll-arrow-prev').removeClass('visible');
                                 } else {
                                     curTableScroll.parent().find('.table-scroll-fixed').addClass('visible');
+                                    curTableScroll.parent().find('.table-scroll-arrow-prev').addClass('visible');
+                                }
+                                if (this.mcs.leftPct == 100) {
+                                    curTableScroll.parent().find('.table-scroll-arrow-next').removeClass('visible');
+                                } else {
+                                    curTableScroll.parent().find('.table-scroll-arrow-next').addClass('visible');
                                 }
                             }
                         }
@@ -596,6 +605,42 @@ $(document).ready(function() {
                 });
             }
         }
+    });
+
+    var isHover = false;
+    var timerTableScroll = null;
+
+    function scrollTableTo(curTable, scrollTarget) {
+        if (isHover) {
+            curTable.mCustomScrollbar('scrollTo', scrollTarget, {scrollEasing : 'linear', scrollInertia: 300});
+            timerTableScroll = window.setTimeout(function() {
+                scrollTableTo(curTable, scrollTarget);
+            }, 300);
+        }
+    }
+
+    $('body').on('mouseenter', '.table-scroll-arrow-prev', function() {
+        var curTable = $(this).parent().find('.table-scroll');
+        isHover = true;
+        scrollTableTo(curTable, '+=200');
+    });
+
+    $('body').on('mouseleave', '.table-scroll-arrow-prev', function() {
+        window.clearTimeout(timerTableScroll);
+        timerTableScroll = null;
+        isHover = false;
+    });
+
+    $('body').on('mouseenter', '.table-scroll-arrow-next', function() {
+        var curTable = $(this).parent().find('.table-scroll');
+        isHover = true;
+        scrollTableTo(curTable, '-=200');
+    });
+
+    $('body').on('mouseleave', '.table-scroll-arrow-next', function() {
+        window.clearTimeout(timerTableScroll);
+        timerTableScroll = null;
+        isHover = false;
     });
 
     $('.levels-item-title').click(function() {
@@ -1212,6 +1257,19 @@ $(window).on('load resize scroll', function() {
                 curLink.parent().addClass('active');
             }
         });
+    });
+
+    $('.category-parameters .table-scroll-with-fixed').each(function() {
+        var curBlock = $(this);
+        if (curBlock.parents().filter('.tabs-content').length == 0 || curBlock.parents().filter('.tabs-content').hasClass('active')) {
+            if (windowScroll + $('header').outerHeight() > curBlock.offset().top) {
+                if (windowScroll + $('header').outerHeight() + 111 < curBlock.offset().top + curBlock.outerHeight()) {
+                    curBlock.find('.table-scroll-arrow-prev, .table-scroll-arrow-next').css({'margin-top': windowScroll + $('header').outerHeight() - curBlock.offset().top});
+                }
+            } else {
+                curBlock.find('.table-scroll-arrow-prev, .table-scroll-arrow-next').css({'margin-top': 0});
+            }
+        }
     });
 });
 
