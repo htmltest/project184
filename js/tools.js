@@ -440,8 +440,9 @@ $(document).ready(function() {
 
     $('.batch-gallery-preview-list').slick({
         infinite: false,
-        slidesToShow: 7,
+        slidesToShow: 5,
         slidesToScroll: 1,
+        vertical: true,
         accessibility: false,
         prevArrow: '<button type="button" class="slick-prev"><svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#gallery-prev"></use></svg></button>',
         nextArrow: '<button type="button" class="slick-next"><svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#gallery-next"></use></svg></button>',
@@ -882,6 +883,27 @@ $(document).ready(function() {
         catalogueMenuTimer4 = window.setTimeout(function() {
             curLi.removeClass('hover');
         }, 500);
+    });
+
+    $('.category-batch-list-slider').slick({
+        infinite: false,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        prevArrow: '<button type="button" class="slick-prev"><svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#category-batch-list-slider-prev"></use></svg></button>',
+        nextArrow: '<button type="button" class="slick-next"><svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#category-batch-list-slider-next"></use></svg></button>',
+        dots: true,
+        responsive: [
+            {
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    slidesPerRow: 4,
+                    adaptiveHeight: true
+                }
+            }
+        ]
     });
 
 });

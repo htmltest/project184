@@ -215,4 +215,18 @@
         <rect x="24.9688" y="18.4853" width="3" height="12" transform="rotate(135 24.9688 18.4853)" />
     </symbol>
 
+    <symbol viewBox="0 0 20 20" id="category-batch-list-slider-prev">
+        <path d="M12.5 15L7.5 10L12.5 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="category-batch-list-slider-next">
+        <path d="M7.5 5L12.5 10L7.5 15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="batch-info-variant-order">
+        <path d="M7.49935 18.3333C7.95959 18.3333 8.33268 17.9602 8.33268 17.5C8.33268 17.0397 7.95959 16.6666 7.49935 16.6666C7.03911 16.6666 6.66602 17.0397 6.66602 17.5C6.66602 17.9602 7.03911 18.3333 7.49935 18.3333Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M16.6673 18.3333C17.1276 18.3333 17.5007 17.9602 17.5007 17.5C17.5007 17.0397 17.1276 16.6666 16.6673 16.6666C16.2071 16.6666 15.834 17.0397 15.834 17.5C15.834 17.9602 16.2071 18.3333 16.6673 18.3333Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M0.833984 0.833374H4.16732L6.40065 11.9917C6.47686 12.3754 6.68557 12.72 6.99027 12.9653C7.29497 13.2106 7.67623 13.3409 8.06732 13.3334H16.1673C16.5584 13.3409 16.9397 13.2106 17.2444 12.9653C17.5491 12.72 17.7578 12.3754 17.834 11.9917L19.1673 5.00004H5.00065" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+
 </svg>
