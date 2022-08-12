@@ -2047,7 +2047,7 @@ h1+.catalogue-category-descr {margin:18px 0 0 0}
     .batch-info-variant-order a svg {width:26px; height:26px; margin:-13px 0 0 -13px}
 }
 
-.order-reg {margin-bottom:-80px; border-bottom:none}
+.order-reg {margin-bottom:-62px; border-bottom:none}
 .order-reg .main-feedback-row .form-input textarea {min-height:142px}
 
 @media screen and (max-width:1199px) {
