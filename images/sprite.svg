@@ -229,4 +229,8 @@
         <path d="M0.833984 0.833374H4.16732L6.40065 11.9917C6.47686 12.3754 6.68557 12.72 6.99027 12.9653C7.29497 13.2106 7.67623 13.3409 8.06732 13.3334H16.1673C16.5584 13.3409 16.9397 13.2106 17.2444 12.9653C17.5491 12.72 17.7578 12.3754 17.834 11.9917L19.1673 5.00004H5.00065" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
     </symbol>
 
+    <symbol viewBox="0 0 14 8" id="category-mobile-arrow">
+        <path d="M12 2L7 7L2 2" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+    </symbol>
+
 </svg>
