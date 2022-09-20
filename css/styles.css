@@ -1340,7 +1340,7 @@ hr+.category-parameters {margin:50px 0 0 0}
     .wrapper .category-parameters th br {display:none}
 }
 
-.category-batch-prefs {margin:0 0 40px 0}
+.category-batch-prefs {margin:0 0 40px 0; clear:both}
 .category-batch-prefs h4 {margin-top:0; color:#000; font-weight:bold}
 .category-batch-prefs h2 svg {display:none}
 .category-batch-prefs-list {margin:32px 0 -13px 0; color:#000; max-width:75%}
@@ -1930,7 +1930,7 @@ footer {background:#efefef; position:absolute; left:0; bottom:0; right:0}
 
 .catalogue-with-menu::after {content:""; display:block; clear:both}
 
-.catalogue-menu {float:left; width:226px; margin:0 59px 0 0; padding:15px 0 0 0; z-index:20; position:relative}
+.catalogue-menu {float:left; width:226px; margin:0 59px 40px 0; padding:15px 0 0 0; z-index:20; position:relative}
 .catalogue-menu ul {margin:0; padding:0; list-style:none; background:#fff; border:1px solid #e8e8e8; box-shadow:4px 4px 30px rgba(0, 0, 0, 0.08); position:relative}
 .catalogue-menu ul li {margin:0; padding:0; position:static}
 .catalogue-menu ul li::before {display:none}
