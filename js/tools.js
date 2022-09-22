@@ -587,6 +587,9 @@ $(document).ready(function() {
                 var curTableScroll = curTable.parents().filter('.table-scroll');
                 curTableScroll.mCustomScrollbar({
                     axis: 'x',
+                    mouseWheel: {
+                        enable: false
+                    },
                     callbacks: {
                         onInit: function() {
                             if (curTableScroll.parents().filter('.category-parameters').length == 1) {
