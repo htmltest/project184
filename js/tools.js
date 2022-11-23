@@ -289,7 +289,12 @@ $(document).ready(function() {
 
     $('body').on('click', '[data-lightbox]', function(e) {
         var curItem = $(this);
-        var curGallery = $('[data-lightbox]');
+        var curGroup = curItem.attr('data-lightbox');
+        if (curGroup == '') {
+            var curGallery = curItem;
+        } else {
+            var curGallery = $('[data-lightbox="' + curGroup + '"]');
+        }
         var curIndex = curGallery.index(curItem);
 
         var curWidth = $(window).width();
