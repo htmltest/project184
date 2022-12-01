@@ -233,4 +233,8 @@
         <path d="M12 2L7 7L2 2" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
     </symbol>
 
+    <symbol viewBox="0 0 24 25" id="btn-feedback">
+        <path d="M4 4.97852H20V16.9785H5.17L4 18.1485V4.97852ZM4 2.97852C2.9 2.97852 2.01 3.87852 2.01 4.97852L2 22.9785L6 18.9785H20C21.1 18.9785 22 18.0785 22 16.9785V4.97852C22 3.87852 21.1 2.97852 20 2.97852H4ZM6 12.9785H14V14.9785H6V12.9785ZM6 9.97852H18V11.9785H6V9.97852ZM6 6.97852H18V8.97852H6V6.97852Z" />
+    </symbol>
+
 </svg>

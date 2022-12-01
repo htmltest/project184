@@ -803,7 +803,7 @@ header {height:170px; position:relative; z-index:99; background:#fff}
 .breadcrumbs-catalogue {display:inline; position:relative}
 .breadcrumbs-catalogue-title {display:inline}
 .breadcrumbs-catalogue-title svg {display:inline-block; vertical-align:middle; margin:-2px 0 0 8px; width:14px; height:14px; fill:none; stroke:#e02f21}
-.breadcrumbs-catalogue-menu {display:none; position:absolute; left:0; top:100%; margin-top:18px; z-index:88; min-width:300px; background:#ffffff; border:1px solid #d6d6d6; box-shadow:4px 4px 30px rgba(0, 0, 0, 0.08); padding:10px 20px}
+.breadcrumbs-catalogue-menu {display:none; position:absolute; left:0; top:19px; margin-top:18px; z-index:88; min-width:300px; background:#ffffff; border:1px solid #d6d6d6; box-shadow:4px 4px 30px rgba(0, 0, 0, 0.08); padding:10px 20px}
 .breadcrumbs-catalogue-menu::before {content:""; display:block; width:10px; height:10px; background:#fff; position:absolute; left:10px; top:-6px; border-left:1px solid #d6d6d6; border-top:1px solid #d6d6d6; transform:rotate(45deg)}
 .breadcrumbs-catalogue-menu::after {content:""; display:block; position:absolute; left:-1px; top:-19px; right:-1px; height:18px; background:url(../images/blank.gif)}
 .breadcrumbs-catalogue:hover .breadcrumbs-catalogue-menu {display:block}
@@ -1402,18 +1402,20 @@ h4+.category-batch-add-anonce {margin-top:-18px}
     .batch-gallery {float:none; width:auto; padding:0; margin:40px 0 0 0}
 }
 
-.batch-gallery-big {float:right; width:calc(100% - 98px); border:1px solid #e8e8e8; padding:10px}
+.batch-gallery-big {border:1px solid #e8e8e8; padding:10px}
+.batch-gallery-preview+.batch-gallery-big {float:right; width:calc(100% - 98px)}
 .batch-gallery-big-list {font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap; position:relative; overflow:hidden}
-.batch-gallery-big-item {display:inline-block; vertical-align:top; width:100%}
+.batch-gallery-big-item {display:inline-block; vertical-align:top; width:100%; height:552px; line-height:552px; text-align:center}
 .batch-gallery-big-item a {display:block; height:552px; line-height:552px; text-align:center}
 .batch-gallery-big-list .slick-slide img,
-.batch-gallery-big-item a img {max-height:100%; vertical-align:middle; display:inline-block}
+.batch-gallery-big-item img {max-height:100%; vertical-align:middle; display:inline-block}
 
 @media screen and (max-width:1199px) {
     .batch-gallery-big {float:none; width:auto; border:none; padding:0; margin:0 95px 0 0}
     .batch-gallery-big-list {overflow:visible}
     .batch-gallery-big-list .slick-list {overflow:visible}
-    .batch-gallery-big-item a {height:330px; line-height:308px; padding:10px; border:1px solid #e8e8e8; margin:0 20px 0 0}
+    .batch-gallery-big-item {height:330px; line-height:308px; text-align:center; border:1px solid #e8e8e8; padding:10px}
+    .batch-gallery-big-item a {height:308px; line-height:308px; margin:0 20px 0 0}
 }
 
 .batch-gallery-preview {float:left; width:51px; line-height:0}
@@ -2169,4 +2171,37 @@ h1+.catalogue-category-descr {margin:18px 0 0 0}
 
 @media screen and (max-width:767px) {
     .presentation-item {width:50%}
+}
+
+.auth {max-width:424px; margin:80px auto 0 auto}
+.auth h1 {text-align:center}
+.auth-form {margin:40px 0 0 0}
+.auth-form form {margin:0; padding:0}
+.auth-form .form-input {margin-bottom:25px}
+.auth-form .form-checkbox {margin-top:20px}
+.auth-btn {margin:40px 0 0 0; text-align:center}
+.auth-btn .btn {font-weight:bold; text-transform:uppercase; font-size:16px; line-height:21px; padding-left:40px; padding-right:40px}
+.auth-bottom {margin:60px auto 0 auto; text-align:center}
+.auth-links {display:inline-block; vertical-align:top; border-bottom:1px solid #becee5; padding:0 0 30px 0; font-weight:normal; line-height:23px; min-width:350px; text-align:center}
+.auth-links span {margin:0 25px; color:#becee5}
+.auth-feedback-title {margin:40px 0 0 0; font-weight:normal; line-height:23px}
+.auth-feedback-btn {margin:20px 0 0 0}
+.btn-feedback {display:inline-block; vertical-align:middle; margin:-2px 10px 0 0; width:24px; height:25px; fill:#FFFFFF; transition:fill 0.2s}
+
+@media (max-width:1199px) {
+    .auth {max-width:none; margin:40px 0 0 0}
+    .auth-btn .btn {display:inline-block; width:auto}
+    .auth-feedback-btn .btn {display:inline-block; width:auto; padding-left:20px; padding-right:20px}
+}
+
+.forgot-anonce {margin:20px -171px; text-align:center}
+.forgot-anonce p {margin:0}
+.forgot-anonce a {text-decoration:underline}
+@media screen and (min-width:1200px) {
+    .forgot-anonce a:hover {text-decoration:none}
+}
+
+@media (max-width:1199px) {
+    .forgot-anonce {margin:20px 0}
+    .forgot-anonce p+p {margin:27px 0 0 0}
 }
