@@ -1344,12 +1344,26 @@ function windowOpen(linkWindow, dataWindow) {
 
 function windowClose() {
     if ($('.window').length > 0) {
-        $('.window').remove();
-        $('html').removeClass('window-open');
-        $('body').css({'margin-right': 0});
-        $('.wrapper').css({'top': 0});
-        $('meta[name="viewport"]').attr('content', 'width=device-width');
-        $(window).scrollTop($('.wrapper').data('curScroll'));
+
+        var isEmptyForm = true;
+        $('.window .form-input input, .window .form-input textarea, .window .form-select select').each(function() {
+            if ($(this).val() != '') {
+                isEmptyForm = false;
+            }
+        });
+        if (isEmptyForm) {
+            $('.window').remove();
+            $('html').removeClass('window-open');
+            $('body').css({'margin-right': 0});
+            $('.wrapper').css({'top': 0});
+            $('meta[name="viewport"]').attr('content', 'width=device-width');
+            $(window).scrollTop($('.wrapper').data('curScroll'));
+        } else {
+            if (confirm('Закрыть форму?')) {
+                $('.window .form-input input, .window .form-input textarea, .window .form-select select').val('');
+                windowClose();
+            }
+        }
     }
 }
 
