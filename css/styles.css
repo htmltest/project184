@@ -358,16 +358,16 @@ label.error {display:block; margin:10px 0 0 0; font-weight:normal; font-size:14p
 .wrapper {width:100%; min-width:480px; min-height:100%; position:relative; overflow:hidden; padding:0 0 384px 0}
 
 @media screen and (max-width:1199px) {
-    .wrapper {padding:80px 0 0 0}
+    .wrapper {padding:65px 0 0 0}
 }
 
 header {height:170px; position:relative; z-index:99; background:#fff}
 .header-container {height:110px}
 
 @media screen and (max-width:1199px) {
-    header {height:80px; position:fixed; left:0; top:0; right:0}
+    header {height:65px; position:fixed; left:0; top:0; right:0}
     header.fixed {border-bottom:1px solid #ebebeb}
-    .header-container {height:80px}
+    .header-container {height:65px}
     .mobile-menu-open header {height:auto; bottom:0; overflow:auto}
 }
 
@@ -379,19 +379,17 @@ header {height:170px; position:relative; z-index:99; background:#fff}
 .logo-title-text-2 {font-weight:bold; font-size:22px; line-height:33px; color:#000; margin:-7px 0 0 0}
 
 @media screen and (max-width:1199px) {
-    .logo {margin:16px 0 0 0}
-    .logo-img {width:38px; height:54px}
-    .logo-title {margin:6px 0 0 20px}
-    .logo-title-text-1 {font-size:12px; line-height:18px}
-    .logo-title-text-2 {font-size:18px; line-height:27px; margin:-4px 0 0 0}
-
-    .mobile-menu-open .logo-title {display:none}
+    .logo {margin:14px 0 0 0}
+    .logo-img {width:27px; height:38px}
+    .logo-title {margin:2px 0 0 10px}
+    .logo-title-text-1 {font-size:10px; line-height:15px}
+    .logo-title-text-2 {font-size:16px; line-height:16px; margin:2px 0 0 0}
 }
 
 .mobile-menu-link {display:none; transition:none}
 
 @media screen and (max-width:1199px) {
-    .mobile-menu-link {display:block; float:right; margin:25px -3px 0 29px; width:30px; height:30px; position:relative; overflow:hidden}
+    .mobile-menu-link {display:block; float:right; margin:17px 0 0 30px; width:30px; height:30px; position:relative; overflow:hidden}
     .mobile-menu-link svg {display:block; fill:none; width:30px; height:30px}
     .mobile-menu-link svg:nth-child(2) {display:none}
     .mobile-menu-open .mobile-menu-link svg:nth-child(1) {display:none}
@@ -401,7 +399,7 @@ header {height:170px; position:relative; z-index:99; background:#fff}
     .mobile-menu-open body {overflow:hidden; position:fixed; left:0; top:0; right:0; bottom:0}
 }
 
-.header-search {float:right; margin:42px 0 0 37px}
+.header-search {float:right; margin:42px 0 0 20px}
 .header-search-link {display:block}
 .header-search-link svg {display:block; width:26px; height:26px; fill:none; stroke:#e02f21; transition:stroke 0.2s}
 @media screen and (min-width:1200px) {
@@ -409,7 +407,7 @@ header {height:170px; position:relative; z-index:99; background:#fff}
 }
 
 @media screen and (max-width:1199px) {
-    .header-search {margin:27px 0 0 0}
+    .header-search {margin:19px 0 0 0}
 }
 
 .header-search-window {display:none; position:absolute; right:calc(50% - 600px); top:0; left:calc(50% - 270px); padding:0 82px 0 323px; height:110px; background:#fff; z-index:2}
@@ -435,27 +433,28 @@ header {height:170px; position:relative; z-index:99; background:#fff}
 
     .header-search-open .mobile-menu-link {visibility:hidden}
     .header-search-open .header-callback,
-    .header-search-open.mobile-menu-open .header-callback {display:none}
-    .header-search-open .logo-title {display:block}
-    .header-search-open .header-search-link {display:none}
+    .header-search-open.mobile-menu-open .header-callback {visibility:hidden}
+    .header-search-open .header-search-link {visibility:hidden}
+    .header-search-open .header-youtube {visibility:hidden}
 
-    .header-search-window {right:0; left:0; top:80px; position:fixed; z-index:99px; padding:0; height:auto; bottom:0; background:rgba(0, 0, 0, 0.3)}
+    .header-search-window {right:0; left:0; top:65px; position:fixed; z-index:99px; padding:0; height:auto; bottom:0; background:rgba(0, 0, 0, 0.3)}
     .header-search-window form {margin:0; background:#fff; padding:55px 20px 50px 20px}
     .header-search-submit button {background:#e02f21; border-radius:2px; opacity:1; top:55px; right:20px}
     .header-search-submit button svg {stroke:#fff}
-    .header-search-close {top:-54px; right:17px; width:30px; height:30px}
+    .header-search-close {top:-44px; right:17px; width:30px; height:30px}
     .header-search-close svg {width:30px; height:30px}
 }
 
-.header-callback {float:right; margin:33px 0 0 0}
-.header-callback a {display:block; height:43px; border:1px solid #e02f21; color:#4a4a4a; font-weight:normal; font-size:15px; line-height:41px; padding:0 15px; text-decoration:none; transition:background 0.2s, color 0.2s}
+.header-callback {float:right; margin:42px 0 0 0}
+.header-callback a {display:block; width:26px; height:26px; font-size:0; line-height:0; text-decoration:none; position:relative; border-radius:50%; border:1px solid #E02F21; transition:border-color 0.2s}
+.header-callback a svg {display:block; width:26px; height:26px; position:absolute; left:-1px; top:-1px; fill:#E02F21; transition:fill 0.2s}
 @media screen and (min-width:1200px) {
-    .header-callback a:hover {background:#e02f21; color:#fff}
+    .header-callback a:hover {border-color:#cd1103}
+    .header-callback a:hover svg {fill:#cd1103}
 }
 
 @media screen and (max-width:1199px) {
-    .header-callback {display:none; margin:26px 27px 0 0}
-    .header-callback a {width:28px; height:28px; font-size:0; line-height:0; border:none; background:url(../images/header-callback-mobile.svg) no-repeat}
+    .header-callback {display:none; margin:19px 27px 0 0}
 
     .mobile-menu-open .header-callback {display:block}
 }
@@ -472,14 +471,19 @@ header {height:170px; position:relative; z-index:99; background:#fff}
     .header-contacts {display:none}
 }
 
-.header-youtube {float:right; margin:42px 40px 0 0}
-.header-youtube svg {display:block; width:32px; height:32px; fill:#E02F21; transition:fill 0.2s}
+.header-youtube {float:right; margin:34px 40px 0 0}
+.header-youtube a {display:block; position:relative; padding:0 0 0 53px; text-decoration:none}
+.header-youtube svg {position:absolute; left:0; top:6px; display:block; width:44px; height:32px; fill:#E02F21; transition:fill 0.2s}
 @media screen and (min-width:1200px) {
     .header-youtube a:hover svg {fill:#cd1103}
 }
 
 @media screen and (max-width:1199px) {
-    .header-youtube {margin:24px 29px 0 0}
+    .header-youtube {margin:22px 30px 0 0}
+    .header-youtube a {padding:0}
+    .header-youtube svg {position:relative; left:auto; top:auto; width:30px; height:22px}
+    .header-youtube .header-contacts-title {display:none}
+    .header-youtube .header-contacts-text {display:none}
 }
 
 .nav {height:60px; background:#e02f21; font-weight:bold; font-size:16px; line-height:34px; letter-spacing:0.05em; text-transform:uppercase}
