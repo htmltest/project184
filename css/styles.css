@@ -446,11 +446,11 @@ header {height:170px; position:relative; z-index:99; background:#fff}
 }
 
 .header-callback {float:right; margin:42px 0 0 0}
-.header-callback a {display:block; width:26px; height:26px; font-size:0; line-height:0; text-decoration:none; position:relative; border-radius:50%; border:1px solid #E02F21; transition:border-color 0.2s}
+.header-callback a {display:block; width:26px; height:26px; font-size:0; line-height:0; text-decoration:none; position:relative; border-radius:50%; border:1px solid #E02F21; transition:border-color 0.2s, background 0.2s}
 .header-callback a svg {display:block; width:26px; height:26px; position:absolute; left:-1px; top:-1px; fill:#E02F21; transition:fill 0.2s}
 @media screen and (min-width:1200px) {
-    .header-callback a:hover {border-color:#cd1103}
-    .header-callback a:hover svg {fill:#cd1103}
+    .header-callback a:hover {border-color:#cd1103; background:#cd1103}
+    .header-callback a:hover svg {fill:#FFFFFF}
 }
 
 @media screen and (max-width:1199px) {
