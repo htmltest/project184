@@ -1,7 +1,6 @@
 <div class="window-callback">
     <div class="window-title">Запрос товара</div>
-    <form action="windows/success.html" method="post" data-captchaurl="ajax/captcha.php" class="window-form recaptcha-form">
-        <script src="https://www.google.com/recaptcha/api.js?render=6LdHSvgcAAAAAHfkqTliNRLNbN8n4oSa0UJfMCU3"></script>
+    <form action="windows/error_smartcaptcha_window.php" method="post" class="window-form">
         <div class="window-order-product">
             <div class="window-order-product-preview"><img src="files/order-window.jpg" alt="" /></div>
             <div class="window-order-product-container">
@@ -34,6 +33,9 @@
         <div class="form-input"><span>Номер телефона <em>*</em></span><input type="text" name="phone" value="" class="required phoneRU" /></div>
         <div class="form-input"><span>Название компании <em>*</em></span><input type="text" name="company" value="" class="required" /></div>
         <div class="form-checkbox"><label><input type="checkbox" name="policy" checked="checked" class="required" /><span>Согласен с <a href="#">политикой обработки данных</a> <em>*</em></span></label></div>
+
+        <div class="captcha-container"></div>
+
         <div class="form-submit">
             <input type="submit" class="btn" value="Оставить заявку" />
             <div class="form-required"><span>*</span> - обязательные для заполнения поля</div>

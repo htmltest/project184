@@ -1064,6 +1064,20 @@ function initForm(curForm) {
         }
     });
 
+    curForm.find('.captcha-container').each(function() {
+        if (!window.smartCaptcha) {
+            return;
+        }
+        var curID = window.smartCaptcha.render(this, {
+            sitekey: 'uahGSHTKJqjaJ0ezlhjrbOYH4OxS6zzL9CZ47OgY',
+            callback: smartCaptchaCallback,
+            invisible: true,
+            hideShield: true,
+        });
+        $(this).attr('data-smartid', curID);
+        window.smartCaptcha.execute(curID);
+    });
+
     curForm.find('[name="recaptcha_response"]').each(function() {
         var curInput = $(this);
         grecaptcha.ready(function() {
@@ -1128,6 +1142,10 @@ function initForm(curForm) {
         }
     });
 }
+
+function smartCaptchaLoad() {}
+
+function smartCaptchaCallback(token) {}
 
 $(window).on('load resize scroll', function() {
     var windowScroll = $(window).scrollTop();
