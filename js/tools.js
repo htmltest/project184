@@ -1064,179 +1064,64 @@ function initForm(curForm) {
         }
     });
 
+    curForm.find('[name="recaptcha_response"]').each(function() {
+        var curInput = $(this);
+        grecaptcha.ready(function() {
+            grecaptcha.execute('6LdHSvgcAAAAAHfkqTliNRLNbN8n4oSa0UJfMCU3', {action: 'submit'}).then(function(token) {
+                curInput.val(token);
+            });
+        });
+    });
+
     curForm.validate({
         ignore: '',
         submitHandler: function(form) {
             var curForm = $(form);
+
             if (curForm.hasClass('ajax-form')) {
-                if (curForm.hasClass('recaptcha-form')) {
-                    grecaptcha.ready(function() {
-                        grecaptcha.execute('6LdHSvgcAAAAAHfkqTliNRLNbN8n4oSa0UJfMCU3', {action: 'submit'}).then(function(token) {
-                            $.ajax({
-                                type: 'POST',
-                                url: curForm.attr('data-captchaurl'),
-                                dataType: 'json',
-                                data: 'recaptcha_response=' + token,
-                                cache: false
-                            }).fail(function(jqXHR, textStatus, errorThrown) {
-                                alert('Сервис временно недоступен, попробуйте позже.' + textStatus);
-                                curForm.removeClass('loading');
-                            }).done(function(data) {
-                                if (data.status) {
-                                    curForm.addClass('loading');
-                                    var formData = new FormData(form);
+                curForm.addClass('loading');
+                var formData = new FormData(form);
 
-                                    if (curForm.find('[type=file]').length != 0) {
-                                        var file = curForm.find('[type=file]')[0].files[0];
-                                        formData.append('file', file);
-                                    }
-
-                                    $.ajax({
-                                        type: 'POST',
-                                        url: curForm.attr('action'),
-                                        processData: false,
-                                        contentType: false,
-                                        dataType: 'json',
-                                        data: formData,
-                                        cache: false
-                                    }).done(function(data) {
-                                        if (data.status) {
-                                            curForm.find('.form-input input, .form-input textarea').each(function() {
-                                                $(this).val('').trigger('change blur').removeClass('error valid');
-                                                $(this).parent().removeClass('focus full');
-                                            });
-                                            curForm.find('.support-products .main-feedback-row:gt(0)').remove();
-                                            curForm.find('.support-produce-select-series').html('<option value=""></option>');
-                                            curForm.find('.support-produce-select-series').trigger('change');
-                                            curForm.find('.support-produce-select-category option:selected').prop('selected', false);
-                                            curForm.find('.support-produce-select-category').trigger('change');
-                                            curForm.prepend('<div class="message message-success">' + data.message + '</div>')
-                                        } else {
-                                            curForm.prepend('<div class="message message-error">' + data.message + '</div>')
-                                        }
-                                        curForm.removeClass('loading');
-                                    });
-                                } else {
-                                    alert('Не пройдена проверка Google reCAPTCHA v3.');
-                                    curForm.removeClass('loading');
-                                }
-                            });
-                        });
-                    });
-                } else {
-                    curForm.addClass('loading');
-                    var formData = new FormData(form);
-
-                    $.ajax({
-                        type: 'POST',
-                        url: curForm.attr('action'),
-                        processData: false,
-                        contentType: false,
-                        dataType: 'json',
-                        data: formData,
-                        cache: false
-                    }).done(function(data) {
-                        curForm.find('.message').remove();
-                        if (data.status) {
-                            curForm.find('.form-input input, .form-input textarea').each(function() {
-                                $(this).val('').trigger('change blur').removeClass('error valid');
-                                $(this).parent().removeClass('focus full');
-                            });
-                            curForm.find('.support-products .main-feedback-row:gt(0)').remove();
-                            curForm.find('.support-produce-select-series').html('<option value=""></option>');
-                            curForm.find('.support-produce-select-series').trigger('change');
-                            curForm.find('.support-produce-select-category option:selected').prop('selected', false);
-                            curForm.find('.support-produce-select-category').trigger('change');
-                            curForm.prepend('<div class="message message-success">' + data.message + '</div>')
-                        } else {
-                            curForm.prepend('<div class="message message-error">' + data.message + '</div>')
-                        }
-                        if ($(window).width() < 1200) {
-                            $('html, body').animate({'scrollTop': $('#feedback').offset().top - $('header').height()});
-                        }
-                        curForm.removeClass('loading');
-                    });
+                if (curForm.find('[type=file]').length != 0) {
+                    var file = curForm.find('[type=file]')[0].files[0];
+                    formData.append('file', file);
                 }
-            } else if (curForm.hasClass('window-form')) {
-                if (curForm.hasClass('recaptcha-form')) {
-                    grecaptcha.ready(function() {
-                        grecaptcha.execute('6LdHSvgcAAAAAHfkqTliNRLNbN8n4oSa0UJfMCU3', {action: 'submit'}).then(function(token) {
-                            $.ajax({
-                                type: 'POST',
-                                url: curForm.attr('data-captchaurl'),
-                                dataType: 'json',
-                                data: 'recaptcha_response=' + token,
-                                cache: false
-                            }).fail(function(jqXHR, textStatus, errorThrown) {
-                                alert('Сервис временно недоступен, попробуйте позже.' + textStatus);
-                                curForm.removeClass('loading');
-                            }).done(function(data) {
-                                if (data.status) {
-                                    curForm.addClass('loading');
-                                    var formData = new FormData(form);
 
-                                    if (curForm.find('[type=file]').length != 0) {
-                                        var file = curForm.find('[type=file]')[0].files[0];
-                                        formData.append('file', file);
-                                    }
-
-                                    $.ajax({
-                                        type: 'POST',
-                                        url: curForm.attr('action'),
-                                        processData: false,
-                                        contentType: false,
-                                        dataType: 'json',
-                                        data: formData,
-                                        cache: false
-                                    }).done(function(data) {
-                                        if (data.status) {
-                                            curForm.find('.form-input input, .form-input textarea').each(function() {
-                                                $(this).val('').trigger('change blur').removeClass('error valid');
-                                                $(this).parent().removeClass('focus full');
-                                            });
-                                            curForm.find('.support-products .main-feedback-row:gt(0)').remove();
-                                            curForm.find('.support-produce-select-series').html('<option value=""></option>');
-                                            curForm.find('.support-produce-select-series').trigger('change');
-                                            curForm.find('.support-produce-select-category option:selected').prop('selected', false);
-                                            curForm.find('.support-produce-select-category').trigger('change');
-                                            curForm.prepend('<div class="message message-success">' + data.message + '</div>')
-                                        } else {
-                                            curForm.prepend('<div class="message message-error">' + data.message + '</div>')
-                                        }
-                                    });
-                                    curForm.removeClass('loading');
-                                } else {
-                                    alert('Не пройдена проверка Google reCAPTCHA v3.');
-                                    curForm.removeClass('loading');
-                                }
-                            });
+                $.ajax({
+                    type: 'POST',
+                    url: curForm.attr('action'),
+                    processData: false,
+                    contentType: false,
+                    dataType: 'json',
+                    data: formData,
+                    cache: false
+                }).done(function(data) {
+                    curForm.find('.message').remove();
+                    if (data.status) {
+                        curForm.find('.form-input input, .form-input textarea').each(function() {
+                            $(this).val('').trigger('change blur').removeClass('error valid');
+                            $(this).parent().removeClass('focus full');
                         });
-                    });
-                } else {
-                    var formData = new FormData(form);
-
-                    windowOpen(curForm.attr('action'), formData);
-                }
-            } else if (curForm.hasClass('recaptcha-form')) {
-                grecaptcha.ready(function() {
-                    grecaptcha.execute('6LdHSvgcAAAAAHfkqTliNRLNbN8n4oSa0UJfMCU3', {action: 'submit'}).then(function(token) {
-                        $.ajax({
-                            type: 'POST',
-                            url: curForm.attr('data-captchaurl'),
-                            dataType: 'json',
-                            data: 'recaptcha_response=' + token,
-                            cache: false
-                        }).fail(function(jqXHR, textStatus, errorThrown) {
-                            alert('Сервис временно недоступен, попробуйте позже.' + textStatus);
-                        }).done(function(data) {
-                            if (data.status) {
-                                form.submit();
-                            } else {
-                                alert('Не пройдена проверка Google reCAPTCHA v3.');
-                            }
-                        });
-                    });
+                        curForm.find('.support-products .main-feedback-row:gt(0)').remove();
+                        curForm.find('.support-produce-select-series').html('<option value=""></option>');
+                        curForm.find('.support-produce-select-series').trigger('change');
+                        curForm.find('.support-produce-select-category option:selected').prop('selected', false);
+                        curForm.find('.support-produce-select-category').trigger('change');
+                        curForm.prepend('<div class="message message-success">' + data.message + '</div>')
+                    } else {
+                        curForm.prepend('<div class="message message-error">' + data.message + '</div>')
+                    }
+                    curForm.removeClass('loading');
                 });
+            } else if (curForm.hasClass('window-form')) {
+                var formData = new FormData(form);
+
+                if (curForm.find('[type=file]').length != 0) {
+                    var file = curForm.find('[type=file]')[0].files[0];
+                    formData.append('file', file);
+                }
+
+                windowOpen(curForm.attr('action'), formData);
             } else {
                 form.submit();
             }

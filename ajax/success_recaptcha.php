@@ -7,8 +7,8 @@
 
     $recaptchaJSON = json_decode($recaptcha);
     if ($recaptchaJSON->success == true && $recaptchaJSON->score >= 0.5) {
-        echo '{"status":true}';
+        echo '{"status":true, "message":"Спасибо за ваше обращение, наш менеджер вскоре свяжется с вами!"}';
     } else {
-        echo '{"status":false}';
+        echo '{"status":false, "message":"Не пройдена проверка на робота"}';
     }
 ?>

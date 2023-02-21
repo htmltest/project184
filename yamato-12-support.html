@@ -171,8 +171,8 @@
                         <div class="support-reg-form">
                             <h2>Регистрация продукта</h2>
                             <div class="support-reg-form-warning"><span>ВНИМАНИЕ!</span> Регистрационная форма заполняется конечным покупателем оборудования Yamato. Используйте кнопку "+", чтобы зарегистрировать несколько единиц оборудования.</div>
-                            <form action="ajax/success.html" method="post" data-captchaurl="ajax/captcha.php" class="ajax-form recaptcha-form">
-                                <script src="https://www.google.com/recaptcha/api.js?render=6LdHSvgcAAAAAHfkqTliNRLNbN8n4oSa0UJfMCU3"></script>
+                            <form action="ajax/success.html" method="post" class="ajax-form">
+                                <input type="hidden" name="recaptcha_response" value="" />
                                 <h4>Контактная информация владельца</h4>
                                 <div class="main-feedback-row">
                                     <div class="main-feedback-col">
@@ -527,6 +527,8 @@
         <script src="js/mcustomscrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
         <script src="js/clipboard.min.js"></script>
         <script src="js/tools.js"></script>
+
+        <script src="https://www.google.com/recaptcha/api.js?render=6LdHSvgcAAAAAHfkqTliNRLNbN8n4oSa0UJfMCU3"></script>
 
     </body>
 </html>
