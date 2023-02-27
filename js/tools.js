@@ -1046,6 +1046,7 @@ function initForm(curForm) {
                 $(e.delegateTarget).parent().find('.select2-container').addClass('select2-container--full-multiple');
             }
             curSelect.parent().find('select.error').removeClass('error');
+            curSelect.parent().find('select').addClass('valid');
             curSelect.parent().find('label.error').remove();
         });
 
