@@ -1076,7 +1076,6 @@ function initForm(curForm) {
             hideShield: true,
         });
         $(this).attr('data-smartid', curID);
-        window.smartCaptcha.execute(curID);
     });
 
     curForm.find('[name="recaptcha_response"]').each(function() {
@@ -1093,52 +1092,75 @@ function initForm(curForm) {
         submitHandler: function(form) {
             var curForm = $(form);
 
-            if (curForm.hasClass('ajax-form')) {
-                curForm.addClass('loading');
-                var formData = new FormData(form);
+            var smartCaptchaWaiting = false;
+            curForm.find('.captcha-container').each(function() {
+                if (curForm.attr('form-smartcaptchawaiting') != 'true') {
+                    var curBlock = $(this);
+                    var curInput = curBlock.find('input[name="smart-token"]');
+                    curInput.removeAttr('value');
+                    smartCaptchaWaiting = true;
+                    $('form[form-smartcaptchawaiting]').removeAttr('form-smartcaptchawaiting');
+                    curForm.attr('form-smartcaptchawaiting', 'false');
 
-                if (curForm.find('[type=file]').length != 0) {
-                    var file = curForm.find('[type=file]')[0].files[0];
-                    formData.append('file', file);
-                }
-
-                $.ajax({
-                    type: 'POST',
-                    url: curForm.attr('action'),
-                    processData: false,
-                    contentType: false,
-                    dataType: 'json',
-                    data: formData,
-                    cache: false
-                }).done(function(data) {
-                    curForm.find('.message').remove();
-                    if (data.status) {
-                        curForm.find('.form-input input, .form-input textarea').each(function() {
-                            $(this).val('').trigger('change blur').removeClass('error valid');
-                            $(this).parent().removeClass('focus full');
-                        });
-                        curForm.find('.support-products .main-feedback-row:gt(0)').remove();
-                        curForm.find('.support-produce-select-series').html('<option value=""></option>');
-                        curForm.find('.support-produce-select-series').trigger('change');
-                        curForm.find('.support-produce-select-category option:selected').prop('selected', false);
-                        curForm.find('.support-produce-select-category').trigger('change');
-                        curForm.prepend('<div class="message message-success">' + data.message + '</div>')
-                    } else {
-                        curForm.prepend('<div class="message message-error">' + data.message + '</div>')
+                    if (!window.smartCaptcha) {
+                        return;
                     }
-                    curForm.removeClass('loading');
-                });
-            } else if (curForm.hasClass('window-form')) {
-                var formData = new FormData(form);
-
-                if (curForm.find('[type=file]').length != 0) {
-                    var file = curForm.find('[type=file]')[0].files[0];
-                    formData.append('file', file);
+                    var curID = $(this).attr('data-smartid');
+                    window.smartCaptcha.execute(curID);
+                } else {
+                    curForm.removeAttr('form-smartcaptchawaiting');
                 }
+            });
 
-                windowOpen(curForm.attr('action'), formData);
-            } else {
-                form.submit();
+            if (!smartCaptchaWaiting) {
+
+                if (curForm.hasClass('ajax-form')) {
+                    curForm.addClass('loading');
+                    var formData = new FormData(form);
+
+                    if (curForm.find('[type=file]').length != 0) {
+                        var file = curForm.find('[type=file]')[0].files[0];
+                        formData.append('file', file);
+                    }
+
+                    $.ajax({
+                        type: 'POST',
+                        url: curForm.attr('action'),
+                        processData: false,
+                        contentType: false,
+                        dataType: 'json',
+                        data: formData,
+                        cache: false
+                    }).done(function(data) {
+                        curForm.find('.message').remove();
+                        if (data.status) {
+                            curForm.find('.form-input input, .form-input textarea').each(function() {
+                                $(this).val('').trigger('change blur').removeClass('error valid');
+                                $(this).parent().removeClass('focus full');
+                            });
+                            curForm.find('.support-products .main-feedback-row:gt(0)').remove();
+                            curForm.find('.support-produce-select-series').html('<option value=""></option>');
+                            curForm.find('.support-produce-select-series').trigger('change');
+                            curForm.find('.support-produce-select-category option:selected').prop('selected', false);
+                            curForm.find('.support-produce-select-category').trigger('change');
+                            curForm.prepend('<div class="message message-success">' + data.message + '</div>')
+                        } else {
+                            curForm.prepend('<div class="message message-error">' + data.message + '</div>')
+                        }
+                        curForm.removeClass('loading');
+                    });
+                } else if (curForm.hasClass('window-form')) {
+                    var formData = new FormData(form);
+
+                    if (curForm.find('[type=file]').length != 0) {
+                        var file = curForm.find('[type=file]')[0].files[0];
+                        formData.append('file', file);
+                    }
+
+                    windowOpen(curForm.attr('action'), formData);
+                } else {
+                    form.submit();
+                }
             }
         }
     });
@@ -1146,7 +1168,10 @@ function initForm(curForm) {
 
 function smartCaptchaLoad() {}
 
-function smartCaptchaCallback(token) {}
+function smartCaptchaCallback(token) {
+    $('form[form-smartcaptchawaiting]').attr('form-smartcaptchawaiting', 'true');
+    $('form[form-smartcaptchawaiting] input[type="submit"]').trigger('click');
+}
 
 $(window).on('load resize scroll', function() {
     var windowScroll = $(window).scrollTop();
