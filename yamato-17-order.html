@@ -48,7 +48,7 @@
                         </div>
 
                         <div class="header-callback">
-                            <a href="windows/callback-recaptcha.html" class="window-link"><svg><use xlink:href="images/sprite.svg#header-callback"></use></svg></a>
+                            <a href="windows/callback-recaptcha.html" class="window-link">Оставить заявку</a>
                         </div>
 
                         <div class="header-contacts">
@@ -136,7 +136,10 @@
                             </div>
                         </div>
                         <div class="nav-phone">
-                            <a href="windows/callback-recaptcha.html" class="window-link"><svg><use xlink:href="images/sprite.svg#main-contacts-icon-phone"></use></svg></a>
+                            <a href="tel:+74957406871">+7 495 740-68-71</a>
+                        </div>
+                        <div class="nav-callback">
+                            <a href="windows/callback-recaptcha.html" class="window-link">Оставить заявку</a>
                         </div>
                     </div>
                 </div>
@@ -189,11 +192,11 @@
                                 <div class="main-feedback-col">
                                     <div class="form-input"><span>ФИО контактного лица <em>*</em></span><input type="text" name="name" value="" class="required" /></div>
                                     <div class="form-input"><span>Электронная почта <em>*</em></span><input type="text" name="email" value="" class="required email" /></div>
-                                    <div class="form-input"><span>Номер телефона <em>*</em></span><input type="text" name="phone" value="" class="required phoneRU" /></div>
+                                    <div class="form-input"><span>Номер телефона <em>*</em></span><input type="text" name="phone" value="" data-tel-input class="required" maxlength="18" /></div>
                                 </div>
 
                                 <div class="main-feedback-col">
-                                    <div class="form-input"><span>Название компании <em>*</em></span><input type="text" name="company" value="" class="required" /></div>
+                                    <div class="form-input"><span>Название компании</span><input type="text" name="company" value="" /></div>
                                     <div class="form-input form-textarea"><span>Комментарии</span><textarea name="comments" cols="5" rows="3"></textarea></div>
                                 </div>
                             </div>
@@ -313,6 +316,7 @@
         <script src="js/jquery-3.4.1.min.js"></script>
         <script src="js/slick/slick.min.js"></script>
         <script src="js/jquery.mask.min.js"></script>
+        <script src="js/phoneinput.js"></script>
         <script src="js/validation/jquery.validate.min.js"></script>
         <script src="js/validation/messages_ru.js"></script>
         <script src="js/select2/select2.min.js"></script>

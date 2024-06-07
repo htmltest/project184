@@ -33,11 +33,11 @@ h3 {margin:40px 0 20px 0; padding:0; font-weight:normal; font-size:24px; line-he
 h4 {margin:40px 0 20px 0; padding:0; font-weight:normal; font-size:21px; line-height:32px}
 p {margin:20px 0; padding:0}
 p.anonce-text {margin:40px 0; font-size:18px; line-height:27px; font-weight:normal}
-ul {margin:40px 0; padding:0; list-style:none}
+ul {margin:20px 0; padding:0; list-style:none}
 ul li {margin:6px 0; padding:0 0 0 15px; position:relative}
 ul li::before {content:""; display:block; position:absolute; left:0; top:9px; width:5px; height:5px; background:#000}
 li ul {margin:10px 0 24px 0}
-ol {margin:40px 0; padding:0; list-style:none; counter-reset:point}
+ol {margin:20px 0; padding:0; list-style:none; counter-reset:point}
 ol li {margin:6px 0; padding:0 0 0 26px; position:relative}
 ol li::before {content:counter(point)'.'; counter-increment:point 1; font-weight:normal; position:absolute; left:0; top:0; color:#000}
 li ol {margin:10px 0 24px 0; counter-reset:subpoint}
@@ -128,7 +128,7 @@ form.loading::after {content:""; display:block; position:absolute; left:0; top:0
 .form-input textarea {position:relative; border:2px solid #e5e5e5; font:18px/27px Arial, sans-serif; color:#333; vertical-align:top; margin:0; padding:26px 18px 7px 18px; width:100%; height:64px; box-sizing:border-box; outline:none; border-radius:0; background:#fff; -webkit-appearance:none; transition:border-color 0.2s}
 .fonts-loaded .form-input input,
 .fonts-loaded .form-input textarea {font-family:RobotoCondensed, sans-serif}
-.form-input textarea {height:auto; resize:none; overflow:auto}
+.form-input textarea {height:auto; resize:none; overflow:auto; min-height:138px}
 @media screen and (min-width:1200px) {
     .form-input input:hover,
     .form-input textarea:hover {border-color:#faca9b}
@@ -437,6 +437,7 @@ header {height:170px; position:relative; z-index:99; background:#fff}
     .header-search-open .header-search-link {visibility:hidden}
     .header-search-open .header-rutube {visibility:hidden}
     .header-search-open .header-youtube {visibility:hidden}
+    .header-search-open .header-contacts {visibility:hidden}
 
     .header-search-window {right:0; left:0; top:65px; position:fixed; z-index:99px; padding:0; height:auto; bottom:0; background:rgba(0, 0, 0, 0.3)}
     .header-search-window form {margin:0; background:#fff; padding:55px 20px 50px 20px}
@@ -446,18 +447,16 @@ header {height:170px; position:relative; z-index:99; background:#fff}
     .header-search-close svg {width:30px; height:30px}
 }
 
-.header-callback {float:right; margin:42px 0 0 0}
-.header-callback a {display:block; width:26px; height:26px; font-size:0; line-height:0; text-decoration:none; position:relative; border-radius:50%; border:1px solid #E02F21; transition:border-color 0.2s, background 0.2s}
-.header-callback a svg {display:block; width:26px; height:26px; position:absolute; left:-1px; top:-1px; fill:#E02F21; transition:fill 0.2s}
+.header-callback {float:right; margin:38px 0 0 0}
+.header-callback a {display:block; padding:5px 11px; font-weight:normal; font-size:13px; line-height:20px; color:#E02F21; text-decoration:none; position:relative; border-radius:2px; border:1px solid #E02F21; transition:border-color 0.2s, background 0.2s, color 0.2s}
+.header-callback a svg {display:none; width:26px; height:26px; position:absolute; left:-1px; top:-1px; fill:#E02F21; transition:fill 0.2s}
 @media screen and (min-width:1200px) {
-    .header-callback a:hover {border-color:#cd1103; background:#cd1103}
+    .header-callback a:hover {border-color:#cd1103; background:#cd1103; color:#FFFFFF}
     .header-callback a:hover svg {fill:#FFFFFF}
 }
 
 @media screen and (max-width:1199px) {
     .header-callback {display:none; margin:19px 27px 0 0}
-
-    .mobile-menu-open .header-callback {display:block}
 }
 
 .header-contacts {float:right; margin:34px 40px 0 0}
@@ -469,7 +468,11 @@ header {height:170px; position:relative; z-index:99; background:#fff}
 .header-contacts-text {margin:-1px 0 0 0; font-weight:normal; font-size:13px; line-height:20px; color:#777}
 
 @media screen and (max-width:1199px) {
-    .header-contacts {display:none}
+    .header-contacts {margin:19px 28px 0 0}
+    .header-contacts+.header-contacts {display:none}
+    .header-contacts-title {font-size:0; line-height:0}
+    .header-contacts-title a {display:block; width:26px; height:26px; background:url(../images/header-phone-mobile.svg) no-repeat}
+    .header-contacts-text {display:none}
 }
 
 .header-rutube {float:right; margin:38px 40px 0 0}
@@ -492,7 +495,7 @@ header {height:170px; position:relative; z-index:99; background:#fff}
 }
 
 @media screen and (max-width:1199px) {
-    .header-youtube {margin:16px 10px 0 0}
+    .header-youtube {display:none; margin:16px 10px 0 0}
     .header-youtube svg {width:32px; height:32px}
 }
 
@@ -554,15 +557,20 @@ header {height:170px; position:relative; z-index:99; background:#fff}
 .nav-contacts {display:none}
 .nav-logo {display:none; float:left; margin:3px 0 0 -10px; width:55px; height:50px; background:url(../images/logo-nav.svg) no-repeat; background-size:100%; position:relative}
 .nav-logo a {display:block; position:absolute; left:0; top:0; right:0; bottom:0}
-.nav-phone {display:none; float:right; margin:18px 0 0 0}
-.nav-phone a {display:block}
-.nav-phone a svg {display:block; width:25px; height:25px; fill:#fff}
+.nav-phone {display:none; float:right; margin:19px 0 0 0}
+.nav-phone a {display:block; text-decoration:none; color:#FFFFFF; font-weight:bold; font-size:16px; line-height:24px}
+.nav-callback {display:none; float:right; margin:14px 16px 0 0}
+.nav-callback a {display:block; text-decoration:none; padding:4px 15px; border:1px solid #FFFFFF; border-radius:2px; color:#FFFFFF; font-weight:normal; font-size:16px; line-height:24px; transition:background 0.2s, color 0.2s; text-transform:none; letter-spacing:0}
+@media screen and (min-width:1200px) {
+    .nav-callback a:hover {background:#FFFFFF; color:#E02F21}
+}
 
 @media screen and (min-width:1200px) {
     header.fixed .nav {position:fixed; left:0; top:0; right:0; z-index:99}
     header.fixed .nav-logo {display:block}
     header.fixed .nav ul {margin:0 0 0 53px; float:left}
     header.fixed .nav-phone {display:block}
+    header.fixed .nav-callback {display:block}
 }
 
 @media screen and (max-width:1199px) {
@@ -620,7 +628,7 @@ header {height:170px; position:relative; z-index:99; background:#fff}
     .mobile-submenu-open .nav ul li.nav-catalogue ul li:first-child {margin:0; border-top:none}
     .mobile-submenu-open .nav ul li.nav-catalogue ul li a,
     .mobile-submenu-open .nav ul li.nav-catalogue.active ul li a {padding:24px 0 24px 20px}
-    
+
     .mobile-menu-open .header-rutube {display:none}
     .mobile-menu-open .header-youtube {display:none}
 }
@@ -825,26 +833,6 @@ header {height:170px; position:relative; z-index:99; background:#fff}
 }
 .breadcrumbs span {color:#2c2c2c}
 
-.breadcrumbs-catalogue {display:inline; position:relative}
-.breadcrumbs-catalogue-title {display:inline}
-.breadcrumbs-catalogue-title svg {display:inline-block; vertical-align:middle; margin:-2px 0 0 8px; width:14px; height:14px; fill:none; stroke:#e02f21}
-.breadcrumbs-catalogue-menu {display:none; position:absolute; left:0; top:19px; margin-top:18px; z-index:88; min-width:300px; background:#ffffff; border:1px solid #d6d6d6; box-shadow:4px 4px 30px rgba(0, 0, 0, 0.08); padding:10px 20px}
-.breadcrumbs-catalogue-menu::before {content:""; display:block; width:10px; height:10px; background:#fff; position:absolute; left:10px; top:-6px; border-left:1px solid #d6d6d6; border-top:1px solid #d6d6d6; transform:rotate(45deg)}
-.breadcrumbs-catalogue-menu::after {content:""; display:block; position:absolute; left:-1px; top:-19px; right:-1px; height:18px; background:url(../images/blank.gif)}
-.breadcrumbs-catalogue:hover .breadcrumbs-catalogue-menu {display:block}
-.breadcrumbs-catalogue-menu ul {margin:0; padding:0; list-style:none}
-.breadcrumbs-catalogue-menu ul li {border-top:1px solid #ececec; margin:0 20px 0 0; padding:0; position:relative}
-.breadcrumbs-catalogue-menu ul li:first-child {border-top:none}
-.breadcrumbs-catalogue-menu ul li::before {display:none}
-.breadcrumbs-catalogue-menu ul li a {display:block; margin:0 -40px 0 -20px; padding:10px 20px; color:#848484; text-decoration:none; transition:background 0.2s, color 0.2s}
-.breadcrumbs-catalogue-menu ul li.active > a {color:#e02f21}
-.breadcrumbs-catalogue-menu ul li:hover > a {color:#e02f21; background:#f3f3f3}
-.breadcrumbs-catalogue-menu ul li.with-submenu > a {position:relative; padding-right:40px}
-.breadcrumbs-catalogue-menu ul li.with-submenu > a::before {content:""; display:block; width:20px; height:20px; position:absolute; right:14px; top:10px; background:url(../images/breadcrumbs-catalogue.svg) no-repeat}
-.breadcrumbs-catalogue-menu ul li ul {display:none; position:absolute; left:100%; top:-1px; min-width:300px; margin:0 0 0 40px; padding:10px 20px; background:#ffffff; border:1px solid #d6d6d6; box-shadow:4px 4px 30px rgba(0, 0, 0, 0.08)}
-.breadcrumbs-catalogue-menu ul li ul::before {content:""; display:block; position:absolute; left:-41px; top:-1px; bottom:-1px; width:41px; background:url(../images/blank.gif)}
-.breadcrumbs-catalogue-menu ul li:hover > ul {display:block}
-
 @media screen and (max-width:1199px) {
     .breadcrumbs {display:none}
     .breadcrumbs+h1 {margin-top:16px}
@@ -914,9 +902,9 @@ header {height:170px; position:relative; z-index:99; background:#fff}
 .news-detail-social-links {margin:6px 0 0 0; font-size:0; line-height:0; letter-spacing:-1px}
 .news-detail-social-links a {display:inline-block; vertical-align:top; width:30px; height:30px; margin:0 0 0 20px; border-radius:50%; overflow:hidden; position:relative}
 .news-detail-social-links a:first-child {margin:0}
-.news-detail-social-links a svg {display:block; width:30px; height:30px; fill:#e02f21; transition:fill 0.2s; border-radius:50%}
+.news-detail-social-links a img {display:block; width:30px; height:30px; transition:opacity 0.2s}
 @media screen and (min-width:1200px) {
-    .news-detail-social-links a:hover svg {fill:#fcbebe}
+    .news-detail-social-links a:hover img {opacity:0.8}
 }
 .news-detail-container {margin:30px 0 0 0}
 
@@ -1421,10 +1409,16 @@ h4+.category-batch-add-anonce {margin-top:-18px}
 .batch-header {margin:50px 0 60px 0}
 .batch-header::after {content:""; display:block; clear:both}
 .batch-gallery {float:left; width:50%; padding:0 10px 0 0}
+.batch-gallery-container {float:left; width:570px}
+
+@media screen and (min-width:1200px) {
+    .batch-gallery.fixed .batch-gallery-container {position:fixed; top:60px}
+}
 
 @media screen and (max-width:1199px) {
     .batch-header {margin:16px 0 60px 0}
     .batch-gallery {float:none; width:auto; padding:0; margin:40px 0 0 0}
+    .batch-gallery-container {float:none; width:auto; margin:0 !important}
 }
 
 .batch-gallery-big {border:1px solid #e8e8e8; padding:10px}
@@ -1437,6 +1431,7 @@ h4+.category-batch-add-anonce {margin-top:-18px}
 
 @media screen and (max-width:1199px) {
     .batch-gallery-big {float:none; width:auto; border:none; padding:0; margin:0 95px 0 0}
+    .batch-gallery-preview+.batch-gallery-big {float:none; width:auto}
     .batch-gallery-big-list {overflow:visible}
     .batch-gallery-big-list .slick-list {overflow:visible}
     .batch-gallery-big-item {height:330px; line-height:308px; text-align:center; border:1px solid #e8e8e8; padding:10px}
@@ -1485,8 +1480,8 @@ h4+.category-batch-add-anonce {margin-top:-18px}
 .batch-info-params {margin:30px 0 0 0}
 .batch-info-param {margin:10px 0 0 0; color:#000; line-height:19px}
 .batch-info-param::after {content:""; display:block; clear:both}
-.batch-info-param-title {float:left; width:260px}
-.batch-info-param-value {margin:0 0 0 272px; font-weight:normal}
+.batch-info-param-title {float:left; width:301px}
+.batch-info-param-value {margin:0 0 0 321px; font-weight:normal}
 .batch-info-params-link {margin:19px 0 0 0}
 .batch-info-params-link a {text-decoration:none; border-bottom:1px dashed transparent; transition:border-color 0.2s}
 .batch-info-params-link a:hover {border-bottom-color:#e02f21}
@@ -1960,7 +1955,7 @@ footer {background:#efefef; position:absolute; left:0; bottom:0; right:0}
 
 .catalogue-menu {float:left; width:226px; margin:0 59px 40px 0; padding:15px 0 0 0; z-index:20; position:relative}
 .catalogue-menu ul {margin:0; padding:0; list-style:none; background:#fff; border:1px solid #e8e8e8; box-shadow:4px 4px 30px rgba(0, 0, 0, 0.08); position:relative}
-.catalogue-menu ul li {margin:0; padding:0; position:static}
+.catalogue-menu ul li {margin:0; padding:0; position:relative}
 .catalogue-menu ul li::before {display:none}
 .catalogue-menu ul li > a {display:block; padding:10px 18px; color:#4a4a4a; text-decoration:none; line-height:19px; font-weight:normal; transition:background 0.2s; position:relative}
 .catalogue-menu ul li.active > a {background:#f4f4f4}
@@ -2089,22 +2084,19 @@ h1+.catalogue-category-descr {margin:18px 0 0 0}
 .batch-info-variants {margin:25px 0 47px 0; display:table; width:100%}
 .batch-info-variants-headers {display:table-row; font-weight:300; font-size:12px; line-height:14px; color:#000000}
 .batch-info-variants-header {display:table-cell; vertical-align:top; padding:0 0 8px 0}
+.batch-info-variants-header:nth-child(2) {width:110px; padding:0 0 8px 20px}
+.batch-info-variants-header:nth-child(3) {width:121px}
 .batch-info-variant {display:table-row}
-.batch-info-variant-name {display:table-cell; vertical-align:middle; font-weight:normal; font-size:16px; line-height:19px; color:#000; padding:13px 10px 13px 0; border-top:1px solid #D9D9D9}
-.batch-info-variant-price {display:table-cell; vertical-align:middle; font-weight:bold; font-size:18px; line-height:27px; color:#e02f21; white-space:nowrap; border-top:1px solid #D9D9D9; padding:9px 10px 9px 0}
-.batch-info-variant-order {display:table-cell; vertical-align:middle; width:44px; border-top:1px solid #D9D9D9}
-.batch-info-variant-order a {display:inline-block; width:44px; height:44px; position:relative}
-.batch-info-variant-order a svg {display:block; width:20px; height:20px; fill:none; stroke:#e02f21; position:absolute; left:50%; top:50%; margin:-10px 0 0 -10px; transition:stroke 0.2s}
-@media screen and (min-width:1200px) {
-    .batch-info-variant-order a:hover svg {stroke:#cd1103}
-}
+.batch-info-variant-name {display:table-cell; width:auto; vertical-align:middle; font-weight:normal; font-size:16px; line-height:19px; color:#000; padding:13px 0 13px 0; border-top:1px solid #D9D9D9}
+.batch-info-variant-price {display:table-cell; width:110px; vertical-align:middle; font-weight:bold; font-size:18px; line-height:27px; color:#e02f21; white-space:nowrap; border-top:1px solid #D9D9D9; padding:9px 10px 9px 20px}
+.batch-info-variant-order {display:table-cell; width:121px; text-align:right; vertical-align:middle; border-top:1px solid #D9D9D9; padding:5px 0}
+.batch-info-variant-order .btn {padding:5px 20px; font-size:16px; line-height:24px}
 
 @media screen and (max-width:1199px) {
     .batch-info-variants {margin:40px 0 45px 0}
     .batch-info-variants-headers {font-size:18px; line-height:22px}
     .batch-info-variants-header {padding:0 0 10px 0}
     .batch-info-variant-name {font-size:18px; line-height:27px; padding:9px 10px 9px 0}
-    .batch-info-variant-order a svg {width:26px; height:26px; margin:-13px 0 0 -13px}
 }
 
 .order-reg {margin-bottom:-62px; border-bottom:none}

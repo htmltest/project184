@@ -21,13 +21,6 @@ $(document).ready(function() {
         ]
     });
 
-    $.validator.addMethod('phoneRU',
-        function(phone_number, element) {
-            return this.optional(element) || phone_number.match(/^\+7 \(\d{3}\) \d{3}\-\d{2}\-\d{2}$/);
-        },
-        'Ошибка заполнения'
-    );
-
     $.validator.addMethod('inputDate',
         function(curDate, element) {
             if (this.optional(element) && curDate == '') {
@@ -517,11 +510,11 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
-    $('body').on('click', '.news-detail-social-fb', function(e) {
+    $('body').on('click', '.news-detail-social-tg', function(e) {
         var curTitle = encodeURIComponent($('title').html());
         var curUrl = encodeURIComponent(window.location.href);
 
-        popupCenter('https://www.facebook.com/sharer/sharer.php?u=' + curUrl, curTitle);
+        popupCenter('https://telegram.me/share/url?url=' + curUrl + '&text=' + curTitle, curTitle);
 
         e.preventDefault();
     });
@@ -535,11 +528,11 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
-    $('body').on('click', '.news-detail-social-twitter', function(e) {
+    $('body').on('click', '.news-detail-social-wa', function(e) {
         var curTitle = encodeURIComponent($('title').html());
         var curUrl = encodeURIComponent(window.location.href);
 
-        popupCenter('https://twitter.com/share?url=' + curUrl + '&text=' + curTitle, curTitle);
+        popupCenter('https://api.whatsapp.com/send?text=' + curTitle + ': ' + curUrl, curTitle);
 
         e.preventDefault();
     });
@@ -681,13 +674,6 @@ $(document).ready(function() {
                     $(this).prepend('<div class="category-parameters-title-mobile">' + curTR.find('td').eq(0).html() + '</div>');
                 });
             });
-        }
-    });
-
-    $('.breadcrumbs-catalogue-menu ul li').each(function() {
-        var curLi = $(this);
-        if (curLi.find('ul').length > 0) {
-            curLi.addClass('with-submenu');
         }
     });
 
@@ -926,8 +912,6 @@ function initForm(curForm) {
     curForm.find('.form-input input:focus, .form-input textarea:focus').each(function() {
         $(this).trigger('focus');
     });
-
-    curForm.find('input.phoneRU').mask('+7 (000) 000-00-00');
 
     curForm.find('.form-input textarea').each(function() {
         $(this).css({'height': this.scrollHeight, 'overflow-y': 'hidden'});
@@ -1192,6 +1176,13 @@ function smartCaptchaCallback(token) {
     $('form[form-smartcaptchawaiting] input[type="submit"]').trigger('click');
 }
 
+$(window).on('load resize', function() {
+    $('.batch-gallery').each(function() {
+        $('.batch-gallery').css({'min-height': '0'});
+        $('.batch-gallery').css({'min-height': $('.batch-gallery-container').height() + 'px'});
+    });
+});
+
 $(window).on('load resize scroll', function() {
     var windowScroll = $(window).scrollTop();
     $('body').append('<div id="body-test-height" style="position:fixed; left:0; top:0; right:0; bottom:0; z-index:-1"></div>');
@@ -1228,6 +1219,20 @@ $(window).on('load resize scroll', function() {
             } else {
                 curBlock.find('.table-scroll-arrow-prev, .table-scroll-arrow-next').css({'margin-top': 0});
             }
+        }
+    });
+
+    $('.batch-gallery').each(function() {
+        if (windowScroll + 60 > $('.batch-header').offset().top) {
+            $('.batch-gallery').addClass('fixed');
+            if (windowScroll + 60 + $('.batch-gallery').height() > $('.batch-header').offset().top + $('.batch-header').height()) {
+                $('.batch-gallery-container').css({'margin-top': ($('.batch-header').offset().top + $('.batch-header').height()) - (windowScroll + 60 + $('.batch-gallery').height())});
+            } else {
+                $('.batch-gallery-container').css({'margin-top': 0});
+            }
+        } else {
+            $('.batch-gallery').removeClass('fixed');
+            $('.batch-gallery-container').css({'margin-top': 0});
         }
     });
 });
@@ -1286,6 +1291,7 @@ function windowOpen(linkWindow, dataWindow) {
         });
 
         $(window).trigger('resize');
+        maskPhoneInput($('.window')[0]);
 
     });
 }

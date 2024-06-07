@@ -1,9 +1,9 @@
 <div class="window-callback">
-    <div class="window-title">Обратный звонок</div>
+    <div class="window-title">Оставить заявку</div>
     <form action="windows/success_smartcaptcha_window.php" method="post" class="window-form">
-        <div class="form-input"><span>Телефон <em>*</em></span><input type="text" name="phone" value="" class="required phoneRU" /></div>
+        <div class="form-input"><span>Номер телефона <em>*</em></span><input type="text" name="phone" value="" data-tel-input class="required" maxlength="18" /></div>
         <div class="form-input"><span>Имя</span><input type="text" name="name" value="" /></div>
-        <div class="form-input"><span>Удобное время</span><input type="text" name="time" value="" /></div>
+        <div class="form-input"><span>Комментарий</span><textarea name="comment" rows="1" cols="1"></textarea></div>
         <div class="form-checkbox"><label><input type="checkbox" name="policy" checked="checked" class="required" /><span>Согласен с <a href="#">политикой обработки данных</a> <em>*</em></span></label></div>
 
         <div class="captcha-container"></div>

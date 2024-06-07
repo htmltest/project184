@@ -212,10 +212,6 @@
         <path d="M3.5 5.25L7 8.75L10.5 5.25" stroke-linecap="round" stroke-linejoin="round" />
     </symbol>
 
-    <symbol viewBox="0 0 14 15" id="breadcrumbs-catalogue-title">
-        <path d="M3.5 5.75L7 9.25L10.5 5.75" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-    </symbol>
-
     <symbol viewBox="0 0 36 36" id="table-scroll-arrow">
         <rect x="16.4844" y="26.9706" width="3" height="12" transform="rotate(-135 16.4844 26.9706)" />
         <rect x="24.9688" y="18.4853" width="3" height="12" transform="rotate(135 24.9688 18.4853)" />
