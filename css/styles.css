@@ -1785,7 +1785,6 @@ footer {background:#efefef; position:absolute; left:0; bottom:0; right:0}
 
 @media screen and (max-width:1199px) {
     .up-link {width:50px; height:50px}
-    .up-link::before {content:""; display:block; position:absolute; left:-40px; top:-40px; right:-40px; bottom:-40px}
     .up-link svg {width:28px; height:28px; margin:-14px 0 0 -14px}
 }
 
