@@ -770,7 +770,20 @@ header {height:170px; position:relative; z-index:99; background:#fff}
 @media screen and (min-width:1200px) {
     .main-feedback-row-close:hover {background:#fcbebe}
 }
-
+.main-feedback-textarea-file {position:relative}
+.main-feedback-row .form-input textarea {padding-bottom:70px}
+.main-feedback-textarea-file .form-file {position:absolute; right:2px; bottom:2px; margin:0}
+.main-feedback-textarea-file .form-file-input span {height:55px; line-height:55px; background:none; border:none; padding:0 47px 0 0; color:#999999; transition:color 0.2s}
+@media screen and (min-width:1200px) {
+    .main-feedback-textarea-file .form-file-input:hover span {color:#E02F21}
+}
+.main-feedback-textarea-file .form-file-input span::before {right:20px; top:50%; margin-top:-12px; width:24px; height:24px; background:url(../images/input-file-textarea.svg) no-repeat}
+.main-feedback-textarea-file .form-file-input span em {display:block; color:#000000; position:relative; background:#FFFFFF; padding:0 48px 0 29px; margin:0 -47px 0 0; max-width:546px}
+.main-feedback-textarea-file .form-file-input span em::before {content:""; position:absolute; left:0; top:50%; width:24px; height:24px; margin-top:-14px; background:url(../images/input-file-textarea-icon.svg) no-repeat}
+.main-feedback-textarea-file .form-file-input span em a {right:20px; width:20px; height:20px; margin-top:-11px; background:url(../images/input-file-textarea-remove.svg) no-repeat; transition:opacity 0.2s}
+@media screen and (min-width:1200px) {
+    .main-feedback-textarea-file .form-file-input span em a:hover {opacity:0.6}
+}
 
 @media screen and (max-width:1199px) {
     .main-feedback {padding:60px 0; margin:0 0 -60px 0}
@@ -779,6 +792,9 @@ header {height:170px; position:relative; z-index:99; background:#fff}
     .main-feedback-col {float:none; width:auto; padding:0; margin:14px 0 0 0}
     .main-feedback-row .form-input textarea {min-height:217px}
     .main-feedback-col-empty {display:none}
+
+    .main-feedback-textarea-file .form-file-input span {font-size:0; line-height:0}
+    .main-feedback-textarea-file .form-file-input span em {max-width:416px; font-size:18px; line-height:55px}
 }
 
 .main-contacts {padding:45px 0 0 0}
