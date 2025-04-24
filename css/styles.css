@@ -1424,7 +1424,7 @@ h4+.category-batch-add-anonce {margin-top:-18px}
 
 @media screen and (max-width:1199px) {
     .category-batch-add {border-top:1px solid #BCBCBC; margin:0; max-width:none; padding:0}
-    .category-batch-add-content h3 {font-weight:normal; color:#707070}
+    .category-batch-add-content h3 {font-weight:normal}
     .category-batch-add h2 {cursor:pointer; padding:28px 0; font-weight:bold; font-size:20px; line-height:30px; text-transform:uppercase; letter-spacing:0.05em; margin:0; position:relative; text-transform:uppercase}
     .category-batch-add h2 svg {display:block; width:14px; height:8px; position:absolute; right:0; top:39px; fill:none; stroke:#E02F21}
     .category-batch-add.open h2 svg {transform:rotate(-180deg)}
@@ -2253,10 +2253,10 @@ h1+.catalogue-category-descr {margin:18px 0 0 0}
 .reviews {margin:10px -5px 0 -5px; display:flex; flex-wrap:wrap}
 .reviews-item {min-width:calc(33.33% - 10px); max-width:calc(33.33% - 10px); margin:10px 5px 0 5px; background:#F9F9F9; padding:20px 20px 20px 46px; position:relative}
 .reviews-item-icon {position:absolute; left:20px; top:20px}
-.reviews-item-icon svg {width:17px; height:14px; fill:#E02F21}
+.reviews-item-icon svg {display:block; width:17px; height:14px; fill:rgba(0, 0, 0, 0.4)}
 .reviews-item-text {color:#000000}
 
 @media (max-width:1199px) {
     .reviews {margin:20px 0 0 0; display:block}
-    .reviews-item {min-width:0; max-width:none; margin:20px 0 0 0}
+    .reviews-item {min-width:0; max-width:none; margin:10px 0 0 0}
 }
